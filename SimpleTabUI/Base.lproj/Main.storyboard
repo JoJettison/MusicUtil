@@ -109,14 +109,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S9L-eC-aZv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sight Read" image="SightIcon" landscapeImage="SightIcon" selectedImage="SightIcon" id="4Qe-fo-sLc"/>
+                    <navigationItem key="navigationItem" id="oRb-ai-fdw"/>
                     <connections>
                         <outlet property="StaffPicker" destination="XDr-Jo-SRs" id="ShG-Os-8ab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C72-fR-ADO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="1072.7136431784108"/>
+            <point key="canvasLocation" x="1688.8" y="1072.7136431784108"/>
         </scene>
         <!--Reading Game Controller-->
         <scene sceneID="PNF-dR-sV6">
@@ -127,34 +127,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cho-2S-16f">
-                                <rect key="frame" x="145" y="20" width="85" height="41"/>
+                                <rect key="frame" x="145" y="64" width="85" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="TrebleStaff" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
-                                <rect key="frame" x="67" y="132" width="241" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="TrebleStaff" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
+                                <rect key="frame" x="67" y="176" width="241" height="140"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0F-9D-6gh">
-                                <rect key="frame" x="22" y="20" width="34" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Niv-tJ-KfG" kind="presentation" id="gil-qr-EM6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88764977331606221" green="0.88764977331606221" blue="0.88764977331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Cho-2S-16f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E0F-9D-6gh" secondAttribute="trailing" constant="8" symbolic="YES" id="3jo-Gr-RWI"/>
                             <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="1fs-He-AFD" secondAttribute="centerX" id="OMt-Bo-Dm4"/>
                             <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="JXv-9T-nBr" secondAttribute="centerX" id="Sfu-7J-o0D"/>
                             <constraint firstItem="JXv-9T-nBr" firstAttribute="top" secondItem="Cho-2S-16f" secondAttribute="bottom" constant="71" id="VXl-h5-TfG"/>
                             <constraint firstItem="Cho-2S-16f" firstAttribute="top" secondItem="LYi-Yj-kv1" secondAttribute="top" id="af2-Cn-iEF"/>
-                            <constraint firstItem="E0F-9D-6gh" firstAttribute="leading" secondItem="LYi-Yj-kv1" secondAttribute="leading" constant="22" id="boH-YT-RVr"/>
                             <constraint firstItem="JXv-9T-nBr" firstAttribute="leading" secondItem="LYi-Yj-kv1" secondAttribute="leading" constant="67" id="cvo-xw-OsP"/>
-                            <constraint firstItem="E0F-9D-6gh" firstAttribute="top" secondItem="Cho-2S-16f" secondAttribute="top" id="rKR-KR-TDB"/>
                             <constraint firstItem="LYi-Yj-kv1" firstAttribute="bottom" secondItem="JXv-9T-nBr" secondAttribute="bottom" constant="407" id="z3d-aZ-YFy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LYi-Yj-kv1"/>
@@ -166,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz4-Oy-R7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8" y="1077.2113943028487"/>
+            <point key="canvasLocation" x="2516" y="1077.2113943028487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -182,12 +170,31 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Niv-tJ-KfG" kind="relationship" relationship="viewControllers" id="uRU-mv-Qs2"/>
+                        <segue destination="wp8-aR-hJz" kind="relationship" relationship="viewControllers" id="uRU-mv-Qs2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Sight Read-->
+        <scene sceneID="Qbk-yw-iz5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wp8-aR-hJz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sight Read" image="SightIcon" landscapeImage="SightIcon" selectedImage="SightIcon" id="4Qe-fo-sLc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGX-gm-Hk4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Niv-tJ-KfG" kind="relationship" relationship="rootViewController" id="3Ln-II-CWA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeW-ZH-Ye6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="1072.7136431784108"/>
         </scene>
     </scenes>
     <resources>
@@ -196,7 +203,4 @@
         <image name="TrebleStaff" width="559.5" height="251.25"/>
         <image name="TuneIcon" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gil-qr-EM6"/>
-    </inferredMetricsTieBreakers>
 </document>

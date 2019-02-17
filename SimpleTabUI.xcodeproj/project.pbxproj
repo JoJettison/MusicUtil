@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74B469E6221936FC0008BCB9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B469E5221936FC0008BCB9 /* AVFoundation.framework */; };
-		74B469E82219389D0008BCB9 /* A-Tone-His_Self-1266414414.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469E72219389D0008BCB9 /* A-Tone-His_Self-1266414414.mp3 */; };
+		74B469EA221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469E9221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 */; };
 		7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */; };
 		7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA71E2215112400798814 /* AppDelegate.swift */; };
 		7CDBA7212215112400798814 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7202215112400798814 /* TunerViewController.swift */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		74B469E5221936FC0008BCB9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		74B469E72219389D0008BCB9 /* A-Tone-His_Self-1266414414.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "A-Tone-His_Self-1266414414.mp3"; path = "../../Downloads/A-Tone-His_Self-1266414414.mp3"; sourceTree = "<group>"; };
+		74B469E9221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A-Tone-His_Self-1266414414.mp3"; sourceTree = "<group>"; };
 		7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetReadViewController.swift; sourceTree = "<group>"; };
 		7CDBA71B2215112400798814 /* SimpleTabUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTabUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA71E2215112400798814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +86,6 @@
 		74B469E4221936F10008BCB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74B469E72219389D0008BCB9 /* A-Tone-His_Self-1266414414.mp3 */,
 				74B469E5221936FC0008BCB9 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -99,6 +98,7 @@
 				7CDBA7342215112700798814 /* SimpleTabUITests */,
 				7CDBA73F2215112700798814 /* SimpleTabUIUITests */,
 				7CDBA71C2215112400798814 /* Products */,
+				74B469E9221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 */,
 				74B469E4221936F10008BCB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B469E82219389D0008BCB9 /* A-Tone-His_Self-1266414414.mp3 in Resources */,
+				74B469EA221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 in Resources */,
 				7CDBA72B2215112700798814 /* LaunchScreen.storyboard in Resources */,
 				7CDBA7282215112700798814 /* Assets.xcassets in Resources */,
 				7CDBA7262215112400798814 /* Main.storyboard in Resources */,

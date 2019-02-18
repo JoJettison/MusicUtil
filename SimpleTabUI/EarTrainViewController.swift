@@ -11,12 +11,12 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    let questions = ["Answer = A", "Answer = B", "Answer = C", "Answer = D", "Answer = E", "Answer = F", "Answer = G"]
+    //let questions = ["Answer = A", "Answer = B", "Answer = C", "Answer = D", "Answer = E", "Answer = F", "Answer = G"]
     let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
     let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
     
     //Variables
-    var score = 0
+    var score = ["0"]
     var audio = Int.random(in: 0...6)
     var audioPlayerA = AVAudioPlayer()
     var audioPlayerB = AVAudioPlayer()
@@ -35,7 +35,7 @@ class SecondViewController: UIViewController {
         if ((sender as AnyObject).tag == Int(audio))
         {
             print("Right")
-            score += 1
+            //score[0] += 1
             print("Score: ", score)
         }
         else
@@ -72,8 +72,20 @@ class SecondViewController: UIViewController {
     
     func newQuestion()
     {
-        //lbl.text = String(score)
+        sleep(1)
+        //lbl.text = score[0]
         audio = Int.random(in: 0...6)
+        switch audio
+        {
+        case 0: audioPlayerA.play()
+        case 1: audioPlayerB.play()
+        case 2: audioPlayerC.play()
+        case 3: audioPlayerD.play()
+        case 4: audioPlayerE.play()
+        case 5: audioPlayerF.play()
+        case 6: audioPlayerG.play()
+        default: print ("Audio button error")
+        }
         print("Answer: ", audio)
     }
     

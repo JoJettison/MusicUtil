@@ -18,11 +18,14 @@ class ReadingGameViewController: UIViewController {
     @IBOutlet weak var scoreLbl: UILabel!
     
     
+    
+    
     override func viewDidLoad() {
         
         if Trb == imageSel{
-            
+                
             staffImage.image = UIImage(named: "TrebleStaff")
+            
             
         } else if (imageSel ==  Bss) {
             

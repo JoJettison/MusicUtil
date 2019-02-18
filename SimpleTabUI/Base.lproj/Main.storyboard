@@ -132,18 +132,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="TrebleStaff" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
-                                <rect key="frame" x="67" y="176" width="241" height="140"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="TrebleStaff" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
+                                <rect key="frame" x="67" y="176" width="287" height="160"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88764977331606221" green="0.88764977331606221" blue="0.88764977331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="1fs-He-AFD" secondAttribute="centerX" id="OMt-Bo-Dm4"/>
-                            <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="JXv-9T-nBr" secondAttribute="centerX" id="Sfu-7J-o0D"/>
+                            <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="JXv-9T-nBr" secondAttribute="centerX" constant="-23" id="Sfu-7J-o0D"/>
                             <constraint firstItem="JXv-9T-nBr" firstAttribute="top" secondItem="Cho-2S-16f" secondAttribute="bottom" constant="71" id="VXl-h5-TfG"/>
                             <constraint firstItem="Cho-2S-16f" firstAttribute="top" secondItem="LYi-Yj-kv1" secondAttribute="top" id="af2-Cn-iEF"/>
                             <constraint firstItem="JXv-9T-nBr" firstAttribute="leading" secondItem="LYi-Yj-kv1" secondAttribute="leading" constant="67" id="cvo-xw-OsP"/>
-                            <constraint firstItem="LYi-Yj-kv1" firstAttribute="bottom" secondItem="JXv-9T-nBr" secondAttribute="bottom" constant="407" id="z3d-aZ-YFy"/>
+                            <constraint firstItem="LYi-Yj-kv1" firstAttribute="bottom" secondItem="JXv-9T-nBr" secondAttribute="bottom" constant="282" id="z3d-aZ-YFy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LYi-Yj-kv1"/>
                     </view>

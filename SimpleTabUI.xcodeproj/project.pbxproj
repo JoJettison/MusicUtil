@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		74B469E6221936FC0008BCB9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B469E5221936FC0008BCB9 /* AVFoundation.framework */; };
-		74B469EA221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469E9221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 */; };
 		74B469EC221A3B5E0008BCB9 /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469EB221A3B5E0008BCB9 /* A.mp3 */; };
 		74B469F1221A3B750008BCB9 /* B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469ED221A3B740008BCB9 /* B.mp3 */; };
 		74B469F2221A3B750008BCB9 /* C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469EE221A3B740008BCB9 /* C.mp3 */; };
@@ -16,6 +15,31 @@
 		74B469F4221A3B750008BCB9 /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469F0221A3B750008BCB9 /* E.mp3 */; };
 		74B469F7221A3B840008BCB9 /* G.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469F5221A3B830008BCB9 /* G.mp3 */; };
 		74B469F8221A3B840008BCB9 /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469F6221A3B830008BCB9 /* F.mp3 */; };
+		7CD9D03D2221EF1D007A783F /* Cbass2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0302221EF14007A783F /* Cbass2-1.png */; };
+		7CD9D03E2221EF1D007A783F /* Gbass2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0312221EF15007A783F /* Gbass2-1.png */; };
+		7CD9D03F2221EF1D007A783F /* Bbass1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0322221EF15007A783F /* Bbass1-1.png */; };
+		7CD9D0402221EF1D007A783F /* Bbass2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0332221EF16007A783F /* Bbass2-1.png */; };
+		7CD9D0412221EF1D007A783F /* Abass2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0342221EF16007A783F /* Abass2-1.png */; };
+		7CD9D0422221EF1D007A783F /* Gbass1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0352221EF16007A783F /* Gbass1-1.png */; };
+		7CD9D0432221EF1D007A783F /* Fbass2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0362221EF17007A783F /* Fbass2-1.png */; };
+		7CD9D0442221EF1D007A783F /* Ebass-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0372221EF18007A783F /* Ebass-1.png */; };
+		7CD9D0452221EF1D007A783F /* Fbass1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0382221EF1B007A783F /* Fbass1-1.png */; };
+		7CD9D0462221EF1D007A783F /* Abass1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0392221EF1C007A783F /* Abass1-1.png */; };
+		7CD9D0472221EF1D007A783F /* Cbass1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D03A2221EF1C007A783F /* Cbass1-1.png */; };
+		7CD9D0482221EF1D007A783F /* Ebass2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D03B2221EF1D007A783F /* Ebass2-1.png */; };
+		7CD9D0492221EF1D007A783F /* Dbass1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D03C2221EF1D007A783F /* Dbass1-1.png */; };
+		7CD9D0562221EF4C007A783F /* Gtreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D04A2221EF48007A783F /* Gtreble-1-1.png */; };
+		7CD9D0572221EF4C007A783F /* Atreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D04B2221EF49007A783F /* Atreble-1-1.png */; };
+		7CD9D0582221EF4C007A783F /* Ctreble-2-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D04C2221EF49007A783F /* Ctreble-2-1-1.png */; };
+		7CD9D0592221EF4C007A783F /* Ftreble-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D04D2221EF49007A783F /* Ftreble-2-1.png */; };
+		7CD9D05A2221EF4C007A783F /* Btreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D04E2221EF4A007A783F /* Btreble-1-1.png */; };
+		7CD9D05B2221EF4C007A783F /* Ctreble1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D04F2221EF4A007A783F /* Ctreble1.png */; };
+		7CD9D05C2221EF4C007A783F /* Dtreble-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0502221EF4A007A783F /* Dtreble-2-1.png */; };
+		7CD9D05D2221EF4C007A783F /* Dtreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0512221EF4A007A783F /* Dtreble-1-1.png */; };
+		7CD9D05E2221EF4C007A783F /* Dtreble1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0522221EF4B007A783F /* Dtreble1.png */; };
+		7CD9D05F2221EF4C007A783F /* Etreble-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0532221EF4B007A783F /* Etreble-1.png */; };
+		7CD9D0602221EF4C007A783F /* Etreble2-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0542221EF4B007A783F /* Etreble2-1-1.png */; };
+		7CD9D0612221EF4C007A783F /* Ftreble-1-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0552221EF4C007A783F /* Ftreble-1-1-1.png */; };
 		7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */; };
 		7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA71E2215112400798814 /* AppDelegate.swift */; };
 		7CDBA7212215112400798814 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7202215112400798814 /* TunerViewController.swift */; };
@@ -26,7 +50,6 @@
 		7CDBA7362215112700798814 /* SimpleTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7352215112700798814 /* SimpleTabUITests.swift */; };
 		7CDBA7412215112700798814 /* SimpleTabUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */; };
 		7CDBDC332218C0C20078BA32 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBDC322218C0C20078BA32 /* StaffView.swift */; };
-		7CDBDC352218E51E0078BA32 /* ReadingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBDC342218E51E0078BA32 /* ReadingGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		74B469E5221936FC0008BCB9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		74B469E9221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A-Tone-His_Self-1266414414.mp3"; sourceTree = "<group>"; };
 		74B469EB221A3B5E0008BCB9 /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
 		74B469ED221A3B740008BCB9 /* B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = B.mp3; sourceTree = "<group>"; };
 		74B469EE221A3B740008BCB9 /* C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C.mp3; sourceTree = "<group>"; };
@@ -56,6 +78,31 @@
 		74B469F0221A3B750008BCB9 /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
 		74B469F5221A3B830008BCB9 /* G.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G.mp3; sourceTree = "<group>"; };
 		74B469F6221A3B830008BCB9 /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
+		7CD9D0302221EF14007A783F /* Cbass2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cbass2-1.png"; sourceTree = "<group>"; };
+		7CD9D0312221EF15007A783F /* Gbass2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gbass2-1.png"; sourceTree = "<group>"; };
+		7CD9D0322221EF15007A783F /* Bbass1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bbass1-1.png"; sourceTree = "<group>"; };
+		7CD9D0332221EF16007A783F /* Bbass2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bbass2-1.png"; sourceTree = "<group>"; };
+		7CD9D0342221EF16007A783F /* Abass2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Abass2-1.png"; sourceTree = "<group>"; };
+		7CD9D0352221EF16007A783F /* Gbass1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gbass1-1.png"; sourceTree = "<group>"; };
+		7CD9D0362221EF17007A783F /* Fbass2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fbass2-1.png"; sourceTree = "<group>"; };
+		7CD9D0372221EF18007A783F /* Ebass-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ebass-1.png"; sourceTree = "<group>"; };
+		7CD9D0382221EF1B007A783F /* Fbass1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fbass1-1.png"; sourceTree = "<group>"; };
+		7CD9D0392221EF1C007A783F /* Abass1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Abass1-1.png"; sourceTree = "<group>"; };
+		7CD9D03A2221EF1C007A783F /* Cbass1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cbass1-1.png"; sourceTree = "<group>"; };
+		7CD9D03B2221EF1D007A783F /* Ebass2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ebass2-1.png"; sourceTree = "<group>"; };
+		7CD9D03C2221EF1D007A783F /* Dbass1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dbass1-1.png"; sourceTree = "<group>"; };
+		7CD9D04A2221EF48007A783F /* Gtreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gtreble-1-1.png"; sourceTree = "<group>"; };
+		7CD9D04B2221EF49007A783F /* Atreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Atreble-1-1.png"; sourceTree = "<group>"; };
+		7CD9D04C2221EF49007A783F /* Ctreble-2-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ctreble-2-1-1.png"; sourceTree = "<group>"; };
+		7CD9D04D2221EF49007A783F /* Ftreble-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ftreble-2-1.png"; sourceTree = "<group>"; };
+		7CD9D04E2221EF4A007A783F /* Btreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Btreble-1-1.png"; sourceTree = "<group>"; };
+		7CD9D04F2221EF4A007A783F /* Ctreble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ctreble1.png; sourceTree = "<group>"; };
+		7CD9D0502221EF4A007A783F /* Dtreble-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dtreble-2-1.png"; sourceTree = "<group>"; };
+		7CD9D0512221EF4A007A783F /* Dtreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dtreble-1-1.png"; sourceTree = "<group>"; };
+		7CD9D0522221EF4B007A783F /* Dtreble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dtreble1.png; sourceTree = "<group>"; };
+		7CD9D0532221EF4B007A783F /* Etreble-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Etreble-1.png"; sourceTree = "<group>"; };
+		7CD9D0542221EF4B007A783F /* Etreble2-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Etreble2-1-1.png"; sourceTree = "<group>"; };
+		7CD9D0552221EF4C007A783F /* Ftreble-1-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ftreble-1-1-1.png"; sourceTree = "<group>"; };
 		7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetReadViewController.swift; sourceTree = "<group>"; };
 		7CDBA71B2215112400798814 /* SimpleTabUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTabUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA71E2215112400798814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +119,6 @@
 		7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabUIUITests.swift; sourceTree = "<group>"; };
 		7CDBA7422215112700798814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CDBDC322218C0C20078BA32 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
-		7CDBDC342218E51E0078BA32 /* ReadingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +155,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7CD9CFFC221F4D81007A783F /* Bass */ = {
+			isa = PBXGroup;
+			children = (
+				7CD9D0392221EF1C007A783F /* Abass1-1.png */,
+				7CD9D0342221EF16007A783F /* Abass2-1.png */,
+				7CD9D0322221EF15007A783F /* Bbass1-1.png */,
+				7CD9D0332221EF16007A783F /* Bbass2-1.png */,
+				7CD9D03A2221EF1C007A783F /* Cbass1-1.png */,
+				7CD9D0302221EF14007A783F /* Cbass2-1.png */,
+				7CD9D03C2221EF1D007A783F /* Dbass1-1.png */,
+				7CD9D0372221EF18007A783F /* Ebass-1.png */,
+				7CD9D03B2221EF1D007A783F /* Ebass2-1.png */,
+				7CD9D0382221EF1B007A783F /* Fbass1-1.png */,
+				7CD9D0362221EF17007A783F /* Fbass2-1.png */,
+				7CD9D0352221EF16007A783F /* Gbass1-1.png */,
+				7CD9D0312221EF15007A783F /* Gbass2-1.png */,
+			);
+			path = Bass;
+			sourceTree = "<group>";
+		};
+		7CD9D017221F4D9D007A783F /* Treble */ = {
+			isa = PBXGroup;
+			children = (
+				7CD9D04B2221EF49007A783F /* Atreble-1-1.png */,
+				7CD9D04E2221EF4A007A783F /* Btreble-1-1.png */,
+				7CD9D04C2221EF49007A783F /* Ctreble-2-1-1.png */,
+				7CD9D04F2221EF4A007A783F /* Ctreble1.png */,
+				7CD9D0512221EF4A007A783F /* Dtreble-1-1.png */,
+				7CD9D0502221EF4A007A783F /* Dtreble-2-1.png */,
+				7CD9D0522221EF4B007A783F /* Dtreble1.png */,
+				7CD9D0532221EF4B007A783F /* Etreble-1.png */,
+				7CD9D0542221EF4B007A783F /* Etreble2-1-1.png */,
+				7CD9D0552221EF4C007A783F /* Ftreble-1-1-1.png */,
+				7CD9D04D2221EF49007A783F /* Ftreble-2-1.png */,
+				7CD9D04A2221EF48007A783F /* Gtreble-1-1.png */,
+			);
+			path = Treble;
+			sourceTree = "<group>";
+		};
+		7CDB5AF9221B55D200B7658F /* StaffImages */ = {
+			isa = PBXGroup;
+			children = (
+				7CD9D017221F4D9D007A783F /* Treble */,
+				7CD9CFFC221F4D81007A783F /* Bass */,
+			);
+			path = StaffImages;
+			sourceTree = "<group>";
+		};
 		7CDBA7122215112400798814 = {
 			isa = PBXGroup;
 			children = (
+				7CDB5AF9221B55D200B7658F /* StaffImages */,
 				7CDBA71D2215112400798814 /* SimpleTabUI */,
 				7CDBA7342215112700798814 /* SimpleTabUITests */,
 				7CDBA73F2215112700798814 /* SimpleTabUIUITests */,
@@ -123,7 +218,6 @@
 				74B469F0221A3B750008BCB9 /* E.mp3 */,
 				74B469F6221A3B830008BCB9 /* F.mp3 */,
 				74B469F5221A3B830008BCB9 /* G.mp3 */,
-				74B469E9221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 */,
 				74B469E4221936F10008BCB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -146,7 +240,6 @@
 				7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */,
 				7CDBA7222215112400798814 /* EarTrainViewController.swift */,
 				7CDBA7242215112400798814 /* Main.storyboard */,
-				7CDBDC342218E51E0078BA32 /* ReadingGameViewController.swift */,
 				7CDBDC322218C0C20078BA32 /* StaffView.swift */,
 				7CDBA7272215112700798814 /* Assets.xcassets */,
 				7CDBA7292215112700798814 /* LaunchScreen.storyboard */,
@@ -277,17 +370,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD9D0602221EF4C007A783F /* Etreble2-1-1.png in Resources */,
 				74B469F8221A3B840008BCB9 /* F.mp3 in Resources */,
+				7CD9D0412221EF1D007A783F /* Abass2-1.png in Resources */,
+				7CD9D0492221EF1D007A783F /* Dbass1-1.png in Resources */,
+				7CD9D05D2221EF4C007A783F /* Dtreble-1-1.png in Resources */,
+				7CD9D0562221EF4C007A783F /* Gtreble-1-1.png in Resources */,
 				74B469F7221A3B840008BCB9 /* G.mp3 in Resources */,
+				7CD9D05C2221EF4C007A783F /* Dtreble-2-1.png in Resources */,
+				7CD9D05B2221EF4C007A783F /* Ctreble1.png in Resources */,
+				7CD9D0612221EF4C007A783F /* Ftreble-1-1-1.png in Resources */,
 				74B469F2221A3B750008BCB9 /* C.mp3 in Resources */,
-				74B469EA221A24510008BCB9 /* A-Tone-His_Self-1266414414.mp3 in Resources */,
+				7CD9D0472221EF1D007A783F /* Cbass1-1.png in Resources */,
+				7CD9D05F2221EF4C007A783F /* Etreble-1.png in Resources */,
 				7CDBA72B2215112700798814 /* LaunchScreen.storyboard in Resources */,
 				74B469F4221A3B750008BCB9 /* E.mp3 in Resources */,
+				7CD9D0572221EF4C007A783F /* Atreble-1-1.png in Resources */,
+				7CD9D05A2221EF4C007A783F /* Btreble-1-1.png in Resources */,
 				74B469EC221A3B5E0008BCB9 /* A.mp3 in Resources */,
+				7CD9D0592221EF4C007A783F /* Ftreble-2-1.png in Resources */,
 				74B469F1221A3B750008BCB9 /* B.mp3 in Resources */,
 				7CDBA7282215112700798814 /* Assets.xcassets in Resources */,
+				7CD9D05E2221EF4C007A783F /* Dtreble1.png in Resources */,
 				7CDBA7262215112400798814 /* Main.storyboard in Resources */,
 				74B469F3221A3B750008BCB9 /* D.mp3 in Resources */,
+				7CD9D0402221EF1D007A783F /* Bbass2-1.png in Resources */,
+				7CD9D0582221EF4C007A783F /* Ctreble-2-1-1.png in Resources */,
+				7CD9D0482221EF1D007A783F /* Ebass2-1.png in Resources */,
+				7CD9D03D2221EF1D007A783F /* Cbass2-1.png in Resources */,
+				7CD9D03F2221EF1D007A783F /* Bbass1-1.png in Resources */,
+				7CD9D0452221EF1D007A783F /* Fbass1-1.png in Resources */,
+				7CD9D0442221EF1D007A783F /* Ebass-1.png in Resources */,
+				7CD9D0462221EF1D007A783F /* Abass1-1.png in Resources */,
+				7CD9D0422221EF1D007A783F /* Gbass1-1.png in Resources */,
+				7CD9D03E2221EF1D007A783F /* Gbass2-1.png in Resources */,
+				7CD9D0432221EF1D007A783F /* Fbass2-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */,
-				7CDBDC352218E51E0078BA32 /* ReadingGameViewController.swift in Sources */,
 				7CDBDC332218C0C20078BA32 /* StaffView.swift in Sources */,
 				7CDBA7232215112400798814 /* EarTrainViewController.swift in Sources */,
 				7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */,
@@ -495,7 +611,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3RMP5AJVM;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3RMP5AJVM;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

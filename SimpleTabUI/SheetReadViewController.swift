@@ -10,39 +10,81 @@ import UIKit
 
 class SheetReadViewController: UIViewController {
     
-    private let dataSource = ["Treble", "Bass", "Full"]
-    @IBOutlet weak var StaffPicker: UIPickerView!
-    var selection: String?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        StaffPicker.dataSource = self
-        StaffPicker.delegate = self
-    }
+    //Variables
+//    var imageSel = ""
+//    var Trb = "Treble"
+//    var Bss = "Bass"
+    var randsel = Int.random(in: 0...4)
+    var trebleImg: [UIImage] = []
+    var bassImg: [UIImage] = []
+    var grandImg: [UIImage] = []
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ReadingGameViewController
-        destinationVC.imageSel = selection!
-    }
-
-}
-
-extension SheetReadViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    //Linked view objects
+    @IBOutlet weak var staffImage: UIImageView!
+    @IBOutlet weak var staffSelector: UISegmentedControl!
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let value = dataSource[row]
-        selection = value
+    @IBAction func staffChange(_ sender: UISegmentedControl) {
+        randsel = Int.random(in: (0...trebleImg.count))
+        
+        if staffSelector.selectedSegmentIndex == 0{
+            trebleImg.append(UIImage(named: "Atreble-1-1")!)
+            trebleImg.append(UIImage(named: "Btreble-1-1")!)
+            trebleImg.append(UIImage(named: "Ctreble-2-1-1")!)
+            trebleImg.append(UIImage(named: "Dtreble-2-1")!)
+            trebleImg.append(UIImage(named: "Etreble2-1-1")!)
+            staffImage.image =  trebleImg[randsel]
+            
+        } else if (staffSelector.selectedSegmentIndex == 1) {
+            bassImg.append(UIImage(named: "Abass1-1.png")!)
+            bassImg.append(UIImage(named: "Abass2-1.png")!)
+            bassImg.append(UIImage(named: "Bbass1-1.png")!)
+            bassImg.append(UIImage(named: "Cbass1-1.png")!)
+            bassImg.append(UIImage(named: "Ebass2-1.png")!)
+            staffImage.image = bassImg[randsel]
+            
+        }  else{
+            
+            staffImage.image = UIImage(named: "FullStaff")
+            
+        }
         
     }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataSource[row]
+    override func viewDidLoad() {
+        initStaffImages()
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
-}
+    
+    func initStaffImages(){
+        
+        if let path = Bundle.main.resourcePath {    //Access asset bundle
+            let imagePath = path   //location of images
+            let url = NSURL(fileURLWithPath: imagePath)
+            let imgfileManager = FileManager.default
+            //idk what this does yet
+            let properties = [URLResourceKey.localizedNameKey, URLResourceKey.creationDateKey,URLResourceKey.localizedTypeDescriptionKey]
+            
+            do{
+                //load all filenames into an array?
+                let imageURLs = try imgfileManager.contentsOfDirectory(at: url as URL, includingPropertiesForKeys: properties, options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles )
+                
+                print("image URLs \(imageURLs)")
+                
+                //error handling
+            } catch let error as NSError{
+                print (error.description)
+            }
+           
+        }
+    }
+    func newQuestion(){
+        
+    }
+   
+  }
+
+
+
+
+

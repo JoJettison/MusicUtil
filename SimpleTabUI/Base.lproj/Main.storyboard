@@ -191,7 +191,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" image="TrebleStaff" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
                                 <rect key="frame" x="60" y="105" width="263" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -345,7 +345,6 @@
     <resources>
         <image name="EarIcon" width="30" height="30"/>
         <image name="SightIcon" width="30" height="30"/>
-        <image name="TrebleStaff" width="559.5" height="251.25"/>
         <image name="TuneIcon" width="30" height="30"/>
     </resources>
 </document>

@@ -73,6 +73,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Gnn-rb-dKz"/>
+                                    <action selector="btnColorChange:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6VW-u3-vbs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVo-Tm-rnu">
@@ -162,14 +163,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="pGq-mp-AcL">
-                                <rect key="frame" x="235" y="148" width="54" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="g3P-wA-gkb">
-                                <rect key="frame" x="87" y="148" width="54" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -180,9 +173,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Ear Train" image="EarIcon" landscapeImage="EarIcon" selectedImage="EarIcon" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="rightImg" destination="pGq-mp-AcL" id="Co4-Jx-FZ5"/>
                         <outlet property="scoreLbl" destination="pWa-ek-r7e" id="Crb-3M-4Ys"/>
-                        <outlet property="wrongImg" destination="g3P-wA-gkb" id="WIm-nk-Y6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -323,7 +314,5 @@
         <image name="SightIcon" width="30" height="30"/>
         <image name="TrebleStaff" width="559.5" height="251.25"/>
         <image name="TuneIcon" width="30" height="30"/>
-        <image name="correct" width="180" height="180"/>
-        <image name="incorrect" width="180" height="180"/>
     </resources>
 </document>

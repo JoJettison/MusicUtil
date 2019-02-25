@@ -28,16 +28,12 @@ class SecondViewController: UIViewController {
     //Label
     @IBOutlet weak var scoreLbl: UILabel!
     
-    //Images
-    @IBOutlet weak var wrongImg: UIImageView!
-    @IBOutlet weak var rightImg: UIImageView!
-    
     //Answer Button
-    @IBAction func Action(_ sender: Any)
+    @IBAction func Action(_ sender: UIButton)
     {
         if ((sender as AnyObject).tag == Int(audio))
         {
-            self.(sender as AnyObject).backgroundColor = UIColor.green
+            sender.backgroundColor = UIColor.green
             print("Right")
             
             score += 1
@@ -45,13 +41,14 @@ class SecondViewController: UIViewController {
         }
         else
         {
-            wrongImg.isHidden = false
+            sender.backgroundColor = UIColor.red
             print("Wrong")
         }
         
         newQuestion()
         
     }
+    
     
     //Play Button
     @IBAction func Play(_ sender: Any)
@@ -83,10 +80,6 @@ class SecondViewController: UIViewController {
     func newQuestion()
     {
         sleep(1)
-        wrongImg.isHidden = true
-        rightImg.isHidden = true
-        wrongImg.isHidden = false
-        rightImg.isHidden = false
         audio = Int.random(in: 0...6)
         switch audio
         {
@@ -104,8 +97,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad()
     {
-        wrongImg.isHidden = true
-        rightImg.isHidden = true
         super.viewDidLoad()
         updateScore()
         // Do any additional setup after loading the view, typically from a nib.

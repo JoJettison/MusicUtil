@@ -11,12 +11,11 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    //let questions = ["Answer = A", "Answer = B", "Answer = C", "Answer = D", "Answer = E", "Answer = F", "Answer = G"]
     let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
     let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
     
     //Variables
-    var score = ["0"]
+    var score:Int = 0
     var audio = Int.random(in: 0...6)
     var audioPlayerA = AVAudioPlayer()
     var audioPlayerB = AVAudioPlayer()
@@ -27,21 +26,27 @@ class SecondViewController: UIViewController {
     var audioPlayerG = AVAudioPlayer()
     
     //Label
-    @IBOutlet weak var lbl: UILabel!
+    @IBOutlet weak var scoreLbl: UILabel!
+    
+    //Images
+    @IBOutlet weak var wrongImg: UIImageView!
+    @IBOutlet weak var rightImg: UIImageView!
     
     //Answer Button
     @IBAction func Action(_ sender: Any)
     {
         if ((sender as AnyObject).tag == Int(audio))
         {
+            self.(sender as AnyObject).backgroundColor = UIColor.green
             print("Right")
-            //score[0] += 1
-            print("Score: ", score)
+            
+            score += 1
+            updateScore()
         }
         else
         {
+            wrongImg.isHidden = false
             print("Wrong")
-            print("Score: ", score)
         }
         
         newQuestion()
@@ -70,10 +75,18 @@ class SecondViewController: UIViewController {
         newQuestion()
     }
     
+    func updateScore()
+    {
+        scoreLbl?.text = "SCORE: \(score)"
+    }
+    
     func newQuestion()
     {
         sleep(1)
-        //lbl.text = score[0]
+        wrongImg.isHidden = true
+        rightImg.isHidden = true
+        wrongImg.isHidden = false
+        rightImg.isHidden = false
         audio = Int.random(in: 0...6)
         switch audio
         {
@@ -91,7 +104,10 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad()
     {
+        wrongImg.isHidden = true
+        rightImg.isHidden = true
         super.viewDidLoad()
+        updateScore()
         // Do any additional setup after loading the view, typically from a nib.
         
         let soundA = Bundle.main.path(forResource: "A", ofType: "mp3")

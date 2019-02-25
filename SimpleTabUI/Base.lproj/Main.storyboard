@@ -208,14 +208,7 @@
                                     <action selector="staffChange:" destination="Niv-tJ-KfG" eventType="valueChanged" id="U4k-53-bC3"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mo-DW-nAP">
-                                <rect key="frame" x="158" y="71" width="53" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z08-nx-bv8">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z08-nx-bv8">
                                 <rect key="frame" x="89" y="292" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,9 +218,10 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="KcU-ja-F7L"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="bjh-ub-aZr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-bV-AaH">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-bV-AaH">
                                 <rect key="frame" x="159" y="292" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -237,6 +231,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="RNP-1s-mkj"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="26f-9s-c8X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0B-eW-BhJ">
@@ -249,9 +244,10 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="1ol-Hm-Wnf"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="Ckn-6c-wXD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wg-6N-KfI">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wg-6N-KfI">
                                 <rect key="frame" x="89" y="362" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -261,9 +257,10 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="bRk-OC-QO2"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="raB-uR-70s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY3-Lq-U7h">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY3-Lq-U7h">
                                 <rect key="frame" x="159" y="362" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -273,9 +270,10 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Vfv-wk-1yR"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="NQR-Ks-niX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Si-B7-ace">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Si-B7-ace">
                                 <rect key="frame" x="229" y="362" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -285,9 +283,10 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Tzj-68-uwI"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="3yN-H6-MSP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isa-Oc-cT5">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isa-Oc-cT5">
                                 <rect key="frame" x="159" y="437" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -297,8 +296,16 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Tvc-ZA-uOp"/>
+                                    <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="RF1-gx-5wT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mo-DW-nAP">
+                                <rect key="frame" x="165" y="71" width="53" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -312,6 +319,7 @@
                     <navigationItem key="navigationItem" id="oRb-ai-fdw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="scoreLbl" destination="2Mo-DW-nAP" id="SzS-aY-O8I"/>
                         <outlet property="staffImage" destination="JXv-9T-nBr" id="I4r-Hg-aZv"/>
                         <outlet property="staffSelector" destination="DUK-49-kbN" id="MoA-l5-NDb"/>
                     </connections>

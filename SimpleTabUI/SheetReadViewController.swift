@@ -10,7 +10,7 @@ import UIKit
 
 class SheetReadViewController: UIViewController {
     
-    //Variables
+    // Note Variables [Notes are uniquely identified by their NoteID. These match the answer button tags]
     var CnoteTr = StaffNote(NoteVal: "C", NoteID: 0, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Ctreble-1-1")!)
     var CnoteBa = StaffNote(NoteVal: "C", NoteID: 0, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Cbass2-1")!)
     //var CshDflote = StaffNote(NoteVal: "C#|Db", NoteID: 1, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Ctreble1")!)
@@ -30,8 +30,9 @@ class SheetReadViewController: UIViewController {
     //var BflAshnote = StaffNote(NoteVal: "Bb|A#", NoteID: 10, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Ctreble1")!)
     var BnoteTr = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Btreble-1-1")!)
     var BnoteBa = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Bbass1-1")!)
-    var randsel = Int.random(in: (0...6))
     
+    var randsel = Int.random(in: (0..<7))
+    var score = 0
     var trebleNotes: [StaffNote] = []
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
@@ -39,58 +40,56 @@ class SheetReadViewController: UIViewController {
     //Linked view objects
     @IBOutlet weak var staffImage: UIImageView!
     @IBOutlet weak var staffSelector: UISegmentedControl!
+    @IBOutlet weak var scoreLbl: UILabel!
     
+    
+    //Answer Buttons
+    @IBAction func Answer(_ sender: Any) {
+        
+        if (sender as AnyObject).tag == trebleNotes[randsel].NoteID{
+            print("Right")
+            score += 1
+            print("Score: ", score)
+        }
+        else{
+            print("Wrong")
+            print("Score: ", score)
+        }
+        
+        newQuestion()
+    }
+    
+    
+    //Segmented control update
     @IBAction func staffChange(_ sender: UISegmentedControl) {
         
         if staffSelector.selectedSegmentIndex == 0{
             randsel = Int.random(in: (0..<trebleNotes.count))
-           staffImage.image =  trebleNotes[randsel].image
-            print(trebleNotes[randsel].NoteVal!)
+            staffImage.image =  trebleNotes[randsel].image
+            print("Answer: ",trebleNotes[randsel].NoteVal!)
             
         } else if (staffSelector.selectedSegmentIndex == 1) {
             randsel = Int.random(in: (0..<bassNotes.count))
-           staffImage.image = bassNotes[randsel].image
-            print(bassNotes[randsel].NoteVal!)
+            staffImage.image = bassNotes[randsel].image
+            print("Answer: ",bassNotes[randsel].NoteVal!)
             
         }  else{
             //randsel = Int.random(in: (0..<grandNotes.count))
             staffImage.image = UIImage(named: "FullStaff")
-            
         }
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        newQuestion()
+    }
+    
+    
     override func viewDidLoad() {
         initStaffNotes()
-       // initBassNotes()
-        staffImage.image =  trebleNotes[randsel].image
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    /*Not Using*/
-    
-    //    func initStaffImages(){
-    //
-    //        if let path = Bundle.main.resourcePath {    //Access asset bundle
-    //            let imagePath = path   //location of images
-    //            let url = NSURL(fileURLWithPath: imagePath)
-    //            let imgfileManager = FileManager.default
-    //            //idk what this does yet
-    //            let properties = [URLResourceKey.localizedNameKey, URLResourceKey.creationDateKey,URLResourceKey.localizedTypeDescriptionKey]
-    //
-    //            do{
-    //                //load all filenames into an array?
-    //                let imageURLs = try imgfileManager.contentsOfDirectory(at: url as URL, includingPropertiesForKeys: properties, options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles )
-    //
-    //                print("image URLs \(imageURLs)")
-    //
-    //                //error handling
-    //            } catch let error as NSError{
-    //                print (error.description)
-    //            }
-    //
-    //        }
-    //    }
     
     func initStaffNotes(){
         //Add Treble notes to the array
@@ -112,6 +111,23 @@ class SheetReadViewController: UIViewController {
     }
     
     func newQuestion(){
+        //Display score
+        scoreLbl.text = String(score)
+        //Check which selector is in use
+        switch(staffSelector.selectedSegmentIndex){
+        case 0:
+            randsel = Int.random(in: 0..<trebleNotes.count)
+            staffImage.image =  trebleNotes[randsel].image
+            print("Answer: ",trebleNotes[randsel].NoteVal!)
+        case 1:
+            randsel = Int.random(in: 0..<bassNotes.count)
+            staffImage.image = bassNotes[randsel].image
+            print("Answer: ",bassNotes[randsel].NoteVal!)
+        case 2:
+             randsel = Int.random(in: 0..<grandNotes.count)
+        default:
+             randsel = 0
+        }
     }
    
   }

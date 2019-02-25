@@ -7,14 +7,181 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SecondViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
+    let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
+    
+    //Variables
+    var score:Int = 0
+    var audio = Int.random(in: 0...6)
+    var audioPlayerA = AVAudioPlayer()
+    var audioPlayerB = AVAudioPlayer()
+    var audioPlayerC = AVAudioPlayer()
+    var audioPlayerD = AVAudioPlayer()
+    var audioPlayerE = AVAudioPlayer()
+    var audioPlayerF = AVAudioPlayer()
+    var audioPlayerG = AVAudioPlayer()
+    
+    //Label
+    @IBOutlet weak var scoreLbl: UILabel!
+    
+    //Images
+    @IBOutlet weak var wrongImg: UIImageView!
+    @IBOutlet weak var rightImg: UIImageView!
+    
+    //Answer Button
+    @IBAction func Action(_ sender: Any)
+    {
+        if ((sender as AnyObject).tag == Int(audio))
+        {
+            self.(sender as AnyObject).backgroundColor = UIColor.green
+            print("Right")
+            
+            score += 1
+            updateScore()
+        }
+        else
+        {
+            wrongImg.isHidden = false
+            print("Wrong")
+        }
+        
+        newQuestion()
+        
     }
-
-
+    
+    //Play Button
+    @IBAction func Play(_ sender: Any)
+    {
+        switch audio
+        {
+        case 0: audioPlayerA.play()
+        case 1: audioPlayerB.play()
+        case 2: audioPlayerC.play()
+        case 3: audioPlayerD.play()
+        case 4: audioPlayerE.play()
+        case 5: audioPlayerF.play()
+        case 6: audioPlayerG.play()
+        default: print ("Audio button error")
+        }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        newQuestion()
+    }
+    
+    func updateScore()
+    {
+        scoreLbl?.text = "SCORE: \(score)"
+    }
+    
+    func newQuestion()
+    {
+        sleep(1)
+        wrongImg.isHidden = true
+        rightImg.isHidden = true
+        wrongImg.isHidden = false
+        rightImg.isHidden = false
+        audio = Int.random(in: 0...6)
+        switch audio
+        {
+        case 0: audioPlayerA.play()
+        case 1: audioPlayerB.play()
+        case 2: audioPlayerC.play()
+        case 3: audioPlayerD.play()
+        case 4: audioPlayerE.play()
+        case 5: audioPlayerF.play()
+        case 6: audioPlayerG.play()
+        default: print ("Audio button error")
+        }
+        print("Answer: ", audio)
+    }
+    
+    override func viewDidLoad()
+    {
+        wrongImg.isHidden = true
+        rightImg.isHidden = true
+        super.viewDidLoad()
+        updateScore()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        let soundA = Bundle.main.path(forResource: "A", ofType: "mp3")
+        let soundB = Bundle.main.path(forResource: "B", ofType: "mp3")
+        let soundC = Bundle.main.path(forResource: "C", ofType: "mp3")
+        let soundD = Bundle.main.path(forResource: "D", ofType: "mp3")
+        let soundE = Bundle.main.path(forResource: "E", ofType: "mp3")
+        let soundF = Bundle.main.path(forResource: "F", ofType: "mp3")
+        let soundG = Bundle.main.path(forResource: "G", ofType: "mp3")
+        
+        do
+        {
+            audioPlayerA = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundA!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerB = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundB!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerC = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundC!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerD = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundD!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerE = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundE!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerF = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundF!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerG = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundG!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+    }
+    
+    
 }
 

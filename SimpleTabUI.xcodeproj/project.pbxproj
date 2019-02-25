@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74B469E6221936FC0008BCB9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B469E5221936FC0008BCB9 /* AVFoundation.framework */; };
+		74B469EC221A3B5E0008BCB9 /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469EB221A3B5E0008BCB9 /* A.mp3 */; };
+		74B469F1221A3B750008BCB9 /* B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469ED221A3B740008BCB9 /* B.mp3 */; };
+		74B469F2221A3B750008BCB9 /* C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469EE221A3B740008BCB9 /* C.mp3 */; };
+		74B469F3221A3B750008BCB9 /* D.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469EF221A3B740008BCB9 /* D.mp3 */; };
+		74B469F4221A3B750008BCB9 /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469F0221A3B750008BCB9 /* E.mp3 */; };
+		74B469F7221A3B840008BCB9 /* G.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469F5221A3B830008BCB9 /* G.mp3 */; };
+		74B469F8221A3B840008BCB9 /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B469F6221A3B830008BCB9 /* F.mp3 */; };
 		7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */; };
 		7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA71E2215112400798814 /* AppDelegate.swift */; };
 		7CDBA7212215112400798814 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7202215112400798814 /* TunerViewController.swift */; };
@@ -16,6 +24,8 @@
 		7CDBA72B2215112700798814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBA7292215112700798814 /* LaunchScreen.storyboard */; };
 		7CDBA7362215112700798814 /* SimpleTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7352215112700798814 /* SimpleTabUITests.swift */; };
 		7CDBA7412215112700798814 /* SimpleTabUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */; };
+		7CDBDC332218C0C20078BA32 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBDC322218C0C20078BA32 /* StaffView.swift */; };
+		7CDBDC352218E51E0078BA32 /* ReadingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBDC342218E51E0078BA32 /* ReadingGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74B469E5221936FC0008BCB9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		74B469EB221A3B5E0008BCB9 /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
+		74B469ED221A3B740008BCB9 /* B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = B.mp3; sourceTree = "<group>"; };
+		74B469EE221A3B740008BCB9 /* C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C.mp3; sourceTree = "<group>"; };
+		74B469EF221A3B740008BCB9 /* D.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D.mp3; sourceTree = "<group>"; };
+		74B469F0221A3B750008BCB9 /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
+		74B469F5221A3B830008BCB9 /* G.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G.mp3; sourceTree = "<group>"; };
+		74B469F6221A3B830008BCB9 /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
 		7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetReadViewController.swift; sourceTree = "<group>"; };
 		7CDBA71B2215112400798814 /* SimpleTabUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTabUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA71E2215112400798814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +69,8 @@
 		7CDBA73C2215112700798814 /* SimpleTabUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTabUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabUIUITests.swift; sourceTree = "<group>"; };
 		7CDBA7422215112700798814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CDBDC322218C0C20078BA32 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
+		7CDBDC342218E51E0078BA32 /* ReadingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B469E6221936FC0008BCB9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74B469E4221936F10008BCB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74B469E5221936FC0008BCB9 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7CDBA7122215112400798814 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,14 @@
 				7CDBA7342215112700798814 /* SimpleTabUITests */,
 				7CDBA73F2215112700798814 /* SimpleTabUIUITests */,
 				7CDBA71C2215112400798814 /* Products */,
+				74B469EB221A3B5E0008BCB9 /* A.mp3 */,
+				74B469ED221A3B740008BCB9 /* B.mp3 */,
+				74B469EE221A3B740008BCB9 /* C.mp3 */,
+				74B469EF221A3B740008BCB9 /* D.mp3 */,
+				74B469F0221A3B750008BCB9 /* E.mp3 */,
+				74B469F6221A3B830008BCB9 /* F.mp3 */,
+				74B469F5221A3B830008BCB9 /* G.mp3 */,
+				74B469E4221936F10008BCB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +143,8 @@
 				7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */,
 				7CDBA7222215112400798814 /* EarTrainViewController.swift */,
 				7CDBA7242215112400798814 /* Main.storyboard */,
+				7CDBDC342218E51E0078BA32 /* ReadingGameViewController.swift */,
+				7CDBDC322218C0C20078BA32 /* StaffView.swift */,
 				7CDBA7272215112700798814 /* Assets.xcassets */,
 				7CDBA7292215112700798814 /* LaunchScreen.storyboard */,
 				7CDBA72C2215112700798814 /* Info.plist */,
@@ -235,9 +274,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B469F8221A3B840008BCB9 /* F.mp3 in Resources */,
+				74B469F7221A3B840008BCB9 /* G.mp3 in Resources */,
+				74B469F2221A3B750008BCB9 /* C.mp3 in Resources */,
 				7CDBA72B2215112700798814 /* LaunchScreen.storyboard in Resources */,
+				74B469F4221A3B750008BCB9 /* E.mp3 in Resources */,
+				74B469EC221A3B5E0008BCB9 /* A.mp3 in Resources */,
+				74B469F1221A3B750008BCB9 /* B.mp3 in Resources */,
 				7CDBA7282215112700798814 /* Assets.xcassets in Resources */,
 				7CDBA7262215112400798814 /* Main.storyboard in Resources */,
+				74B469F3221A3B750008BCB9 /* D.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */,
+				7CDBDC352218E51E0078BA32 /* ReadingGameViewController.swift in Sources */,
+				7CDBDC332218C0C20078BA32 /* StaffView.swift in Sources */,
 				7CDBA7232215112400798814 /* EarTrainViewController.swift in Sources */,
 				7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */,
 				7CDBA7212215112400798814 /* TunerViewController.swift in Sources */,
@@ -441,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3RMP5AJVM;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3RMP5AJVM;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (

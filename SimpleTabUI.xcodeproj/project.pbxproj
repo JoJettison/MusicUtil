@@ -18,6 +18,12 @@
 		7CDBA72B2215112700798814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBA7292215112700798814 /* LaunchScreen.storyboard */; };
 		7CDBA7362215112700798814 /* SimpleTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7352215112700798814 /* SimpleTabUITests.swift */; };
 		7CDBA7412215112700798814 /* SimpleTabUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */; };
+		7F2C21CD22248D4400F3FA02 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C21CA22248D4300F3FA02 /* Pitch.swift */; };
+		7F2C21CE22248D4400F3FA02 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C21CB22248D4300F3FA02 /* Note.swift */; };
+		7F2C21CF22248D4400F3FA02 /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C21CC22248D4400F3FA02 /* Tuner.swift */; };
+		7F2C21D622248DB800F3FA02 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C21D222248DB800F3FA02 /* KnobView.swift */; };
+		7F2C21D722248DB800F3FA02 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C21D322248DB800F3FA02 /* DisplayView.swift */; };
+		7F2C21D822248DB800F3FA02 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C21D422248DB800F3FA02 /* PlotView.swift */; };
 		D0B49A555A175D7DA8ABE5D4 /* Pods_SimpleTabUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF5BFEC73995E65B7466A5 /* Pods_SimpleTabUIUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		7CDBA73C2215112700798814 /* SimpleTabUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTabUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabUIUITests.swift; sourceTree = "<group>"; };
 		7CDBA7422215112700798814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F2C21CA22248D4300F3FA02 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
+		7F2C21CB22248D4300F3FA02 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		7F2C21CC22248D4400F3FA02 /* Tuner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuner.swift; sourceTree = "<group>"; };
+		7F2C21D222248DB800F3FA02 /* KnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
+		7F2C21D322248DB800F3FA02 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
+		7F2C21D422248DB800F3FA02 /* PlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
 		82AF5BFEC73995E65B7466A5 /* Pods_SimpleTabUIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTabUIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92452D079EC25117FCFC31D4 /* Pods-SimpleTabUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUI.debug.xcconfig"; path = "Target Support Files/Pods-SimpleTabUI/Pods-SimpleTabUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B40FFF549743D513AD5782CB /* Pods-SimpleTabUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUIUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleTabUIUITests/Pods-SimpleTabUIUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +125,6 @@
 				51F30D3050CFD87C069E5904 /* Pods-SimpleTabUIUITests.debug.xcconfig */,
 				B40FFF549743D513AD5782CB /* Pods-SimpleTabUIUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				7CDBA71E2215112400798814 /* AppDelegate.swift */,
+				7F2C21E12224978300F3FA02 /* TunerUI */,
+				7F2C21E2222497B900F3FA02 /* TunerLogic */,
 				7CDBA7202215112400798814 /* TunerViewController.swift */,
 				7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */,
 				7CDBA7222215112400798814 /* EarTrainViewController.swift */,
@@ -170,6 +183,26 @@
 				7CDBA7422215112700798814 /* Info.plist */,
 			);
 			path = SimpleTabUIUITests;
+			sourceTree = "<group>";
+		};
+		7F2C21E12224978300F3FA02 /* TunerUI */ = {
+			isa = PBXGroup;
+			children = (
+				7F2C21D422248DB800F3FA02 /* PlotView.swift */,
+				7F2C21D322248DB800F3FA02 /* DisplayView.swift */,
+				7F2C21D222248DB800F3FA02 /* KnobView.swift */,
+			);
+			path = TunerUI;
+			sourceTree = "<group>";
+		};
+		7F2C21E2222497B900F3FA02 /* TunerLogic */ = {
+			isa = PBXGroup;
+			children = (
+				7F2C21CB22248D4300F3FA02 /* Note.swift */,
+				7F2C21CA22248D4300F3FA02 /* Pitch.swift */,
+				7F2C21CC22248D4400F3FA02 /* Tuner.swift */,
+			);
+			path = TunerLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +434,13 @@
 				7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */,
 				7CDBA7232215112400798814 /* EarTrainViewController.swift in Sources */,
 				7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */,
+				7F2C21D722248DB800F3FA02 /* DisplayView.swift in Sources */,
 				7CDBA7212215112400798814 /* TunerViewController.swift in Sources */,
+				7F2C21CF22248D4400F3FA02 /* Tuner.swift in Sources */,
+				7F2C21CD22248D4400F3FA02 /* Pitch.swift in Sources */,
+				7F2C21D622248DB800F3FA02 /* KnobView.swift in Sources */,
+				7F2C21D822248DB800F3FA02 /* PlotView.swift in Sources */,
+				7F2C21CE22248D4400F3FA02 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,13 +617,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RN39GLGFX;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mycSproj.SimpleTabUI;
+				PRODUCT_BUNDLE_IDENTIFIER = mycSproj.SimpleTabUI1234321;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -597,13 +637,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RN39GLGFX;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mycSproj.SimpleTabUI;
+				PRODUCT_BUNDLE_IDENTIFIER = mycSproj.SimpleTabUI1234321;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

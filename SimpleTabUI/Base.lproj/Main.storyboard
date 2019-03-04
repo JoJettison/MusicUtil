@@ -63,25 +63,6 @@
                                     <segment title="Flat"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3CI-Dv-ecy">
-                                <rect key="frame" x="140" y="178" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nb0-bK-vLj">
-                                <rect key="frame" x="98" y="237" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <state key="normal" title="A">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Gnn-rb-dKz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVo-Tm-rnu">
                                 <rect key="frame" x="162" y="237" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -162,6 +143,25 @@
                                     <action selector="Play:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hqR-eM-bhY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWa-ek-r7e">
+                                <rect key="frame" x="149" y="160" width="77" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-nS-oXK">
+                                <rect key="frame" x="98" y="237" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="v25-WT-4OI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -171,6 +171,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ear Train" image="EarIcon" landscapeImage="EarIcon" selectedImage="EarIcon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="scoreLbl" destination="pWa-ek-r7e" id="Crb-3M-4Ys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,33 +193,79 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="mea-xr-Xkc" appends="YES" id="S8l-ya-09U"/>
-                                </connections>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDr-Jo-SRs">
+                                <rect key="frame" x="0.0" y="271" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Staff Selection"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7U3-td-KMW">
+                                <rect key="frame" x="153.5" y="495" width="68" height="40"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="24"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zca-t4-oKZ" kind="show" id="zfX-wo-bYo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4pe-2o-Pl7" firstAttribute="centerY" secondItem="1E6-98-glr" secondAttribute="centerY" constant="-292" id="C1R-0b-xBR"/>
                             <constraint firstItem="4pe-2o-Pl7" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="Hy1-kE-No4"/>
+                            <constraint firstItem="7U3-td-KMW" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="dub-ra-Gb1"/>
+                            <constraint firstItem="7U3-td-KMW" firstAttribute="centerY" secondItem="1E6-98-glr" secondAttribute="centerY" constant="181.5" id="ob5-aC-Kdw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S9L-eC-aZv"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="mea-xr-Xkc" appends="YES" id="lBv-Sd-jXT"/>
-                            <outletCollection property="gestureRecognizers" destination="mea-xr-Xkc" appends="YES" id="8t4-OT-Q2T"/>
-                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sight Read" image="SightIcon" landscapeImage="SightIcon" selectedImage="SightIcon" id="4Qe-fo-sLc"/>
+                    <navigationItem key="navigationItem" id="oRb-ai-fdw"/>
+                    <connections>
+                        <outlet property="StaffPicker" destination="XDr-Jo-SRs" id="ShG-Os-8ab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C72-fR-ADO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="mea-xr-Xkc">
-                    <connections>
-                        <action selector="didTap:" destination="Niv-tJ-KfG" id="FPk-Ye-aDh"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="751" y="1073"/>
+            <point key="canvasLocation" x="1688.8" y="1072.7136431784108"/>
+        </scene>
+        <!--Reading Game Controller-->
+        <scene sceneID="PNF-dR-sV6">
+            <objects>
+                <viewController id="zca-t4-oKZ" userLabel="Reading Game Controller" customClass="ReadingGameViewController" customModule="SimpleTabUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fs-He-AFD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cho-2S-16f">
+                                <rect key="frame" x="145" y="64" width="85" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="TrebleStaff" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
+                                <rect key="frame" x="67" y="176" width="287" height="160"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88764977331606221" green="0.88764977331606221" blue="0.88764977331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="1fs-He-AFD" secondAttribute="centerX" id="OMt-Bo-Dm4"/>
+                            <constraint firstItem="Cho-2S-16f" firstAttribute="centerX" secondItem="JXv-9T-nBr" secondAttribute="centerX" constant="-23" id="Sfu-7J-o0D"/>
+                            <constraint firstItem="JXv-9T-nBr" firstAttribute="top" secondItem="Cho-2S-16f" secondAttribute="bottom" constant="71" id="VXl-h5-TfG"/>
+                            <constraint firstItem="Cho-2S-16f" firstAttribute="top" secondItem="LYi-Yj-kv1" secondAttribute="top" id="af2-Cn-iEF"/>
+                            <constraint firstItem="JXv-9T-nBr" firstAttribute="leading" secondItem="LYi-Yj-kv1" secondAttribute="leading" constant="67" id="cvo-xw-OsP"/>
+                            <constraint firstItem="LYi-Yj-kv1" firstAttribute="bottom" secondItem="JXv-9T-nBr" secondAttribute="bottom" constant="282" id="z3d-aZ-YFy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LYi-Yj-kv1"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLbl" destination="Cho-2S-16f" id="ALN-r7-1M7"/>
+                        <outlet property="staffImage" destination="JXv-9T-nBr" id="3OQ-qc-qsc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fz4-Oy-R7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2516" y="1077.2113943028487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -232,17 +281,37 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Niv-tJ-KfG" kind="relationship" relationship="viewControllers" id="uRU-mv-Qs2"/>
+                        <segue destination="wp8-aR-hJz" kind="relationship" relationship="viewControllers" id="uRU-mv-Qs2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--Sight Read-->
+        <scene sceneID="Qbk-yw-iz5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wp8-aR-hJz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sight Read" image="SightIcon" landscapeImage="SightIcon" selectedImage="SightIcon" id="4Qe-fo-sLc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGX-gm-Hk4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Niv-tJ-KfG" kind="relationship" relationship="rootViewController" id="3Ln-II-CWA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeW-ZH-Ye6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="1072.7136431784108"/>
+        </scene>
     </scenes>
     <resources>
         <image name="EarIcon" width="30" height="30"/>
         <image name="SightIcon" width="30" height="30"/>
+        <image name="TrebleStaff" width="559.5" height="251.25"/>
         <image name="TuneIcon" width="30" height="30"/>
     </resources>
 </document>

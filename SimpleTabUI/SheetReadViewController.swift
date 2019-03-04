@@ -33,6 +33,8 @@ class SheetReadViewController: UIViewController {
     
     var randsel = Int.random(in: (0..<7))
     var score = 0
+    var cycle = 0
+    var hasSwitched = false
     var trebleNotes: [StaffNote] = []
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
@@ -110,9 +112,40 @@ class SheetReadViewController: UIViewController {
         bassNotes.append(GnoteBa)
     }
     
+    func imgSwitcher(){
+           if (!hasSwitched){
+                CnoteTr.image = UIImage(named: "Ctreble-2-1")
+                CnoteBa.image = UIImage(named: "Cbass1-1")
+                DnoteTr.image = UIImage(named: "Dtreble-2-1")
+                EnoteTr.image = UIImage(named: "Etreble-2-1")
+                EnoteBa.image = UIImage(named: "Ebass-1")
+                FnoteBa.image = UIImage(named: "Fbass2-1")
+                GnoteTr.image = UIImage(named:"Gtreble-2-1")
+                GnoteBa.image = UIImage(named: "Gbass1-1")
+                AnoteBa.image = UIImage(named: "Abass2-1")
+                BnoteBa.image = UIImage(named: "Bbass2-1")
+                hasSwitched = true
+            }
+            else{
+                CnoteTr.image = UIImage(named: "Ctreble-1-1")
+                CnoteBa.image = UIImage(named: "Cbass2-1")
+                DnoteTr.image = UIImage(named: "Dtreble-1-1")
+                EnoteTr.image = UIImage(named: "Etreble-1-1")
+                EnoteBa.image = UIImage(named: "Ebass-2-1")
+                FnoteBa.image = UIImage(named: "Fbass1-1")
+                GnoteTr.image = UIImage(named:"Gtreble-1-1")
+                GnoteBa.image = UIImage(named: "Gbass2-1")
+                AnoteBa.image = UIImage(named: "Abass1-1")
+                BnoteBa.image = UIImage(named: "Bbass1-1")
+                hasSwitched = false
+            }
+    }
+
+    
     func newQuestion(){
         //Display score
         scoreLbl.text = String(score)
+        cycle += 1
         //Check which selector is in use
         switch(staffSelector.selectedSegmentIndex){
         case 0:
@@ -127,6 +160,9 @@ class SheetReadViewController: UIViewController {
              randsel = Int.random(in: 0..<grandNotes.count)
         default:
              randsel = 0
+        }
+        if(cycle % 5 == 0){
+            imgSwitcher()
         }
     }
    

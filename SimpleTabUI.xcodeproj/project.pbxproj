@@ -38,7 +38,7 @@
 		7CD9D0612221EF4C007A783F /* Ftreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D0552221EF4C007A783F /* Ftreble-1-1.png */; };
 		7CD9D06322222F85007A783F /* StaffNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD9D06222222F84007A783F /* StaffNote.swift */; };
 		7CD9D06522226A6E007A783F /* Dtreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D06422226A6D007A783F /* Dtreble-1-1.png */; };
-		7CD9D06722226A8A007A783F /* Dtreble2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D06622226A89007A783F /* Dtreble2-1.png */; };
+		7CD9D06722226A8A007A783F /* Dtreble-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D06622226A89007A783F /* Dtreble-2-1.png */; };
 		7CD9D06922226B66007A783F /* Etreble-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D06822226B66007A783F /* Etreble-1-1.png */; };
 		7CD9D06B22226BD4007A783F /* Gtreble-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D06A22226BD3007A783F /* Gtreble-2-1.png */; };
 		7CDB6EE12217C44000DF57EB /* SheetReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */; };
@@ -102,7 +102,7 @@
 		7CD9D0552221EF4C007A783F /* Ftreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ftreble-1-1.png"; sourceTree = "<group>"; };
 		7CD9D06222222F84007A783F /* StaffNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffNote.swift; sourceTree = "<group>"; };
 		7CD9D06422226A6D007A783F /* Dtreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dtreble-1-1.png"; sourceTree = "<group>"; };
-		7CD9D06622226A89007A783F /* Dtreble2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dtreble2-1.png"; sourceTree = "<group>"; };
+		7CD9D06622226A89007A783F /* Dtreble-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dtreble-2-1.png"; sourceTree = "<group>"; };
 		7CD9D06822226B66007A783F /* Etreble-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Etreble-1-1.png"; sourceTree = "<group>"; };
 		7CD9D06A22226BD3007A783F /* Gtreble-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gtreble-2-1.png"; sourceTree = "<group>"; };
 		7CDB6EE02217C44000DF57EB /* SheetReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetReadViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 				7CD9D04C2221EF49007A783F /* Ctreble-2-1.png */,
 				7CD9D04F2221EF4A007A783F /* Ctreble-1-1.png */,
 				7CD9D06422226A6D007A783F /* Dtreble-1-1.png */,
-				7CD9D06622226A89007A783F /* Dtreble2-1.png */,
+				7CD9D06622226A89007A783F /* Dtreble-2-1.png */,
 				7CD9D06822226B66007A783F /* Etreble-1-1.png */,
 				7CD9D0542221EF4B007A783F /* Etreble-2-1.png */,
 				7CD9D0552221EF4C007A783F /* Ftreble-1-1.png */,
@@ -400,7 +400,7 @@
 				7CD9D0482221EF1D007A783F /* Ebass2-1.png in Resources */,
 				7CD9D03D2221EF1D007A783F /* Cbass2-1.png in Resources */,
 				7CD9D06922226B66007A783F /* Etreble-1-1.png in Resources */,
-				7CD9D06722226A8A007A783F /* Dtreble2-1.png in Resources */,
+				7CD9D06722226A8A007A783F /* Dtreble-2-1.png in Resources */,
 				7CD9D03F2221EF1D007A783F /* Bbass1-1.png in Resources */,
 				7CD9D0452221EF1D007A783F /* Fbass1-1.png in Resources */,
 				7CD9D0442221EF1D007A783F /* Ebass-1.png in Resources */,
@@ -613,14 +613,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R3RMP5AJVM;
+				DEVELOPMENT_TEAM = CG2H8JGRK6;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mycSproj.SimpleTabUI;
+				PRODUCT_BUNDLE_IDENTIFIER = mycSprolj.SimpleTabUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -632,14 +632,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R3RMP5AJVM;
+				DEVELOPMENT_TEAM = CG2H8JGRK6;
 				INFOPLIST_FILE = SimpleTabUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mycSproj.SimpleTabUI;
+				PRODUCT_BUNDLE_IDENTIFIER = mycSprolj.SimpleTabUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

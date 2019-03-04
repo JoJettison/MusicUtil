@@ -11,12 +11,11 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    let questions = ["Answer = A", "Answer = B", "Answer = C", "Answer = D", "Answer = E", "Answer = F", "Answer = G"]
     let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
     let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
     
     //Variables
-    var score = 0
+    var score:Int = 0
     var audio = Int.random(in: 0...6)
     var audioPlayerA = AVAudioPlayer()
     var audioPlayerB = AVAudioPlayer()
@@ -27,26 +26,29 @@ class SecondViewController: UIViewController {
     var audioPlayerG = AVAudioPlayer()
     
     //Label
-    @IBOutlet weak var lbl: UILabel!
+    @IBOutlet weak var scoreLbl: UILabel!
     
     //Answer Button
-    @IBAction func Action(_ sender: Any)
+    @IBAction func Action(_ sender: UIButton)
     {
         if ((sender as AnyObject).tag == Int(audio))
         {
+            sender.backgroundColor = UIColor.green
             print("Right")
+            
             score += 1
-            print("Score: ", score)
+            updateScore()
         }
         else
         {
+            sender.backgroundColor = UIColor.red
             print("Wrong")
-            print("Score: ", score)
         }
         
         newQuestion()
         
     }
+    
     
     //Play Button
     @IBAction func Play(_ sender: Any)
@@ -70,16 +72,33 @@ class SecondViewController: UIViewController {
         newQuestion()
     }
     
+    func updateScore()
+    {
+        scoreLbl?.text = "SCORE: \(score)"
+    }
+    
     func newQuestion()
     {
-        //lbl.text = String(score)
+        sleep(1)
         audio = Int.random(in: 0...6)
+        switch audio
+        {
+        case 0: audioPlayerA.play()
+        case 1: audioPlayerB.play()
+        case 2: audioPlayerC.play()
+        case 3: audioPlayerD.play()
+        case 4: audioPlayerE.play()
+        case 5: audioPlayerF.play()
+        case 6: audioPlayerG.play()
+        default: print ("Audio button error")
+        }
         print("Answer: ", audio)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        updateScore()
         // Do any additional setup after loading the view, typically from a nib.
         
         let soundA = Bundle.main.path(forResource: "A", ofType: "mp3")

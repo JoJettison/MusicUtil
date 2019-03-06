@@ -50,7 +50,6 @@
 		7F088EA2222DCC48009B4592 /* icons8-checked-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E7F222DCC47009B4592 /* icons8-checked-30.png */; };
 		7F088EA3222DCC48009B4592 /* icons8-cancel-30-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E80222DCC47009B4592 /* icons8-cancel-30-2.png */; };
 		7F088EA4222DCC48009B4592 /* B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E81222DCC47009B4592 /* B.mp3 */; };
-		7F088EA5222DCC48009B4592 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E82222DCC47009B4592 /* README.txt */; };
 		7F088EA6222DCC48009B4592 /* D.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E83222DCC47009B4592 /* D.mp3 */; };
 		7F088EA7222DCC48009B4592 /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E84222DCC48009B4592 /* A.mp3 */; };
 		7F088EA8222DCC48009B4592 /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E85222DCC48009B4592 /* F.mp3 */; };
@@ -86,17 +85,17 @@
 		51F30D3050CFD87C069E5904 /* Pods-SimpleTabUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleTabUIUITests/Pods-SimpleTabUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7016B3F8DF96C708D46D128B /* Pods-SimpleTabUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUI.release.xcconfig"; path = "Target Support Files/Pods-SimpleTabUI/Pods-SimpleTabUI.release.xcconfig"; sourceTree = "<group>"; };
 		70B353B31C80C1EF8922DFAC /* Pods-SimpleTabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleTabUITests/Pods-SimpleTabUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7CDBA71B2215112400798814 /* SimpleTabUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTabUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDBA71B2215112400798814 /* MusicUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA71E2215112400798814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDBA7202215112400798814 /* TunerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerViewController.swift; sourceTree = "<group>"; };
 		7CDBA7252215112400798814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CDBA7272215112700798814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CDBA72A2215112700798814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CDBA72C2215112700798814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CDBA7312215112700798814 /* SimpleTabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDBA7312215112700798814 /* MusicUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicUtilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA7352215112700798814 /* SimpleTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabUITests.swift; sourceTree = "<group>"; };
 		7CDBA7372215112700798814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CDBA73C2215112700798814 /* SimpleTabUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTabUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDBA73C2215112700798814 /* MusicUtilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicUtilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDBA7402215112700798814 /* SimpleTabUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabUIUITests.swift; sourceTree = "<group>"; };
 		7CDBA7422215112700798814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F088E59222DCB37009B4592 /* StaffNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffNote.swift; sourceTree = "<group>"; };
@@ -133,7 +132,6 @@
 		7F088E7F222DCC47009B4592 /* icons8-checked-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-checked-30.png"; sourceTree = "<group>"; };
 		7F088E80222DCC47009B4592 /* icons8-cancel-30-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-30-2.png"; sourceTree = "<group>"; };
 		7F088E81222DCC47009B4592 /* B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = B.mp3; sourceTree = "<group>"; };
-		7F088E82222DCC47009B4592 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = "../MusicUtil-dev/README.txt"; sourceTree = "<group>"; };
 		7F088E83222DCC47009B4592 /* D.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D.mp3; sourceTree = "<group>"; };
 		7F088E84222DCC48009B4592 /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
 		7F088E85222DCC48009B4592 /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 				7F088E7E222DCC47009B4592 /* G.mp3 */,
 				7F088E80222DCC47009B4592 /* icons8-cancel-30-2.png */,
 				7F088E7F222DCC47009B4592 /* icons8-checked-30.png */,
-				7F088E82222DCC47009B4592 /* README.txt */,
 				1140867BD3A58675CBD024DF /* Frameworks */,
 				35F0604E2CD53D171C439E48 /* Pods */,
 				7CDBA71C2215112400798814 /* Products */,
@@ -228,9 +225,9 @@
 		7CDBA71C2215112400798814 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7CDBA71B2215112400798814 /* SimpleTabUI.app */,
-				7CDBA7312215112700798814 /* SimpleTabUITests.xctest */,
-				7CDBA73C2215112700798814 /* SimpleTabUIUITests.xctest */,
+				7CDBA71B2215112400798814 /* MusicUtil.app */,
+				7CDBA7312215112700798814 /* MusicUtilTests.xctest */,
+				7CDBA73C2215112700798814 /* MusicUtilUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7CDBA71A2215112400798814 /* SimpleTabUI */ = {
+		7CDBA71A2215112400798814 /* MusicUtil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CDBA7452215112700798814 /* Build configuration list for PBXNativeTarget "SimpleTabUI" */;
+			buildConfigurationList = 7CDBA7452215112700798814 /* Build configuration list for PBXNativeTarget "MusicUtil" */;
 			buildPhases = (
 				FDB2C5AB14A7C1F9C32C6101 /* [CP] Check Pods Manifest.lock */,
 				7CDBA7172215112400798814 /* Sources */,
@@ -357,14 +354,14 @@
 			);
 			dependencies = (
 			);
-			name = SimpleTabUI;
+			name = MusicUtil;
 			productName = SimpleTabUI;
-			productReference = 7CDBA71B2215112400798814 /* SimpleTabUI.app */;
+			productReference = 7CDBA71B2215112400798814 /* MusicUtil.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7CDBA7302215112700798814 /* SimpleTabUITests */ = {
+		7CDBA7302215112700798814 /* MusicUtilTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CDBA7482215112700798814 /* Build configuration list for PBXNativeTarget "SimpleTabUITests" */;
+			buildConfigurationList = 7CDBA7482215112700798814 /* Build configuration list for PBXNativeTarget "MusicUtilTests" */;
 			buildPhases = (
 				CE092DDA4FBA3CA781E7B4F9 /* [CP] Check Pods Manifest.lock */,
 				7CDBA72D2215112700798814 /* Sources */,
@@ -376,14 +373,14 @@
 			dependencies = (
 				7CDBA7332215112700798814 /* PBXTargetDependency */,
 			);
-			name = SimpleTabUITests;
+			name = MusicUtilTests;
 			productName = SimpleTabUITests;
-			productReference = 7CDBA7312215112700798814 /* SimpleTabUITests.xctest */;
+			productReference = 7CDBA7312215112700798814 /* MusicUtilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7CDBA73B2215112700798814 /* SimpleTabUIUITests */ = {
+		7CDBA73B2215112700798814 /* MusicUtilUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CDBA74B2215112700798814 /* Build configuration list for PBXNativeTarget "SimpleTabUIUITests" */;
+			buildConfigurationList = 7CDBA74B2215112700798814 /* Build configuration list for PBXNativeTarget "MusicUtilUITests" */;
 			buildPhases = (
 				EEFF1077D7002F836B9C5125 /* [CP] Check Pods Manifest.lock */,
 				7CDBA7382215112700798814 /* Sources */,
@@ -395,9 +392,9 @@
 			dependencies = (
 				7CDBA73E2215112700798814 /* PBXTargetDependency */,
 			);
-			name = SimpleTabUIUITests;
+			name = MusicUtilUITests;
 			productName = SimpleTabUIUITests;
-			productReference = 7CDBA73C2215112700798814 /* SimpleTabUIUITests.xctest */;
+			productReference = 7CDBA73C2215112700798814 /* MusicUtilUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -423,7 +420,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7CDBA7162215112400798814 /* Build configuration list for PBXProject "SimpleTabUI" */;
+			buildConfigurationList = 7CDBA7162215112400798814 /* Build configuration list for PBXProject "MusicUtil" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -436,9 +433,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7CDBA71A2215112400798814 /* SimpleTabUI */,
-				7CDBA7302215112700798814 /* SimpleTabUITests */,
-				7CDBA73B2215112700798814 /* SimpleTabUIUITests */,
+				7CDBA71A2215112400798814 /* MusicUtil */,
+				7CDBA7302215112700798814 /* MusicUtilTests */,
+				7CDBA73B2215112700798814 /* MusicUtilUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -468,7 +465,6 @@
 				7F088E90222DCC48009B4592 /* Etreble-1-1.png in Resources */,
 				7F088EA0222DCC48009B4592 /* C.mp3 in Resources */,
 				7F088E89222DCC48009B4592 /* Dtreble-1-1.png in Resources */,
-				7F088EA5222DCC48009B4592 /* README.txt in Resources */,
 				7F088E8F222DCC48009B4592 /* Atreble-1-1.png in Resources */,
 				7CDBA7262215112400798814 /* Main.storyboard in Resources */,
 				7F088E98222DCC48009B4592 /* Fbass1-1.png in Resources */,
@@ -637,12 +633,12 @@
 /* Begin PBXTargetDependency section */
 		7CDBA7332215112700798814 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7CDBA71A2215112400798814 /* SimpleTabUI */;
+			target = 7CDBA71A2215112400798814 /* MusicUtil */;
 			targetProxy = 7CDBA7322215112700798814 /* PBXContainerItemProxy */;
 		};
 		7CDBA73E2215112700798814 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7CDBA71A2215112400798814 /* SimpleTabUI */;
+			target = 7CDBA71A2215112400798814 /* MusicUtil */;
 			targetProxy = 7CDBA73D2215112700798814 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -840,7 +836,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleTabUI.app/SimpleTabUI";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicUtil.app/MusicUtil";
 			};
 			name = Debug;
 		};
@@ -861,7 +857,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleTabUI.app/SimpleTabUI";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicUtil.app/MusicUtil";
 			};
 			name = Release;
 		};
@@ -908,7 +904,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7CDBA7162215112400798814 /* Build configuration list for PBXProject "SimpleTabUI" */ = {
+		7CDBA7162215112400798814 /* Build configuration list for PBXProject "MusicUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CDBA7432215112700798814 /* Debug */,
@@ -917,7 +913,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CDBA7452215112700798814 /* Build configuration list for PBXNativeTarget "SimpleTabUI" */ = {
+		7CDBA7452215112700798814 /* Build configuration list for PBXNativeTarget "MusicUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CDBA7462215112700798814 /* Debug */,
@@ -926,7 +922,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CDBA7482215112700798814 /* Build configuration list for PBXNativeTarget "SimpleTabUITests" */ = {
+		7CDBA7482215112700798814 /* Build configuration list for PBXNativeTarget "MusicUtilTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CDBA7492215112700798814 /* Debug */,
@@ -935,7 +931,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CDBA74B2215112700798814 /* Build configuration list for PBXNativeTarget "SimpleTabUIUITests" */ = {
+		7CDBA74B2215112700798814 /* Build configuration list for PBXNativeTarget "MusicUtilUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CDBA74C2215112700798814 /* Debug */,

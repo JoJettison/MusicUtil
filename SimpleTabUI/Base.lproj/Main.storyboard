@@ -13,24 +13,11 @@
         <!--Tuner View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="Tuner View Controller" customClass="FirstViewController" customModule="SimpleTabUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="Tuner View Controller" customClass="FirstViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Tuner" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="144.5" y="20" width="86.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="292" id="exm-UA-ej4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tuner" image="TuneIcon" selectedImage="TuneIcon" id="acW-dT-cKf"/>
@@ -42,18 +29,11 @@
         <!--Ear View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="Ear View Controller" customClass="SecondViewController" customModule="SimpleTabUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" userLabel="Ear View Controller" customClass="SecondViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Ear Training" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="98" y="20" width="179.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-ol-LCe">
                                 <rect key="frame" x="88" y="465" width="201" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,10 +144,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" constant="292" id="qzY-Ky-pLD"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ear Train" image="EarIcon" landscapeImage="EarIcon" selectedImage="EarIcon" id="cPa-gy-q4n"/>
@@ -182,18 +158,11 @@
         <!--Sight Read Controller-->
         <scene sceneID="B1X-VG-YVM">
             <objects>
-                <viewController id="Niv-tJ-KfG" userLabel="Sight Read Controller" customClass="SheetReadViewController" customModule="SimpleTabUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Niv-tJ-KfG" userLabel="Sight Read Controller" customClass="SheetReadViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1E6-98-glr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sight Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pe-2o-Pl7">
-                                <rect key="frame" x="94.5" y="23" width="186" height="37"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-9T-nBr">
                                 <rect key="frame" x="60" y="105" width="263" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -274,6 +243,7 @@
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Vfv-wk-1yR"/>
                                     <action selector="Answer:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="NQR-Ks-niX"/>
+                                    <action selector="Lblswitch:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="08p-aN-abB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Si-B7-ace">
@@ -312,16 +282,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="4pe-2o-Pl7" firstAttribute="centerY" secondItem="1E6-98-glr" secondAttribute="centerY" constant="-292" id="C1R-0b-xBR"/>
-                            <constraint firstItem="4pe-2o-Pl7" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="Hy1-kE-No4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S9L-eC-aZv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sight Reading" image="SightIcon" selectedImage="SightIcon" id="DKs-AF-3Fm"/>
                     <navigationItem key="navigationItem" id="oRb-ai-fdw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="Abutton" destination="Z08-nx-bv8" id="kDm-Bo-Jp2"/>
+                        <outlet property="Bbutton" destination="cxp-bV-AaH" id="zHa-p5-jgu"/>
+                        <outlet property="Cbutton" destination="z0B-eW-BhJ" id="hkk-zD-dKK"/>
+                        <outlet property="Dbutton" destination="2Wg-6N-KfI" id="y54-nl-BjE"/>
+                        <outlet property="Ebutton" destination="IY3-Lq-U7h" id="IoX-Ou-SYc"/>
+                        <outlet property="Fbutton" destination="2Si-B7-ace" id="IOS-e4-cJt"/>
+                        <outlet property="Gbutton" destination="Isa-Oc-cT5" id="oBT-xx-gF6"/>
                         <outlet property="scoreLbl" destination="2Mo-DW-nAP" id="SzS-aY-O8I"/>
                         <outlet property="staffImage" destination="JXv-9T-nBr" id="I4r-Hg-aZv"/>
                         <outlet property="staffSelector" destination="DUK-49-kbN" id="MoA-l5-NDb"/>

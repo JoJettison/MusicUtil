@@ -55,6 +55,7 @@ class SheetReadViewController: UIViewController {
     
     var randsel = Int.random(in: (0..<7))
     var score = 0
+    var lifecount = 3
     var cycle = 0
     var hasSwitched = false
     var trebleNotes: [StaffNote] = []
@@ -66,6 +67,7 @@ class SheetReadViewController: UIViewController {
     @IBOutlet weak var staffImage: UIImageView!
     @IBOutlet weak var staffSelector: UISegmentedControl!
     @IBOutlet weak var scoreLbl: UILabel!
+    @IBOutlet weak var lifeLbl: UILabel!
     
     @IBOutlet weak var Abutton: UIButton!
     @IBOutlet weak var Bbutton: UIButton!
@@ -85,9 +87,17 @@ class SheetReadViewController: UIViewController {
         }
         else{
             print("Wrong")
+            lifecount -= 1
             print("Score: ", score)
+            print("life: ", lifecount)
+            if(lifecount == 0){
+               lifeLbl.text = "Game over, highest score: \(score)"
+                
+                lifecount = 3;
+                score = 0;
+            }
         }
-        
+        sleep(1)
         newQuestion()
     }
     
@@ -209,6 +219,7 @@ class SheetReadViewController: UIViewController {
     func newQuestion(){
         //Display score
         scoreLbl.text = "Score: \(score)"
+        lifeLbl.text = "Life:  \(lifecount)"
         cycle += 1
         //Check which selector is in use
         switch(staffSelector.selectedSegmentIndex){

@@ -208,7 +208,7 @@ class SheetReadViewController: UIViewController {
     
     func newQuestion(){
         //Display score
-        scoreLbl.text = "Score: \(String(describing: scoreLbl))"
+        scoreLbl.text = "Score: \(score)"
         cycle += 1
         //Check which selector is in use
         switch(staffSelector.selectedSegmentIndex){

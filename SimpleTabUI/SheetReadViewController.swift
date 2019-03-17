@@ -53,8 +53,11 @@ class SheetReadViewController: UIViewController {
     var BflTr = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bfltreble-1-1")!)
     var Bflba = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bflbass1-1")!)
     
+    
+    // initialize utility variables
     var randsel = Int.random(in: (0..<7))
     var score = 0
+    var highscore = 0
     var lifecount = 3
     var cycle = 0
     var hasSwitched = false
@@ -157,7 +160,7 @@ class SheetReadViewController: UIViewController {
         bassNotes.append(GnoteBa)
     }
     
-    func imgSwitcher(){
+    func imgSwitcher(){ //Used to switch the image associated with the Note variable
            if (!hasSwitched){
                 CnoteTr.image = UIImage(named: "Ctreble-2-1")
                 CnoteBa.image = UIImage(named: "Cbass1-1")
@@ -184,6 +187,14 @@ class SheetReadViewController: UIViewController {
                 BnoteBa.image = UIImage(named: "Bbass1-1")
                 hasSwitched = false
             }
+    }
+    
+    func highScoreUpdate() {
+        
+        if(score > highscore){
+            highscore = score
+            //highscorelbl.Text = highscore
+        }
     }
     
     func accidCheck(){
@@ -219,6 +230,7 @@ class SheetReadViewController: UIViewController {
     func newQuestion(){
         //Display score
         scoreLbl.text = "Score: \(score)"
+        //Display lives
         lifeLbl.text = "Lives:  \(lifecount)"
         cycle += 1
         //Check which selector is in use
@@ -236,7 +248,7 @@ class SheetReadViewController: UIViewController {
         default:
              randsel = 0
         }
-        if(cycle % 5 == 0){
+        if(cycle % 5 == 0){ //Change up the images so its not the same sequence endlessly
             imgSwitcher()
         }
     }

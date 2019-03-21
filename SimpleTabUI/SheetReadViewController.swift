@@ -150,6 +150,16 @@ class SheetReadViewController: UIViewController {
         trebleNotes.append(EnoteTr)
         trebleNotes.append(FnoteTr)
         trebleNotes.append(GnoteTr)
+        
+        trebleNotes.append(AshTr)
+        trebleNotes.append(AflTr)
+        trebleNotes.append(BflTr)
+        trebleNotes.append(CshTr)
+        trebleNotes.append(DshTr)
+        trebleNotes.append(EflTr)
+        trebleNotes.append(FshTr)
+        trebleNotes.append(GshTr)
+        trebleNotes.append(GflTr)
         //Add Bass notes to the array
         bassNotes.append(AnoteBa)
         bassNotes.append(BnoteBa)

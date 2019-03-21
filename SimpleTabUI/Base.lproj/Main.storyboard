@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tuner" image="TuneIcon" selectedImage="TuneIcon" id="acW-dT-cKf"/>
@@ -142,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0FQ-Rg-u0B" firstAttribute="leading" secondItem="F9w-03-fEw" secondAttribute="trailing" constant="16" id="5DZ-Fw-Ame"/>
                             <constraint firstItem="GhO-nS-oXK" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="217" id="5nJ-a6-E5G"/>
@@ -383,7 +383,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.98791292834901201" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2Mo-DW-nAP" firstAttribute="leading" secondItem="b8V-ZZ-WHJ" secondAttribute="trailing" constant="124" id="3Yj-EP-qLJ"/>
@@ -457,10 +457,10 @@
                                 <exclude reference="6oS-yx-Ihh"/>
                                 <exclude reference="C9m-Ox-qxm"/>
                                 <exclude reference="V3B-1T-qlb"/>
-                                <exclude reference="9yn-ci-FcI"/>
-                                <exclude reference="Rky-Jl-vsq"/>
                                 <exclude reference="Pi1-0Z-hcw"/>
                                 <exclude reference="W11-sv-Tpy"/>
+                                <exclude reference="9yn-ci-FcI"/>
+                                <exclude reference="Rky-Jl-vsq"/>
                                 <exclude reference="3Yj-EP-qLJ"/>
                                 <exclude reference="YQa-Qw-mu3"/>
                                 <exclude reference="yrx-L2-41I"/>
@@ -478,12 +478,6 @@
                                 <exclude reference="Ic6-5J-SM3"/>
                                 <include reference="V3B-1T-qlb"/>
                                 <exclude reference="yab-f2-MXc"/>
-                                <include reference="9yn-ci-FcI"/>
-                                <exclude reference="GXP-Pk-qDj"/>
-                                <exclude reference="LNk-L7-qkt"/>
-                                <include reference="Rky-Jl-vsq"/>
-                                <exclude reference="kIA-Nc-xqj"/>
-                                <exclude reference="pre-aq-ygc"/>
                                 <exclude reference="8FL-o1-RxV"/>
                                 <exclude reference="CeS-Vc-5yy"/>
                                 <exclude reference="Es4-GV-1D9"/>
@@ -491,24 +485,18 @@
                                 <include reference="W11-sv-Tpy"/>
                                 <exclude reference="heh-eE-htc"/>
                                 <exclude reference="ucy-dn-W13"/>
+                                <include reference="9yn-ci-FcI"/>
+                                <exclude reference="GXP-Pk-qDj"/>
+                                <exclude reference="LNk-L7-qkt"/>
+                                <include reference="Rky-Jl-vsq"/>
+                                <exclude reference="kIA-Nc-xqj"/>
+                                <exclude reference="pre-aq-ygc"/>
                                 <include reference="3Yj-EP-qLJ"/>
                                 <exclude reference="A5a-Bb-liZ"/>
                                 <exclude reference="IzF-he-3ih"/>
                                 <include reference="YQa-Qw-mu3"/>
                                 <exclude reference="yNH-dT-w0N"/>
                                 <include reference="yrx-L2-41I"/>
-                                <exclude reference="AA2-gS-IuY"/>
-                                <exclude reference="AKV-79-OV0"/>
-                                <exclude reference="AWy-vz-qAq"/>
-                                <exclude reference="BSo-Am-1G2"/>
-                                <exclude reference="VKC-mW-jL9"/>
-                                <exclude reference="WJ7-aq-47p"/>
-                                <exclude reference="Y7o-zU-dgA"/>
-                                <exclude reference="Z4S-4s-Mvx"/>
-                                <exclude reference="gqf-Fv-p2F"/>
-                                <exclude reference="5Nh-Ms-CCA"/>
-                                <exclude reference="Ty4-c4-etW"/>
-                                <exclude reference="XIU-HX-iqF"/>
                                 <exclude reference="7Ui-md-rgz"/>
                                 <exclude reference="BRO-49-8jI"/>
                                 <include reference="El0-FS-dO5"/>
@@ -520,19 +508,31 @@
                                 <exclude reference="j2L-Do-pId"/>
                                 <exclude reference="pwz-vq-qLZ"/>
                                 <exclude reference="zQL-Jb-PUh"/>
-                                <exclude reference="QsL-0b-TMp"/>
-                                <exclude reference="oB5-Sb-Fur"/>
-                                <exclude reference="wKs-9p-oMN"/>
-                                <exclude reference="L0M-Js-MKb"/>
-                                <exclude reference="jNO-wD-kkG"/>
-                                <exclude reference="pO7-TC-YU4"/>
+                                <exclude reference="5Nh-Ms-CCA"/>
+                                <exclude reference="Ty4-c4-etW"/>
+                                <exclude reference="XIU-HX-iqF"/>
                                 <exclude reference="7uv-dS-392"/>
                                 <exclude reference="UrX-Pz-k6H"/>
                                 <exclude reference="jkp-ID-a7F"/>
                                 <exclude reference="sfW-lC-ink"/>
+                                <exclude reference="QsL-0b-TMp"/>
+                                <exclude reference="oB5-Sb-Fur"/>
+                                <exclude reference="wKs-9p-oMN"/>
                                 <exclude reference="YcJ-ko-fiC"/>
                                 <exclude reference="pd2-gF-CsW"/>
                                 <exclude reference="rHp-GP-rwR"/>
+                                <exclude reference="L0M-Js-MKb"/>
+                                <exclude reference="jNO-wD-kkG"/>
+                                <exclude reference="pO7-TC-YU4"/>
+                                <exclude reference="AA2-gS-IuY"/>
+                                <exclude reference="AKV-79-OV0"/>
+                                <exclude reference="AWy-vz-qAq"/>
+                                <exclude reference="BSo-Am-1G2"/>
+                                <exclude reference="VKC-mW-jL9"/>
+                                <exclude reference="WJ7-aq-47p"/>
+                                <exclude reference="Y7o-zU-dgA"/>
+                                <exclude reference="Z4S-4s-Mvx"/>
+                                <exclude reference="gqf-Fv-p2F"/>
                             </mask>
                         </variation>
                     </view>
@@ -557,17 +557,23 @@
             </objects>
             <point key="canvasLocation" x="747.9760119940031" y="1074.4000000000001"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Muse Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MuseTabBarController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.14901960784313725" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>

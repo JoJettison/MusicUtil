@@ -51,7 +51,7 @@ class SheetReadViewController: UIViewController {
     var BnoteTr = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Btreble-1-1")!)
     var BnoteBa = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Bbass1-1")!)
     var BflTr = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bfltreble-1-1")!)
-    var Bflba = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bflbass1-1")!)
+    var BflBa = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bflbass1-1")!)
     
     
     // initialize utility variables
@@ -135,6 +135,7 @@ class SheetReadViewController: UIViewController {
     
     override func viewDidLoad() {
         initStaffNotes()
+        accidCheck()        // Check on load if sharp or flat is displayed
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -150,7 +151,7 @@ class SheetReadViewController: UIViewController {
         trebleNotes.append(EnoteTr)
         trebleNotes.append(FnoteTr)
         trebleNotes.append(GnoteTr)
-        
+        //Add sharps & flats
         trebleNotes.append(AshTr)
         trebleNotes.append(AflTr)
         trebleNotes.append(BflTr)
@@ -168,7 +169,18 @@ class SheetReadViewController: UIViewController {
         bassNotes.append(EnoteBa)
         bassNotes.append(FnoteBa)
         bassNotes.append(GnoteBa)
+        //add sharps & flats
+        bassNotes.append(AshBa)
+        bassNotes.append(AflBa)
+        bassNotes.append(BflBa)
+        bassNotes.append(CshBa)
+        bassNotes.append(DshBa)
+        bassNotes.append(EflBa)
+        bassNotes.append(FshBa)
+        bassNotes.append(GshBa)
+        bassNotes.append(GflBa)
     }
+    
     
     func imgSwitcher(){ //Used to switch the image associated with the Note variable
            if (!hasSwitched){
@@ -208,20 +220,22 @@ class SheetReadViewController: UIViewController {
     }
     
     func accidCheck(){
+            var trebAccVal = trebleNotes[randsel].nsf.rawValue
+            var bassAccVal = bassNotes[randsel].nsf.rawValue
         
-        if( trebleNotes[randsel].nsf.rawValue == 1){//Sharp
+        if( (trebAccVal == 1) || (bassAccVal == 1) ){//Sharp
             Abutton.setTitle("A"+sharpSym, for: .normal)
             Cbutton.setTitle("C"+sharpSym, for: .normal)
             Dbutton.setTitle("D"+sharpSym, for: .normal)
             Fbutton.setTitle("F"+sharpSym, for: .normal)
             Gbutton.setTitle("G"+sharpSym, for: .normal)
         }
-        else if( trebleNotes[randsel].nsf.rawValue == 2){//Flat
+        else if( (trebAccVal == 2) || (bassAccVal == 2) ){//Flat
             Abutton.setTitle("A"+flatSym, for: .normal)
             Bbutton.setTitle("B"+flatSym, for: .normal)
             Dbutton.setTitle("D"+flatSym, for: .normal)
             Ebutton.setTitle("E"+flatSym, for: .normal)
-            Gbutton.setTitle("F"+flatSym, for: .normal)
+            Gbutton.setTitle("G"+flatSym, for: .normal)
             
         }
         else{   //Reset to default label
@@ -248,15 +262,19 @@ class SheetReadViewController: UIViewController {
         case 0:
             randsel = Int.random(in: 0..<trebleNotes.count)
             staffImage.image =  trebleNotes[randsel].image
+            accidCheck()
             print("Answer: ",trebleNotes[randsel].NoteVal!)
         case 1:
             randsel = Int.random(in: 0..<bassNotes.count)
             staffImage.image = bassNotes[randsel].image
+            accidCheck()
             print("Answer: ",bassNotes[randsel].NoteVal!)
         case 2:
              randsel = Int.random(in: 0..<grandNotes.count)
+             accidCheck()
         default:
              randsel = 0
+             accidCheck()
         }
         if(cycle % 5 == 0){ //Change up the images so its not the same sequence endlessly
             imgSwitcher()

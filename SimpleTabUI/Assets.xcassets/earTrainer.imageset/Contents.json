@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "musical_notes.png",
+      "filename" : "earTraining.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "earTraining@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "earTraining@3x.png",
       "scale" : "3x"
     }
   ],

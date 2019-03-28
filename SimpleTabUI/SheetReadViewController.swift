@@ -69,8 +69,6 @@ class SheetReadViewController: UIViewController {
     //Linked view objects
     @IBOutlet weak var staffImage: UIImageView!
     @IBOutlet weak var staffSelector: UISegmentedControl!
-    @IBOutlet weak var scoreLbl: UILabel!
-    @IBOutlet weak var lifeLbl: UILabel!
     
     @IBOutlet weak var Abutton: UIButton!
     @IBOutlet weak var Bbutton: UIButton!
@@ -79,6 +77,9 @@ class SheetReadViewController: UIViewController {
     @IBOutlet weak var Ebutton: UIButton!
     @IBOutlet weak var Fbutton: UIButton!
     @IBOutlet weak var Gbutton: UIButton!
+    
+    @IBOutlet weak var lifeLbl: UILabel!
+    @IBOutlet weak var scoreLbl: UILabel!
     
     //Answer Buttons
     @IBAction func Answer(_ sender: Any) {
@@ -94,7 +95,7 @@ class SheetReadViewController: UIViewController {
             print("Score: ", score)
             print("life: ", lifecount)
             if(lifecount == 0){
-               lifeLbl.text = "Game over, highest score: \(score)"
+              // lifeLbl.text = "Game over, highest score: \(score)"
                 
                 lifecount = 3;
                 score = 0;
@@ -253,9 +254,9 @@ class SheetReadViewController: UIViewController {
     
     func newQuestion(){
         //Display score
-        scoreLbl.text = "Score: \(score)"
+       scoreLbl.text = "\(score)"
         //Display lives
-        lifeLbl.text = "Lives:  \(lifecount)"
+       lifeLbl.text = "\(lifecount)"
         cycle += 1
         //Check which selector is in use
         switch(staffSelector.selectedSegmentIndex){

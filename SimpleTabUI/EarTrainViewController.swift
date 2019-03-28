@@ -27,6 +27,7 @@ class SecondViewController: UIViewController {
     
     //Label
     @IBOutlet weak var scoreLbl: UILabel!
+    @IBOutlet weak var scoreVal: UILabel!
     
     //Answer Button
     @IBAction func Action(_ sender: UIButton)
@@ -74,7 +75,7 @@ class SecondViewController: UIViewController {
     
     func updateScore()
     {
-        scoreLbl?.text = "SCORE: \(score)"
+        scoreVal?.text = "\(score)"
     }
     
     func newQuestion()

@@ -31,9 +31,20 @@ class SecondViewController: UIViewController {
     //Answer Button
     @IBAction func Action(_ sender: UIButton)
     {
-        if ((sender as AnyObject).tag == Int(audio))
+        UIButton.animate(withDuration: 0.2, animations:
         {
             sender.backgroundColor = UIColor.green
+        },
+        completion:
+        {
+            finish in UIButton.animate(withDuration: 0.2, animations:
+            {
+                sender.backgroundColor = UIColor.blue
+            })
+        })
+        if ((sender as AnyObject).tag == Int(audio))
+        {
+            //sender.backgroundColor = UIColor.green
             print("Right")
             
             score += 1
@@ -41,7 +52,7 @@ class SecondViewController: UIViewController {
         }
         else
         {
-            sender.backgroundColor = UIColor.red
+            //sender.backgroundColor = UIColor.red
             print("Wrong")
         }
         

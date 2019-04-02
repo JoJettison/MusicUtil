@@ -61,6 +61,7 @@ class SheetReadViewController: UIViewController {
     var lifecount = 3
     var cycle = 0
     var hasSwitched = false
+    var gameMode = true
     var trebleNotes: [StaffNote] = []
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
@@ -80,6 +81,7 @@ class SheetReadViewController: UIViewController {
     
     @IBOutlet weak var lifeLbl: UILabel!
     @IBOutlet weak var scoreLbl: UILabel!
+    @IBOutlet weak var livesText: UILabel!
     
     //Answer Buttons
     @IBAction func Answer(_ sender: Any) {
@@ -95,7 +97,6 @@ class SheetReadViewController: UIViewController {
             print("Score: ", score)
             print("life: ", lifecount)
             if(lifecount == 0){
-              // lifeLbl.text = "Game over, highest score: \(score)"
                 
                 lifecount = 3;
                 score = 0;
@@ -137,6 +138,7 @@ class SheetReadViewController: UIViewController {
     override func viewDidLoad() {
         initStaffNotes()
         accidCheck()        // Check on load if sharp or flat is displayed
+        initGame()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -249,6 +251,14 @@ class SheetReadViewController: UIViewController {
             Gbutton.setTitle("G", for: .normal)
         }
         
+    }
+    
+    func initGame(){
+        if (!gameMode){
+            livesText.isHidden = true
+            lifeLbl.isHidden = true
+            lifecount = -1
+        }
     }
 
     

@@ -450,6 +450,7 @@
                         <outlet property="Fbutton" destination="2Si-B7-ace" id="IOS-e4-cJt"/>
                         <outlet property="Gbutton" destination="Isa-Oc-cT5" id="oBT-xx-gF6"/>
                         <outlet property="lifeLbl" destination="01g-dY-zNj" id="XEB-cx-HlQ"/>
+                        <outlet property="livesText" destination="tFT-Tt-rbY" id="vz9-0n-CAg"/>
                         <outlet property="scoreLbl" destination="GsM-eT-Qkl" id="BdR-gk-hvV"/>
                         <outlet property="staffImage" destination="JXv-9T-nBr" id="I4r-Hg-aZv"/>
                         <outlet property="staffSelector" destination="DUK-49-kbN" id="MoA-l5-NDb"/>

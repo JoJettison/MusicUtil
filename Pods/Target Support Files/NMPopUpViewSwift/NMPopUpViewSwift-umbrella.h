@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SimpleTabUIVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SimpleTabUIVersionString[];
+FOUNDATION_EXPORT double NMPopUpViewSwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char NMPopUpViewSwiftVersionString[];
 

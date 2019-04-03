@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NMPopUpViewSwift
 
 class SheetReadViewController: UIViewController {
     
@@ -66,6 +67,8 @@ class SheetReadViewController: UIViewController {
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
     
+    var popViewController : PopUpViewControllerSwift!
+    
     
     //Linked view objects
     @IBOutlet weak var staffImage: UIImageView!
@@ -97,9 +100,10 @@ class SheetReadViewController: UIViewController {
             print("Score: ", score)
             print("life: ", lifecount)
             if(lifecount == 0){
-                
-                lifecount = 3;
-                score = 0;
+                highScoreUpdate()
+                showPopUp()
+                lifecount = 3
+                score = 0
             }
         }
         sleep(1)
@@ -289,6 +293,32 @@ class SheetReadViewController: UIViewController {
         }
         if(cycle % 5 == 0){ //Change up the images so its not the same sequence endlessly
             imgSwitcher()
+        }
+    }
+    func showPopUp() {
+        let bundle = Bundle(for: PopUpViewControllerSwift.self)
+        if (UIDevice.current.userInterfaceIdiom == .pad)
+        {
+            self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPad", bundle: bundle)
+            self.popViewController.title = "FINAL SCORE: \(score)"
+            self.popViewController.showInView(self.view, withImage: UIImage(named: "sightReading"), withMessage: "FINAL SCORE: \(score)\nHIGH SCORE: \(highscore) ", animated: true)
+        } else
+        {
+            if UIScreen.main.bounds.size.width > 320 {
+                if UIScreen.main.scale == 3 {
+                    self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6Plus", bundle: bundle)
+                    self.popViewController.title = "FINAL SCORE: \(score)"
+                    self.popViewController.showInView(self.view, withImage: UIImage(named: "sightReading"), withMessage: "FINAL SCORE: \(score)\nHIGH SCORE: \(highscore) ", animated: true)
+                } else {
+                    self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6", bundle: bundle)
+                    self.popViewController.title = "FINAL SCORE: \(score)"
+                    self.popViewController.showInView(self.view, withImage: UIImage(named: "sightReading"), withMessage: "FINAL SCORE: \(score)\nHIGH SCORE: \(highscore) ", animated: true)
+                }
+            } else {
+                self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController", bundle: bundle)
+                self.popViewController.title = "FINAL SCORE: \(score)"
+                self.popViewController.showInView(self.view, withImage: UIImage(named: "sightReading"), withMessage: "FINAL SCORE: \(score)\nHIGH SCORE: \(highscore) ", animated: true)
+            }
         }
     }
    

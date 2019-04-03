@@ -1,6 +1,0 @@
-framework module Pods_SimpleTabUI {
-  umbrella header "Pods-SimpleTabUI-umbrella.h"
-
-  export *
-  module * { export * }
-}

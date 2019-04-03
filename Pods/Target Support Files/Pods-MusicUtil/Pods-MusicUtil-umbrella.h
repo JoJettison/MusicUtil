@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SimpleTabUIUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SimpleTabUIUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_MusicUtilVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MusicUtilVersionString[];
 

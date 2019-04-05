@@ -29,19 +29,37 @@
         <!--Settings-->
         <scene sceneID="fJx-dT-0IO">
             <objects>
-                <viewController id="Itc-Fy-Kie" sceneMemberID="viewController">
+                <viewController id="Itc-Fy-Kie" customClass="SettingsViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akF-I2-Ijk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-36-KiI">
+                                <rect key="frame" x="56" y="561" width="262" height="29"/>
+                                <segments>
+                                    <segment title="Settings"/>
+                                    <segment title="Resources"/>
+                                    <segment title="Legal"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vpe-36-KiI" firstAttribute="top" secondItem="Nob-mV-8xC" secondAttribute="top" constant="541" id="DfV-ey-Rg4"/>
+                            <constraint firstItem="vpe-36-KiI" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="56" id="ddk-W6-izd"/>
+                            <constraint firstItem="vpe-36-KiI" firstAttribute="centerX" secondItem="akF-I2-Ijk" secondAttribute="centerX" id="l3L-q1-lF2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Nob-mV-8xC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="DLn-Ka-X9L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="vpe-36-KiI" id="Nms-cb-2Zv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcZ-bf-mf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="0.0"/>
+            <point key="canvasLocation" x="1456.8" y="-0.44977511244377816"/>
         </scene>
         <!--Ear View Controller-->
         <scene sceneID="wg7-f3-ORb">

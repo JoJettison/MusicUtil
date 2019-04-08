@@ -18,7 +18,7 @@ class FirstViewController: UIViewController, TunerDelegate {
         super.viewDidLoad()
         
         /* Update the background color. */
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(red:0.78, green:0.78, blue:0.78, alpha:1.0)
         
         /* Setup the display view. */
         displayView.frame = CGRect(

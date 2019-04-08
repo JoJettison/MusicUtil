@@ -34,8 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-36-KiI">
-                                <rect key="frame" x="56" y="561" width="262" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-36-KiI">
+                                <rect key="frame" x="56" y="561" width="263" height="29"/>
                                 <segments>
                                     <segment title="Settings"/>
                                     <segment title="Resources"/>
@@ -43,7 +43,7 @@
                                 </segments>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vpe-36-KiI" firstAttribute="top" secondItem="Nob-mV-8xC" secondAttribute="top" constant="541" id="DfV-ey-Rg4"/>
                             <constraint firstItem="vpe-36-KiI" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="56" id="ddk-W6-izd"/>

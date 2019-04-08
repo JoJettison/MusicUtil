@@ -40,7 +40,11 @@ class Tuner: NSObject {
     fileprivate var timer:      Timer?
     fileprivate let microphone: AKMicrophone
     fileprivate let analyzer:   AKAudioAnalyzer
-
+    
+    public var count = 0
+    public var array = Array(repeating: 0.0, count: 20)
+    public var avgamp = 0.0
+    
     override init() {
         /* Start application-wide microphone recording. */
         AKManager.shared().enableAudioInput()
@@ -60,7 +64,7 @@ class Tuner: NSObject {
         microphone.play()
 
         /* Initialize and schedule a new run loop timer. */
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self,
                                                        selector: #selector(Tuner.tick),
                                                        userInfo: nil,
                                                        repeats: true)
@@ -71,15 +75,36 @@ class Tuner: NSObject {
         microphone.stop()
         timer?.invalidate()
     }
-
+    
+    func avgAmplitude() {
+        avgamp = array.reduce(0,+)/Double(array.count)
+    }
+    
     @objc func tick() {
+        count = count + 1
         /* Read frequency and amplitude from the analyzer. */
         let frequency = Double(analyzer.trackedFrequency.floatValue)
-        let amplitude = Double(analyzer.trackedAmplitude.floatValue)
-
+        var amplitude = Double(analyzer.trackedAmplitude.floatValue)
+        
+        if (count <= 20)
+        {
+            array[count-1] = amplitude
+            if (count == 20)
+            {
+                avgAmplitude()
+                print(avgamp)
+                count = 0
+            }
+        }
+        
+        if (avgamp < 0.02)
+        {
+            amplitude = 0.0
+        }
+        
         /* Find nearest pitch. */
         let pitch = Pitch.nearest(frequency)
-
+        
         /* Calculate the distance. */
         let distance = frequency - pitch.frequency
 

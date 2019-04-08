@@ -7,7 +7,6 @@ target 'MusicUtil' do
 
   # Pods for SimpleTabUI
   pod 'AudioKit', '~> 2.2'
-  pod 'NMPopUpViewSwift'
   target 'MusicUtilTests' do
     inherit! :search_paths
     # Pods for testing

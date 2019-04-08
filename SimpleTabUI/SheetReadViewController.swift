@@ -84,14 +84,36 @@ class SheetReadViewController: UIViewController {
     @IBOutlet weak var livesText: UILabel!
     
     //Answer Buttons
-    @IBAction func Answer(_ sender: Any) {
+    @IBAction func Answer(_ sender: UIButton) {
         
         if (sender as AnyObject).tag == trebleNotes[randsel].NoteID{
+            UIButton.animate(withDuration: 0.0, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+                    })
+            })
             print("Right")
             score += 1
             print("Score: ", score)
         }
         else{
+            UIButton.animate(withDuration: 0.1, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.95, green:0.00, blue:0.00, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+                    })
+            })
             print("Wrong")
             lifecount -= 1
             print("Score: ", score)

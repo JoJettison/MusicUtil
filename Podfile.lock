@@ -1,20 +1,16 @@
 PODS:
   - AudioKit (2.3)
-  - NMPopUpViewSwift (4.2.2)
 
 DEPENDENCIES:
   - AudioKit (~> 2.2)
-  - NMPopUpViewSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AudioKit
-    - NMPopUpViewSwift
 
 SPEC CHECKSUMS:
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
-  NMPopUpViewSwift: d154e22ff636c46a2278b1b5d64d2413c5692afd
 
-PODFILE CHECKSUM: 6df5b0079e1e29a36d4c24116adbfa578a2fdf8f
+PODFILE CHECKSUM: e5797c961ffb3e5c11ffb539c77f3de58c5c414b
 
 COCOAPODS: 1.6.1

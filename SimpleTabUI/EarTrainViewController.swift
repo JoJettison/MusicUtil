@@ -11,8 +11,19 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
+    var keyboardView = true
+    
     let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
     let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
+    
+    //Buttons
+    @IBOutlet weak var gridButtonA: UIButton!
+    @IBOutlet weak var gridButtonB: UIButton!
+    @IBOutlet weak var gridButtonC: UIButton!
+    @IBOutlet weak var gridButtonD: UIButton!
+    @IBOutlet weak var gridButtonE: UIButton!
+    @IBOutlet weak var gridButtonF: UIButton!
+    @IBOutlet weak var gridButtonG: UIButton!
     
     //Variables
     var score:Int = 0
@@ -119,6 +130,18 @@ class SecondViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        if (keyboardView == true)
+        {
+            gridButtonA.isHidden = true
+            gridButtonB.isHidden = true
+            gridButtonC.isHidden = true
+            gridButtonD.isHidden = true
+            gridButtonE.isHidden = true
+            gridButtonF.isHidden = true
+            gridButtonG.isHidden = true
+        }
+        
         updateScore()
         // Do any additional setup after loading the view, typically from a nib.
         

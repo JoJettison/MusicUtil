@@ -245,8 +245,8 @@ class SheetReadViewController: UIViewController {
     }
     
     func accidCheck(){
-            var trebAccVal = trebleNotes[randsel].nsf.rawValue
-            var bassAccVal = bassNotes[randsel].nsf.rawValue
+            let trebAccVal = trebleNotes[randsel].nsf.rawValue
+            let bassAccVal = bassNotes[randsel].nsf.rawValue
         
         if( (trebAccVal == 1) || (bassAccVal == 1) ){//Sharp
             Abutton.setTitle("A"+sharpSym, for: .normal)

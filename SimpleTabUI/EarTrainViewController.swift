@@ -11,12 +11,12 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    var keyboardView = true
+    var keyboardView = false
     
     let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
     let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
     
-    //Buttons
+    //Grid Buttons
     @IBOutlet weak var gridButtonA: UIButton!
     @IBOutlet weak var gridButtonB: UIButton!
     @IBOutlet weak var gridButtonC: UIButton!
@@ -24,6 +24,21 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var gridButtonE: UIButton!
     @IBOutlet weak var gridButtonF: UIButton!
     @IBOutlet weak var gridButtonG: UIButton!
+    
+    //Piano Keys
+    @IBOutlet weak var pianoBackground: UIView!
+    @IBOutlet weak var pianoKeyC: UIButton!
+    @IBOutlet weak var pianoKeyCsh: UIButton!
+    @IBOutlet weak var pianoKeyD: UIButton!
+    @IBOutlet weak var pianoKeyDsh: UIButton!
+    @IBOutlet weak var pianoKeyE: UIButton!
+    @IBOutlet weak var pianoKeyF: UIButton!
+    @IBOutlet weak var pianoKeyFsh: UIButton!
+    @IBOutlet weak var pianoKeyG: UIButton!
+    @IBOutlet weak var pianoKeyGsh: UIButton!
+    @IBOutlet weak var pianoKeyA: UIButton!
+    @IBOutlet weak var pianoKeyAsh: UIButton!
+    @IBOutlet weak var pianoKeyB: UIButton!
     
     //Variables
     var score:Int = 0
@@ -140,6 +155,22 @@ class SecondViewController: UIViewController {
             gridButtonE.isHidden = true
             gridButtonF.isHidden = true
             gridButtonG.isHidden = true
+        }
+        else
+        {
+            pianoBackground.isHidden = true
+            pianoKeyC.isHidden = true
+            pianoKeyCsh.isHidden = true
+            pianoKeyD.isHidden = true
+            pianoKeyDsh.isHidden = true
+            pianoKeyE.isHidden = true
+            pianoKeyF.isHidden = true
+            pianoKeyFsh.isHidden = true
+            pianoKeyG.isHidden = true
+            pianoKeyGsh.isHidden = true
+            pianoKeyA.isHidden = true
+            pianoKeyAsh.isHidden = true
+            pianoKeyB.isHidden = true
         }
         
         updateScore()

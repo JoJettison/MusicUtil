@@ -11,10 +11,12 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    var keyboardView = false
+    var keyboardView = true
     
-    let buttonTitles = ["A", "B", "C", "D", "E", "F", "G"]
-    let answers = ["A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6]
+    let pianoAnswerDict = [0:"C", 1:"C#", 2:"D", 3:"D#", 4:"E", 5:"F", 6:"F#", 7:"G", 8:"G#", 9:"A", 10:"A#", 11:"B"]
+    let gridAnswerDict = [0:"C", 2:"D", 4:"E", 5:"F", 7:"G", 9:"A", 11:"B"]
+    let whiteKeys = [0, 2, 4, 5, 7, 9, 11]
+    let blackKeys = [1, 3, 6, 8, 10]
     
     //Grid Buttons
     @IBOutlet weak var gridButtonA: UIButton!
@@ -55,8 +57,86 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var scoreLbl: UILabel!
     @IBOutlet weak var scoreVal: UILabel!
     
-    //Answer Button
-    @IBAction func Action(_ sender: UIButton)
+    //Answer Piano Key
+    @IBAction func pianoKeyAction(_ sender: UIButton)
+    {
+        //If the answer is correct & the key is white
+        if ((sender as AnyObject).tag == Int(audio) && whiteKeys.contains((sender as AnyObject).tag ))
+        {
+            UIButton.animate(withDuration: 0.0, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+                    })
+            })
+            print("Right")
+            
+            score += 1
+            updateScore()
+        }
+        //If the answer is correct & the key is black
+        else if ((sender as AnyObject).tag == Int(audio) && blackKeys.contains((sender as AnyObject).tag ))
+        {
+            UIButton.animate(withDuration: 0.0, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
+                    })
+            })
+            print("Right")
+            
+            score += 1
+            updateScore()
+        }
+        //If the answer is incorrect & the key is white
+        else if ((sender as AnyObject).tag != Int(audio) && whiteKeys.contains((sender as AnyObject).tag ))
+        {
+            UIButton.animate(withDuration: 0.1, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.95, green:0.00, blue:0.00, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+                    })
+            })
+            print("Wrong")
+        }
+        //If the answer is incorrect and the key is black
+        else
+        {
+            UIButton.animate(withDuration: 0.1, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.95, green:0.00, blue:0.00, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
+                    })
+            })
+            print("Wrong")
+        }
+        
+        //Finally outside the color indication tests
+        newQuestion()
+    }
+    
+    //Answer Grid Button
+    @IBAction func gridButtonAction(_ sender: UIButton)
     {
         if ((sender as AnyObject).tag == Int(audio))
         {
@@ -91,9 +171,7 @@ class SecondViewController: UIViewController {
             })
             print("Wrong")
         }
-        
         newQuestion()
-        
     }
     
     
@@ -102,13 +180,18 @@ class SecondViewController: UIViewController {
     {
         switch audio
         {
-        case 0: audioPlayerA.play()
-        case 1: audioPlayerB.play()
-        case 2: audioPlayerC.play()
-        case 3: audioPlayerD.play()
+        case 0: audioPlayerC.play()
+        case 1: print ("Audio not yet implemented - C#")
+        case 2: audioPlayerD.play()
+        case 3: print ("Audio not yet implemented - D#")
         case 4: audioPlayerE.play()
         case 5: audioPlayerF.play()
-        case 6: audioPlayerG.play()
+        case 6: print ("Audio not yet implemented - F#")
+        case 7: audioPlayerG.play()
+        case 8: print ("Audio not yet implemented - G#")
+        case 9: audioPlayerA.play()
+        case 10: print ("Audio not yet implemented - A#")
+        case 11: audioPlayerB.play()
         default: print ("Audio button error")
         }
     }
@@ -127,16 +210,21 @@ class SecondViewController: UIViewController {
     func newQuestion()
     {
         sleep(1)
-        audio = Int.random(in: 0...6)
+        audio = Int.random(in: 0...11)
         switch audio
         {
-        case 0: audioPlayerA.play()
-        case 1: audioPlayerB.play()
-        case 2: audioPlayerC.play()
-        case 3: audioPlayerD.play()
+        case 0: audioPlayerC.play()
+        case 1: print ("Audio not yet implemented - C#")
+        case 2: audioPlayerD.play()
+        case 3: print ("Audio not yet implemented - D#")
         case 4: audioPlayerE.play()
         case 5: audioPlayerF.play()
-        case 6: audioPlayerG.play()
+        case 6: print ("Audio not yet implemented - F#")
+        case 7: audioPlayerG.play()
+        case 8: print ("Audio not yet implemented - G#")
+        case 9: audioPlayerA.play()
+        case 10: print ("Audio not yet implemented - A#")
+        case 11: audioPlayerB.play()
         default: print ("Audio button error")
         }
         print("Answer: ", audio)

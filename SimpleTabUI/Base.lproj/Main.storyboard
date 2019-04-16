@@ -201,13 +201,22 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="C4"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9B-zk-1F3">
+                                        <rect key="frame" x="47.5" y="0.0" width="45" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="D4"/>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="gy0-Fg-upq" firstAttribute="width" secondItem="G4p-kN-IVE" secondAttribute="width" multiplier="0.123" id="9gM-s3-obD"/>
+                                    <constraint firstItem="t9B-zk-1F3" firstAttribute="centerY" secondItem="G4p-kN-IVE" secondAttribute="centerY" id="Xon-hi-0A8"/>
                                     <constraint firstItem="gy0-Fg-upq" firstAttribute="centerY" secondItem="G4p-kN-IVE" secondAttribute="centerY" id="ZG9-UA-2u2"/>
+                                    <constraint firstItem="t9B-zk-1F3" firstAttribute="leading" secondItem="gy0-Fg-upq" secondAttribute="trailing" constant="2" id="ahE-Qp-nmW"/>
                                     <constraint firstItem="gy0-Fg-upq" firstAttribute="leading" secondItem="G4p-kN-IVE" secondAttribute="leading" id="bgv-Pc-ISO"/>
+                                    <constraint firstItem="t9B-zk-1F3" firstAttribute="width" secondItem="G4p-kN-IVE" secondAttribute="width" multiplier="0.123" id="lJV-qs-8A5"/>
                                     <constraint firstItem="gy0-Fg-upq" firstAttribute="height" secondItem="G4p-kN-IVE" secondAttribute="height" id="me6-xQ-yaU"/>
+                                    <constraint firstItem="t9B-zk-1F3" firstAttribute="height" secondItem="G4p-kN-IVE" secondAttribute="height" id="q8k-RZ-CIK"/>
                                 </constraints>
                             </view>
                         </subviews>

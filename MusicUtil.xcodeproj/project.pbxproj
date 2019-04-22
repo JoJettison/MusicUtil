@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		39C841C4A25E2E2F9E336808 /* Pods_SimpleTabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE8795EB8080EF69943C3AD /* Pods_SimpleTabUITests.framework */; };
+		746C7D85226E6E4A00EF7234 /* G#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 746C7D80226E6E4600EF7234 /* G#.mp3 */; };
+		746C7D86226E6E4A00EF7234 /* D#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 746C7D81226E6E4700EF7234 /* D#.mp3 */; };
+		746C7D87226E6E4A00EF7234 /* A#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 746C7D82226E6E4800EF7234 /* A#.mp3 */; };
+		746C7D88226E6E4A00EF7234 /* C#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 746C7D83226E6E4900EF7234 /* C#.mp3 */; };
+		746C7D89226E6E4A00EF7234 /* F#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 746C7D84226E6E4900EF7234 /* F#.mp3 */; };
 		74796C5F2253F4FF00A12AD4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74796C5E2253F4FF00A12AD4 /* SettingsViewController.swift */; };
 		7C7E56C52242AA0200051F83 /* MuseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E56C42242AA0200051F83 /* MuseTabBarController.swift */; };
 		7C83FC7622387E15002AFCED /* Dshtreble-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C83FC6722387E12002AFCED /* Dshtreble-2-1.png */; };
@@ -128,6 +133,11 @@
 		6BE2C201F6AE59AA706EDBCC /* Pods-MusicUtilUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicUtilUITests.release.xcconfig"; path = "Target Support Files/Pods-MusicUtilUITests/Pods-MusicUtilUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7016B3F8DF96C708D46D128B /* Pods-SimpleTabUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUI.release.xcconfig"; path = "Target Support Files/Pods-SimpleTabUI/Pods-SimpleTabUI.release.xcconfig"; sourceTree = "<group>"; };
 		70B353B31C80C1EF8922DFAC /* Pods-SimpleTabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleTabUITests/Pods-SimpleTabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		746C7D80226E6E4600EF7234 /* G#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "G#.mp3"; sourceTree = "<group>"; };
+		746C7D81226E6E4700EF7234 /* D#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "D#.mp3"; sourceTree = "<group>"; };
+		746C7D82226E6E4800EF7234 /* A#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A#.mp3"; sourceTree = "<group>"; };
+		746C7D83226E6E4900EF7234 /* C#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "C#.mp3"; sourceTree = "<group>"; };
+		746C7D84226E6E4900EF7234 /* F#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "F#.mp3"; sourceTree = "<group>"; };
 		74796C5E2253F4FF00A12AD4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7C7E56C42242AA0200051F83 /* MuseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseTabBarController.swift; sourceTree = "<group>"; };
 		7C83FC6722387E12002AFCED /* Dshtreble-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dshtreble-2-1.png"; sourceTree = "<group>"; };
@@ -302,6 +312,11 @@
 				7F088E86222DCC48009B4592 /* E.mp3 */,
 				7F088E85222DCC48009B4592 /* F.mp3 */,
 				7F088E7E222DCC47009B4592 /* G.mp3 */,
+				746C7D82226E6E4800EF7234 /* A#.mp3 */,
+				746C7D83226E6E4900EF7234 /* C#.mp3 */,
+				746C7D81226E6E4700EF7234 /* D#.mp3 */,
+				746C7D84226E6E4900EF7234 /* F#.mp3 */,
+				746C7D80226E6E4600EF7234 /* G#.mp3 */,
 				7F088E80222DCC47009B4592 /* icons8-cancel-30-2.png */,
 				7F088E7F222DCC47009B4592 /* icons8-checked-30.png */,
 				1140867BD3A58675CBD024DF /* Frameworks */,
@@ -605,6 +620,7 @@
 				7CDBA7282215112700798814 /* Assets.xcassets in Resources */,
 				7C83FC9E2238802A002AFCED /* Fshbass1-1.png in Resources */,
 				7F088E8C222DCC48009B4592 /* Dtreble-2-1.png in Resources */,
+				746C7D87226E6E4A00EF7234 /* A#.mp3 in Resources */,
 				7C83FC8022387E15002AFCED /* Efltreble-1-1.png in Resources */,
 				7F088E94222DCC48009B4592 /* Ebass2-1.png in Resources */,
 				7F088E90222DCC48009B4592 /* Etreble-1-1.png in Resources */,
@@ -613,11 +629,13 @@
 				7F088E8F222DCC48009B4592 /* Atreble-1-1.png in Resources */,
 				7C83FC9B2238802A002AFCED /* Bflbass1-1.png in Resources */,
 				7CDBA7262215112400798814 /* Main.storyboard in Resources */,
+				746C7D85226E6E4A00EF7234 /* G#.mp3 in Resources */,
 				7F088E98222DCC48009B4592 /* Fbass1-1.png in Resources */,
 				7C83FCA42238802A002AFCED /* Dshbass1-1.png in Resources */,
 				7C83FC7922387E15002AFCED /* Gfltreble-1-1.png in Resources */,
 				7C83FC7C22387E15002AFCED /* Dfltreble-1-1.png in Resources */,
 				7C83FC7F22387E15002AFCED /* Fshtreble-2-1.png in Resources */,
+				746C7D88226E6E4A00EF7234 /* C#.mp3 in Resources */,
 				7F088E93222DCC48009B4592 /* Bbass1-1.png in Resources */,
 				7C83FC7E22387E15002AFCED /* Fshtreble-1-1.png in Resources */,
 				7C83FC7822387E15002AFCED /* Bfltreble-1-1.png in Resources */,
@@ -629,6 +647,7 @@
 				7F088E91222DCC48009B4592 /* Btreble-1-1.png in Resources */,
 				7C83FC9A2238802A002AFCED /* Gshbass2-1.png in Resources */,
 				7F088E8A222DCC48009B4592 /* Ctreble-2-1.png in Resources */,
+				746C7D89226E6E4A00EF7234 /* F#.mp3 in Resources */,
 				7F088E8E222DCC48009B4592 /* Ftreble-2-1.png in Resources */,
 				7C83FC992238802A002AFCED /* Gshbass1-1.png in Resources */,
 				7C83FC982238802A002AFCED /* Ashbass2-1.png in Resources */,
@@ -638,6 +657,7 @@
 				7F088E9D222DCC48009B4592 /* Cbass2-1.png in Resources */,
 				7F088EA6222DCC48009B4592 /* D.mp3 in Resources */,
 				7C83FC8322387E15002AFCED /* Afltreble-1-1.png in Resources */,
+				746C7D86226E6E4A00EF7234 /* D#.mp3 in Resources */,
 				7C83FCA82238802A002AFCED /* Eflbass1-1.png in Resources */,
 				7F088E88222DCC48009B4592 /* Ctreble-1-1.png in Resources */,
 				7F088E96222DCC48009B4592 /* Bbass2-1.png in Resources */,

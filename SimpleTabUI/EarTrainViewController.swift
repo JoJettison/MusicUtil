@@ -11,7 +11,7 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    var keyboardView = false
+    var keyboardView = true
     
     let pianoAnswerDict = [0:"C", 1:"C#", 2:"D", 3:"D#", 4:"E", 5:"F", 6:"F#", 7:"G", 8:"G#", 9:"A", 10:"A#", 11:"B"]
     let whiteKeys = [0, 2, 4, 5, 7, 9, 11]
@@ -61,13 +61,18 @@ class SecondViewController: UIViewController {
     var audio = Int.random(in: 0...6)
     //Default initialization for the answer value
     var answerValue = 0
-    var audioPlayerA = AVAudioPlayer()
-    var audioPlayerB = AVAudioPlayer()
     var audioPlayerC = AVAudioPlayer()
+    var audioPlayerCsh = AVAudioPlayer()
     var audioPlayerD = AVAudioPlayer()
+    var audioPlayerDsh = AVAudioPlayer()
     var audioPlayerE = AVAudioPlayer()
     var audioPlayerF = AVAudioPlayer()
+    var audioPlayerFsh = AVAudioPlayer()
     var audioPlayerG = AVAudioPlayer()
+    var audioPlayerGsh = AVAudioPlayer()
+    var audioPlayerA = AVAudioPlayer()
+    var audioPlayerAsh = AVAudioPlayer()
+    var audioPlayerB = AVAudioPlayer()
     
     //Label
     @IBOutlet weak var scoreLbl: UILabel!
@@ -197,16 +202,16 @@ class SecondViewController: UIViewController {
         switch audio
         {
         case 0: audioPlayerC.play()
-        case 1: print ("Audio not yet implemented - C#")
+        case 1: audioPlayerCsh.play()
         case 2: audioPlayerD.play()
-        case 3: print ("Audio not yet implemented - D#")
+        case 3: audioPlayerDsh.play()
         case 4: audioPlayerE.play()
         case 5: audioPlayerF.play()
-        case 6: print ("Audio not yet implemented - F#")
+        case 6: audioPlayerFsh.play()
         case 7: audioPlayerG.play()
-        case 8: print ("Audio not yet implemented - G#")
+        case 8: audioPlayerGsh.play()
         case 9: audioPlayerA.play()
-        case 10: print ("Audio not yet implemented - A#")
+        case 10: audioPlayerAsh.play()
         case 11: audioPlayerB.play()
         default: print ("Audio button error")
         }
@@ -222,64 +227,64 @@ class SecondViewController: UIViewController {
     {
         //Updates the value contained within answerValue
         answerValue = audio
-        
-        //Reset all labels to natural
-        gridButtonC.setTitle("C", for: .normal)
-        gridButtonD.setTitle("D", for: .normal)
-        gridButtonE.setTitle("E", for: .normal)
-        gridButtonF.setTitle("F", for: .normal)
-        gridButtonG.setTitle("G", for: .normal)
-        gridButtonA.setTitle("A", for: .normal)
-        gridButtonB.setTitle("B", for: .normal)
-        
-        if (accidentalNotes.contains(audio))
-        {
-            //The note is accidental, select value to decide if it's set as sharp or flat
-            accidental = Int.random(in: 0...1)
-        }
-        else
-        {
-            //The note is natural
-            accidental = -1
-        }
-        
-        if (accidental == 0)
-        {
-            //Change label & answerValue of "C,D,F,G,A" to sharp
-            answerValue = audio - 1
-            //Change C -> C Sharp: 0 -> 1
-            gridButtonC.setTitle("C"+sharpSym, for: .normal)
-            //Change D -> D Sharp: 2 -> 3
-            gridButtonD.setTitle("D"+sharpSym, for: .normal)
-            //E does not have a sharp equivalent
-            gridButtonE.setTitle("E", for: .normal)
-            //Change F -> F Sharp: 5 -> 6
-            gridButtonF.setTitle("F"+sharpSym, for: .normal)
-            //Change G -> G Sharp: 7 -> 8
-            gridButtonG.setTitle("G"+sharpSym, for: .normal)
-            //Change A -> A Sharp: 9 -> 10
-            gridButtonA.setTitle("A"+sharpSym, for: .normal)
-            //B does not have a sharp equivalent
-            gridButtonB.setTitle("B", for: .normal)
-        }
-        else if (accidental == 1)
-        {
-            //Change label & answerValue of "D,E,G,A,B" to flat
-            //Follows the same structure of the sharps
-            answerValue = audio + 1
-            gridButtonC.setTitle("C", for: .normal)
-            gridButtonD.setTitle("D"+flatSym, for: .normal)
-            gridButtonE.setTitle("E"+flatSym, for: .normal)
-            gridButtonF.setTitle("F", for: .normal)
-            gridButtonG.setTitle("G"+flatSym, for: .normal)
-            gridButtonA.setTitle("A"+flatSym, for: .normal)
-            gridButtonB.setTitle("B"+flatSym, for: .normal)
-        }
-        else
-        {
-            //The note is natural
-            answerValue = audio
-        }
+//
+//        //Reset all labels to natural
+//        gridButtonC.setTitle("C", for: .normal)
+//        gridButtonD.setTitle("D", for: .normal)
+//        gridButtonE.setTitle("E", for: .normal)
+//        gridButtonF.setTitle("F", for: .normal)
+//        gridButtonG.setTitle("G", for: .normal)
+//        gridButtonA.setTitle("A", for: .normal)
+//        gridButtonB.setTitle("B", for: .normal)
+//
+//        if (accidentalNotes.contains(audio))
+//        {
+//            //The note is accidental, select value to decide if it's set as sharp or flat
+//            accidental = Int.random(in: 0...1)
+//        }
+//        else
+//        {
+//            //The note is natural
+//            accidental = -1
+//        }
+//
+//        if (accidental == 0)
+//        {
+//            //Change label & answerValue of "C,D,F,G,A" to sharp
+//            answerValue = audio - 1
+//            //Change C -> C Sharp: 0 -> 1
+//            gridButtonC.setTitle("C"+sharpSym, for: .normal)
+//            //Change D -> D Sharp: 2 -> 3
+//            gridButtonD.setTitle("D"+sharpSym, for: .normal)
+//            //E does not have a sharp equivalent
+//            gridButtonE.setTitle("E", for: .normal)
+//            //Change F -> F Sharp: 5 -> 6
+//            gridButtonF.setTitle("F"+sharpSym, for: .normal)
+//            //Change G -> G Sharp: 7 -> 8
+//            gridButtonG.setTitle("G"+sharpSym, for: .normal)
+//            //Change A -> A Sharp: 9 -> 10
+//            gridButtonA.setTitle("A"+sharpSym, for: .normal)
+//            //B does not have a sharp equivalent
+//            gridButtonB.setTitle("B", for: .normal)
+//        }
+//        else if (accidental == 1)
+//        {
+//            //Change label & answerValue of "D,E,G,A,B" to flat
+//            //Follows the same structure of the sharps
+//            answerValue = audio + 1
+//            gridButtonC.setTitle("C", for: .normal)
+//            gridButtonD.setTitle("D"+flatSym, for: .normal)
+//            gridButtonE.setTitle("E"+flatSym, for: .normal)
+//            gridButtonF.setTitle("F", for: .normal)
+//            gridButtonG.setTitle("G"+flatSym, for: .normal)
+//            gridButtonA.setTitle("A"+flatSym, for: .normal)
+//            gridButtonB.setTitle("B"+flatSym, for: .normal)
+//        }
+//        else
+//        {
+//            //The note is natural
+//            answerValue = audio
+//        }
     }
     
     func updateScore()
@@ -291,20 +296,20 @@ class SecondViewController: UIViewController {
     {
         sleep(1)
         audio = Int.random(in: 0...11)
-        //accidCheck()
+        accidCheck()
         switch audio
         {
         case 0: audioPlayerC.play()
-        case 1: print ("Audio not yet implemented - C#")
+        case 1: audioPlayerCsh.play()
         case 2: audioPlayerD.play()
-        case 3: print ("Audio not yet implemented - D#")
+        case 3: audioPlayerDsh.play()
         case 4: audioPlayerE.play()
         case 5: audioPlayerF.play()
-        case 6: print ("Audio not yet implemented - F#")
+        case 6: audioPlayerFsh.play()
         case 7: audioPlayerG.play()
-        case 8: print ("Audio not yet implemented - G#")
+        case 8: audioPlayerGsh.play()
         case 9: audioPlayerA.play()
-        case 10: print ("Audio not yet implemented - A#")
+        case 10: audioPlayerAsh.play()
         case 11: audioPlayerB.play()
         default: print ("Audio button error")
         }
@@ -343,33 +348,19 @@ class SecondViewController: UIViewController {
         }
         
         updateScore()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let soundA = Bundle.main.path(forResource: "A", ofType: "mp3")
-        let soundB = Bundle.main.path(forResource: "B", ofType: "mp3")
+     
         let soundC = Bundle.main.path(forResource: "C", ofType: "mp3")
+        let soundCsh = Bundle.main.path(forResource: "C#", ofType: "mp3")
         let soundD = Bundle.main.path(forResource: "D", ofType: "mp3")
+        let soundDsh = Bundle.main.path(forResource: "D#", ofType: "mp3")
         let soundE = Bundle.main.path(forResource: "E", ofType: "mp3")
         let soundF = Bundle.main.path(forResource: "F", ofType: "mp3")
+        let soundFsh = Bundle.main.path(forResource: "F#", ofType: "mp3")
         let soundG = Bundle.main.path(forResource: "G", ofType: "mp3")
-        
-        do
-        {
-            audioPlayerA = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundA!))
-        }
-        catch
-        {
-            print ("Error with sound system")
-        }
-        
-        do
-        {
-            audioPlayerB = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundB!))
-        }
-        catch
-        {
-            print ("Error with sound system")
-        }
+        let soundGsh = Bundle.main.path(forResource: "G#", ofType: "mp3")
+        let soundA = Bundle.main.path(forResource: "A", ofType: "mp3")
+        let soundAsh = Bundle.main.path(forResource: "A#", ofType: "mp3")
+        let soundB = Bundle.main.path(forResource: "B", ofType: "mp3")
         
         do
         {
@@ -382,7 +373,25 @@ class SecondViewController: UIViewController {
         
         do
         {
+            audioPlayerCsh = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundCsh!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
             audioPlayerD = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundD!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerDsh = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundDsh!))
         }
         catch
         {
@@ -409,12 +418,58 @@ class SecondViewController: UIViewController {
         
         do
         {
+            audioPlayerFsh = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundFsh!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
             audioPlayerG = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundG!))
         }
         catch
         {
             print ("Error with sound system")
         }
+        
+        do
+        {
+            audioPlayerGsh = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundGsh!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerA = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundA!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerAsh = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundAsh!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
+        do
+        {
+            audioPlayerB = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundB!))
+        }
+        catch
+        {
+            print ("Error with sound system")
+        }
+        
     }
     
     

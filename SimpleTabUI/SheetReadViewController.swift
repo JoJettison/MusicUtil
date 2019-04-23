@@ -10,48 +10,50 @@ import UIKit
 
 class SheetReadViewController: UIViewController {
     
+    var keyboardView = true
+    
     let flatSym = "\u{266D}"
     let sharpSym = "\u{266F}"
     
     // Note Variables [Notes are uniquely identified by their NoteID. These match the answer button tags]
     var CnoteTr = StaffNote(NoteVal: "C", NoteID: 0, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Ctreble-1-1")!)
     var CnoteBa = StaffNote(NoteVal: "C", NoteID: 0, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Cbass2-1")!)
-    var CshTr = StaffNote(NoteVal: "C#", NoteID: 0, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Cshtreble-1-1" )!)
-    var CshBa = StaffNote(NoteVal: "C#", NoteID: 0, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Cshbass1-1")!)
+    var CshTr = StaffNote(NoteVal: "C#", NoteID: 1, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Cshtreble-1-1" )!)
+    var CshBa = StaffNote(NoteVal: "C#", NoteID: 1, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Cshbass1-1")!)
     
     var DnoteTr = StaffNote(NoteVal: "D", NoteID: 2, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Dtreble-1-1")!)
     var DnoteBa = StaffNote(NoteVal: "D", NoteID: 2, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Dbass1-1")!)
-    var DshTr = StaffNote(NoteVal: "D", NoteID: 2, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Dshtreble-1-1")!)
-    var DshBa = StaffNote(NoteVal: "D", NoteID: 2, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Dshbass1-1")!)
+    var DshTr = StaffNote(NoteVal: "D", NoteID: 3, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Dshtreble-1-1")!)
+    var DshBa = StaffNote(NoteVal: "D", NoteID: 3, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Dshbass1-1")!)
     
     var EnoteTr = StaffNote(NoteVal: "E", NoteID: 4, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Etreble-1-1")!)
     var EnoteBa = StaffNote(NoteVal: "E", NoteID: 4, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Ebass2-1")!)
-    var EflTr = StaffNote(NoteVal: "E", NoteID: 4, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Efltreble-1-1")!)
-    var EflBa = StaffNote(NoteVal: "E", NoteID: 4, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Eflbass1-1")!)
+    var EflTr = StaffNote(NoteVal: "E", NoteID: 3, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Efltreble-1-1")!)
+    var EflBa = StaffNote(NoteVal: "E", NoteID: 3, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Eflbass1-1")!)
     
     var FnoteTr = StaffNote(NoteVal: "F", NoteID: 5, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Ftreble-1-1")!)
     var FnoteBa = StaffNote(NoteVal: "F", NoteID: 5, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Fbass1-1")!)
-    var FshTr = StaffNote(NoteVal: "F", NoteID: 5, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Fshtreble-1-1")!)
-    var FshBa = StaffNote(NoteVal: "F", NoteID: 5, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Fshbass1-1")!)
+    var FshTr = StaffNote(NoteVal: "F", NoteID: 6, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Fshtreble-1-1")!)
+    var FshBa = StaffNote(NoteVal: "F", NoteID: 6, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Fshbass1-1")!)
     
     var GnoteTr = StaffNote(NoteVal: "G", NoteID: 7, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Gtreble-1-1")!)
     var GnoteBa = StaffNote(NoteVal: "G", NoteID: 7, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Gbass2-1")!)
-    var GshTr = StaffNote(NoteVal: "G", NoteID: 7, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Gshtreble-1-1")!)
-    var GshBa = StaffNote(NoteVal: "G", NoteID: 7, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Gshbass1-1")!)
-    var GflTr = StaffNote(NoteVal: "G", NoteID: 7, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Gfltreble-1-1")!)
-    var GflBa = StaffNote(NoteVal: "G", NoteID: 7, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Gflbass1-1")!)
+    var GshTr = StaffNote(NoteVal: "G", NoteID: 8, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Gshtreble-1-1")!)
+    var GshBa = StaffNote(NoteVal: "G", NoteID: 8, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Gshbass1-1")!)
+    var GflTr = StaffNote(NoteVal: "G", NoteID: 6, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Gfltreble-1-1")!)
+    var GflBa = StaffNote(NoteVal: "G", NoteID: 6, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Gflbass1-1")!)
     
     var AnoteTr = StaffNote(NoteVal: "A", NoteID: 9, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Atreble-1-1")!)
     var AnoteBa = StaffNote(NoteVal: "A", NoteID: 9, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Abass1-1")!)
-    var AshTr = StaffNote(NoteVal: "A", NoteID: 9, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Ashtreble-1-1")!)
-    var AshBa = StaffNote(NoteVal: "A", NoteID: 9, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Ashbass1-1")!)
-    var AflTr = StaffNote(NoteVal: "A", NoteID: 9, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Afltreble-1-1")!)
-    var AflBa = StaffNote(NoteVal: "A", NoteID: 9, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Aflbass1-1")!)
+    var AshTr = StaffNote(NoteVal: "A", NoteID: 10, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Ashtreble-1-1")!)
+    var AshBa = StaffNote(NoteVal: "A", NoteID: 10, natShaFla: accidental(rawValue: 1)!, image: UIImage(named: "Ashbass1-1")!)
+    var AflTr = StaffNote(NoteVal: "A", NoteID: 8, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Afltreble-1-1")!)
+    var AflBa = StaffNote(NoteVal: "A", NoteID: 8, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Aflbass1-1")!)
     
     var BnoteTr = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Btreble-1-1")!)
     var BnoteBa = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Bbass1-1")!)
-    var BflTr = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bfltreble-1-1")!)
-    var BflBa = StaffNote(NoteVal: "B", NoteID: 11, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bflbass1-1")!)
+    var BflTr = StaffNote(NoteVal: "B", NoteID: 10, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bfltreble-1-1")!)
+    var BflBa = StaffNote(NoteVal: "B", NoteID: 10, natShaFla: accidental(rawValue: 2)!, image: UIImage(named: "Bflbass1-1")!)
     
     
     // initialize utility variables
@@ -66,24 +68,121 @@ class SheetReadViewController: UIViewController {
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
     
+    let whiteKeys = [0, 2, 4, 5, 7, 9, 11]
+    let blackKeys = [1, 3, 6, 8, 10]
     
-    //Linked view objects
+    //Staff Image and Staff Selection
     @IBOutlet weak var staffImage: UIImageView!
     @IBOutlet weak var staffSelector: UISegmentedControl!
     
-    @IBOutlet weak var Abutton: UIButton!
-    @IBOutlet weak var Bbutton: UIButton!
-    @IBOutlet weak var Cbutton: UIButton!
-    @IBOutlet weak var Dbutton: UIButton!
-    @IBOutlet weak var Ebutton: UIButton!
-    @IBOutlet weak var Fbutton: UIButton!
-    @IBOutlet weak var Gbutton: UIButton!
+    //Grid Buttons
+    @IBOutlet weak var gridButtonA: UIButton!
+    @IBOutlet weak var gridButtonB: UIButton!
+    @IBOutlet weak var gridButtonC: UIButton!
+    @IBOutlet weak var gridButtonD: UIButton!
+    @IBOutlet weak var gridButtonE: UIButton!
+    @IBOutlet weak var gridButtonF: UIButton!
+    @IBOutlet weak var gridButtonG: UIButton!
     
+    //Piano Keys
+    @IBOutlet weak var pianoBackground: UIView!
+    @IBOutlet weak var pianoKeyC: UIButton!
+    @IBOutlet weak var pianoKeyCsh: UIButton!
+    @IBOutlet weak var pianoKeyD: UIButton!
+    @IBOutlet weak var pianoKeyDsh: UIButton!
+    @IBOutlet weak var pianoKeyE: UIButton!
+    @IBOutlet weak var pianoKeyF: UIButton!
+    @IBOutlet weak var pianoKeyFsh: UIButton!
+    @IBOutlet weak var pianoKeyG: UIButton!
+    @IBOutlet weak var pianoKeyGsh: UIButton!
+    @IBOutlet weak var pianoKeyA: UIButton!
+    @IBOutlet weak var pianoKeyAsh: UIButton!
+    @IBOutlet weak var pianoKeyB: UIButton!
+    
+    //Labels
     @IBOutlet weak var lifeLbl: UILabel!
     @IBOutlet weak var scoreLbl: UILabel!
     @IBOutlet weak var livesText: UILabel!
     
-    //Answer Buttons
+    //Answer Piano Key
+    @IBAction func pianoKeyAction(_ sender: UIButton)
+    {
+        //If the answer is correct & the key is white
+        if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
+        {
+            UIButton.animate(withDuration: 0.0, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+                    })
+            })
+            print("Right")
+            
+            score += 1
+            //updateScore()
+        }
+            //If the answer is correct & the key is black
+        else if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && blackKeys.contains((sender as AnyObject).tag ))
+        {
+            UIButton.animate(withDuration: 0.0, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
+                    })
+            })
+            print("Right")
+            
+            score += 1
+            //updateScore()
+        }
+            //If the answer is incorrect & the key is white
+        else if ((sender as AnyObject).tag != trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
+        {
+            UIButton.animate(withDuration: 0.1, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.95, green:0.00, blue:0.00, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+                    })
+            })
+            print("Wrong")
+        }
+            //If the answer is incorrect and the key is black
+        else
+        {
+            UIButton.animate(withDuration: 0.1, animations:
+                {
+                    sender.backgroundColor = UIColor(red:0.95, green:0.00, blue:0.00, alpha:1.0)
+            },
+                             completion:
+                {
+                    finish in UIButton.animate(withDuration: 0.2, animations:
+                        {
+                            sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
+                    })
+            })
+            print("Wrong")
+        }
+        
+        //Finally outside the color indication tests
+        newQuestion()
+    }
+    
+    //Answer Grid Button
     @IBAction func Answer(_ sender: UIButton) {
         
         if (sender as AnyObject).tag == trebleNotes[randsel].NoteID{
@@ -158,6 +257,32 @@ class SheetReadViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        if (keyboardView == true)
+        {
+            gridButtonA.isHidden = true
+            gridButtonB.isHidden = true
+            gridButtonC.isHidden = true
+            gridButtonD.isHidden = true
+            gridButtonE.isHidden = true
+            gridButtonF.isHidden = true
+            gridButtonG.isHidden = true
+        }
+        else
+        {
+            pianoBackground.isHidden = true
+            pianoKeyC.isHidden = true
+            pianoKeyCsh.isHidden = true
+            pianoKeyD.isHidden = true
+            pianoKeyDsh.isHidden = true
+            pianoKeyE.isHidden = true
+            pianoKeyF.isHidden = true
+            pianoKeyFsh.isHidden = true
+            pianoKeyG.isHidden = true
+            pianoKeyGsh.isHidden = true
+            pianoKeyA.isHidden = true
+            pianoKeyAsh.isHidden = true
+            pianoKeyB.isHidden = true
+        }
         initStaffNotes()
         accidCheck()        // Check on load if sharp or flat is displayed
         initGame()
@@ -249,28 +374,28 @@ class SheetReadViewController: UIViewController {
             var bassAccVal = bassNotes[randsel].nsf.rawValue
         
         if( (trebAccVal == 1) || (bassAccVal == 1) ){//Sharp
-            Abutton.setTitle("A"+sharpSym, for: .normal)
-            Cbutton.setTitle("C"+sharpSym, for: .normal)
-            Dbutton.setTitle("D"+sharpSym, for: .normal)
-            Fbutton.setTitle("F"+sharpSym, for: .normal)
-            Gbutton.setTitle("G"+sharpSym, for: .normal)
+            gridButtonA.setTitle("A"+sharpSym, for: .normal)
+            gridButtonC.setTitle("C"+sharpSym, for: .normal)
+            gridButtonD.setTitle("D"+sharpSym, for: .normal)
+            gridButtonF.setTitle("F"+sharpSym, for: .normal)
+            gridButtonG.setTitle("G"+sharpSym, for: .normal)
         }
         else if( (trebAccVal == 2) || (bassAccVal == 2) ){//Flat
-            Abutton.setTitle("A"+flatSym, for: .normal)
-            Bbutton.setTitle("B"+flatSym, for: .normal)
-            Dbutton.setTitle("D"+flatSym, for: .normal)
-            Ebutton.setTitle("E"+flatSym, for: .normal)
-            Gbutton.setTitle("G"+flatSym, for: .normal)
+            gridButtonA.setTitle("A"+flatSym, for: .normal)
+            gridButtonB.setTitle("B"+flatSym, for: .normal)
+            gridButtonD.setTitle("D"+flatSym, for: .normal)
+            gridButtonE.setTitle("E"+flatSym, for: .normal)
+            gridButtonG.setTitle("G"+flatSym, for: .normal)
             
         }
         else{   //Reset to default label
-            Abutton.setTitle("A", for: .normal)
-            Bbutton.setTitle("B", for: .normal)
-            Cbutton.setTitle("C", for: .normal)
-            Dbutton.setTitle("D", for: .normal)
-            Ebutton.setTitle("E", for: .normal)
-            Fbutton.setTitle("F", for: .normal)
-            Gbutton.setTitle("G", for: .normal)
+            gridButtonA.setTitle("A", for: .normal)
+            gridButtonB.setTitle("B", for: .normal)
+            gridButtonC.setTitle("C", for: .normal)
+            gridButtonD.setTitle("D", for: .normal)
+            gridButtonE.setTitle("E", for: .normal)
+            gridButtonF.setTitle("F", for: .normal)
+            gridButtonG.setTitle("G", for: .normal)
         }
         
     }

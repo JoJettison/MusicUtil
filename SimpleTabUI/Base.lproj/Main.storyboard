@@ -571,6 +571,170 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-YE-ZgO">
+                                <rect key="frame" x="0.0" y="324" width="375" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-CA-9Te">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="C4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="IG2-fh-Buy"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ULB-9E-6ho"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S7-kN-nE7">
+                                        <rect key="frame" x="54.5" y="0.0" width="53" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="D4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="65a-Ru-Cao"/>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="Sop-kK-ZQ5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wca-X5-HcS">
+                                        <rect key="frame" x="109" y="0.0" width="52.5" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="E4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="eEa-hp-ASr"/>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="peF-0I-4cS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BU3-4f-QwA">
+                                        <rect key="frame" x="163" y="0.0" width="53" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="F4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="D68-dj-Bf2"/>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="NFT-e2-rXG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoC-5m-Ba6">
+                                        <rect key="frame" x="217.5" y="0.0" width="53" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="G4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="Yht-80-bUM"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hH4-na-EbF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-Cf-p1p">
+                                        <rect key="frame" x="272" y="0.0" width="53" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="A4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="1Xv-qP-wZX"/>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="jpu-rt-WHD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-Si-luf">
+                                        <rect key="frame" x="326.5" y="0.0" width="52.5" height="213"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="B4"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="VZG-ZU-mmb"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="kNO-7v-AuS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VM-QX-Vbx">
+                                        <rect key="frame" x="36" y="0.0" width="34" height="138.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="C#"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="HjX-oK-hqk"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="vgp-Ep-be5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgp-Ga-o2C">
+                                        <rect key="frame" x="90.5" y="0.0" width="33.5" height="138.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="D#"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="Jbu-zr-BNZ"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="SYC-kS-kqx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXy-z6-kTR">
+                                        <rect key="frame" x="199" y="0.0" width="34" height="138.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="F#"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="a1r-8l-ARU"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pHr-Tg-bQk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21z-Ld-yY5">
+                                        <rect key="frame" x="253.5" y="0.0" width="34" height="138.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="G#"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="JTh-zw-0tg"/>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="t3C-A3-QCN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWF-Th-cHQ">
+                                        <rect key="frame" x="308" y="0.0" width="33.5" height="138.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="A#"/>
+                                        <connections>
+                                            <action selector="pianoKeyAction:" destination="Niv-tJ-KfG" eventType="touchUpInside" id="F9i-W1-DbU"/>
+                                            <action selector="pianoKeyAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="y9r-Ko-CGp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JoC-5m-Ba6" firstAttribute="leading" secondItem="BU3-4f-QwA" secondAttribute="trailing" constant="1.5" id="0F4-rx-1l4"/>
+                                    <constraint firstItem="lo6-Si-luf" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="1e1-Ml-8Uz"/>
+                                    <constraint firstItem="4VM-QX-Vbx" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.09" id="1z2-wk-bQP"/>
+                                    <constraint firstItem="FXy-z6-kTR" firstAttribute="centerX" secondItem="BU3-4f-QwA" secondAttribute="trailing" id="2EC-dk-fVQ"/>
+                                    <constraint firstItem="KEJ-CA-9Te" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="2Pp-L2-mVE"/>
+                                    <constraint firstItem="aWF-Th-cHQ" firstAttribute="top" secondItem="pEJ-YE-ZgO" secondAttribute="top" id="2SL-0P-UoO"/>
+                                    <constraint firstItem="JoC-5m-Ba6" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="3Iz-ll-cTs"/>
+                                    <constraint firstItem="wca-X5-HcS" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="6LN-1b-uJe"/>
+                                    <constraint firstItem="FXy-z6-kTR" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.09" id="7kh-uv-PpQ"/>
+                                    <constraint firstItem="4VM-QX-Vbx" firstAttribute="centerX" secondItem="KEJ-CA-9Te" secondAttribute="trailing" id="8HR-sh-HEP"/>
+                                    <constraint firstItem="lo6-Si-luf" firstAttribute="leading" secondItem="oW4-Cf-p1p" secondAttribute="trailing" constant="1.5" id="9TW-Fe-IRb"/>
+                                    <constraint firstItem="rgp-Ga-o2C" firstAttribute="top" secondItem="pEJ-YE-ZgO" secondAttribute="top" id="9Ve-kH-pa0"/>
+                                    <constraint firstItem="KEJ-CA-9Te" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="BdZ-nv-BvG"/>
+                                    <constraint firstItem="BU3-4f-QwA" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="D6X-h0-szE"/>
+                                    <constraint firstItem="21z-Ld-yY5" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.09" id="EVO-5F-X2E"/>
+                                    <constraint firstItem="lo6-Si-luf" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="FJe-TK-Gco"/>
+                                    <constraint firstItem="KEJ-CA-9Te" firstAttribute="leading" secondItem="pEJ-YE-ZgO" secondAttribute="leading" id="GfE-Wv-QAN"/>
+                                    <constraint firstItem="FXy-z6-kTR" firstAttribute="top" secondItem="pEJ-YE-ZgO" secondAttribute="top" id="IrB-eT-wBX"/>
+                                    <constraint firstItem="4VM-QX-Vbx" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" multiplier="0.65" id="O6Y-D1-4pm"/>
+                                    <constraint firstItem="aWF-Th-cHQ" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" multiplier="0.65" id="R6D-mx-6GZ"/>
+                                    <constraint firstItem="rgp-Ga-o2C" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" multiplier="0.65" id="SWm-zS-2WE"/>
+                                    <constraint firstItem="21z-Ld-yY5" firstAttribute="centerX" secondItem="JoC-5m-Ba6" secondAttribute="trailing" id="U1M-OO-xoX"/>
+                                    <constraint firstItem="oW4-Cf-p1p" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="WWg-0j-AT5"/>
+                                    <constraint firstItem="rgp-Ga-o2C" firstAttribute="centerX" secondItem="2S7-kN-nE7" secondAttribute="trailing" id="XG5-6h-ozg"/>
+                                    <constraint firstItem="2S7-kN-nE7" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="Xkf-jg-wc5"/>
+                                    <constraint firstItem="4VM-QX-Vbx" firstAttribute="top" secondItem="pEJ-YE-ZgO" secondAttribute="top" id="be4-AS-Oec"/>
+                                    <constraint firstItem="BU3-4f-QwA" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="dJj-5M-1UR"/>
+                                    <constraint firstItem="BU3-4f-QwA" firstAttribute="leading" secondItem="wca-X5-HcS" secondAttribute="trailing" constant="1.5" id="ek0-d2-2Us"/>
+                                    <constraint firstItem="oW4-Cf-p1p" firstAttribute="leading" secondItem="JoC-5m-Ba6" secondAttribute="trailing" constant="1.5" id="fst-OQ-E6c"/>
+                                    <constraint firstItem="rgp-Ga-o2C" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.09" id="hhd-lX-GmJ"/>
+                                    <constraint firstItem="wca-X5-HcS" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="hui-08-2D6"/>
+                                    <constraint firstItem="wca-X5-HcS" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="mIg-MD-Odq"/>
+                                    <constraint firstItem="21z-Ld-yY5" firstAttribute="top" secondItem="pEJ-YE-ZgO" secondAttribute="top" id="oGe-WQ-jKD"/>
+                                    <constraint firstItem="oW4-Cf-p1p" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="oTY-Te-z35"/>
+                                    <constraint firstItem="2S7-kN-nE7" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="pSw-Y9-AKa"/>
+                                    <constraint firstItem="BU3-4f-QwA" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="qU0-0F-Asp"/>
+                                    <constraint firstItem="aWF-Th-cHQ" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.09" id="s4R-XW-pNK"/>
+                                    <constraint firstItem="FXy-z6-kTR" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" multiplier="0.65" id="sdb-ag-1zC"/>
+                                    <constraint firstItem="2S7-kN-nE7" firstAttribute="leading" secondItem="KEJ-CA-9Te" secondAttribute="trailing" constant="1.5" id="t7a-pW-bUg"/>
+                                    <constraint firstItem="2S7-kN-nE7" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="tmR-gy-JAk"/>
+                                    <constraint firstItem="KEJ-CA-9Te" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="tub-E0-psN"/>
+                                    <constraint firstItem="oW4-Cf-p1p" firstAttribute="width" secondItem="pEJ-YE-ZgO" secondAttribute="width" multiplier="0.141" id="x6d-9b-aj6"/>
+                                    <constraint firstItem="JoC-5m-Ba6" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="xgU-hZ-Dxf"/>
+                                    <constraint firstItem="JoC-5m-Ba6" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" id="xxY-9a-bTg"/>
+                                    <constraint firstItem="wca-X5-HcS" firstAttribute="leading" secondItem="2S7-kN-nE7" secondAttribute="trailing" constant="1.5" id="y99-VW-WHa"/>
+                                    <constraint firstItem="lo6-Si-luf" firstAttribute="centerY" secondItem="pEJ-YE-ZgO" secondAttribute="centerY" id="yXa-8D-9ZS"/>
+                                    <constraint firstItem="21z-Ld-yY5" firstAttribute="height" secondItem="pEJ-YE-ZgO" secondAttribute="height" multiplier="0.65" id="z7d-kp-wa2"/>
+                                    <constraint firstItem="aWF-Th-cHQ" firstAttribute="centerX" secondItem="oW4-Cf-p1p" secondAttribute="trailing" id="zg3-c9-q4y"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -579,6 +743,7 @@
                             <constraint firstItem="0k3-IT-0Ur" firstAttribute="leading" secondItem="2Wg-6N-KfI" secondAttribute="trailing" constant="23" id="16U-gu-avZ"/>
                             <constraint firstItem="DUK-49-kbN" firstAttribute="top" secondItem="2Wg-6N-KfI" secondAttribute="bottom" constant="92" id="1cL-z5-Th2"/>
                             <constraint firstItem="DUK-49-kbN" firstAttribute="top" secondItem="0k3-IT-0Ur" secondAttribute="bottom" constant="92" id="33f-2B-baT"/>
+                            <constraint firstItem="pEJ-YE-ZgO" firstAttribute="centerY" secondItem="1E6-98-glr" secondAttribute="centerY" constant="97" id="3Nr-Zm-f2D"/>
                             <constraint firstItem="Tlj-vU-Lrk" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="3bh-C7-UTM"/>
                             <constraint firstItem="cxp-bV-AaH" firstAttribute="top" secondItem="JXv-9T-nBr" secondAttribute="bottom" constant="26" id="7LB-Al-eLH"/>
                             <constraint firstItem="DUK-49-kbN" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="7am-lC-NXj"/>
@@ -592,10 +757,12 @@
                             <constraint firstItem="z0B-eW-BhJ" firstAttribute="top" secondItem="JXv-9T-nBr" secondAttribute="bottom" constant="26" id="Gpn-RU-v51"/>
                             <constraint firstItem="DUK-49-kbN" firstAttribute="top" secondItem="z0B-eW-BhJ" secondAttribute="bottom" constant="171" id="IGB-RN-5ff"/>
                             <constraint firstItem="Tlj-vU-Lrk" firstAttribute="top" secondItem="GsM-eT-Qkl" secondAttribute="bottom" constant="3" id="KmF-kD-MfS"/>
+                            <constraint firstItem="pEJ-YE-ZgO" firstAttribute="width" secondItem="1E6-98-glr" secondAttribute="width" id="L9T-Ac-OPh"/>
                             <constraint firstItem="2Si-B7-ace" firstAttribute="leading" secondItem="0k3-IT-0Ur" secondAttribute="trailing" constant="23" id="MOn-bT-nJx"/>
                             <constraint firstItem="cxp-bV-AaH" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="PtA-nG-bCD"/>
                             <constraint firstItem="cxp-bV-AaH" firstAttribute="leading" secondItem="Z08-nx-bv8" secondAttribute="trailing" constant="24" id="Ri4-XB-lFF"/>
                             <constraint firstItem="Tlj-vU-Lrk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S9L-eC-aZv" secondAttribute="leading" id="UTR-m4-5V7"/>
+                            <constraint firstItem="pEJ-YE-ZgO" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="VOB-KK-BRB"/>
                             <constraint firstItem="DUK-49-kbN" firstAttribute="top" secondItem="cxp-bV-AaH" secondAttribute="bottom" constant="171" id="WAx-n6-lyM"/>
                             <constraint firstItem="S9L-eC-aZv" firstAttribute="bottom" secondItem="DUK-49-kbN" secondAttribute="bottom" constant="27" id="aaZ-Ia-Hqh"/>
                             <constraint firstItem="2Wg-6N-KfI" firstAttribute="top" secondItem="Z08-nx-bv8" secondAttribute="bottom" constant="29" id="cpt-kt-UcL"/>
@@ -610,6 +777,7 @@
                             <constraint firstItem="tFT-Tt-rbY" firstAttribute="top" secondItem="01g-dY-zNj" secondAttribute="bottom" constant="3" id="oNn-rB-h6a"/>
                             <constraint firstItem="S9L-eC-aZv" firstAttribute="trailing" secondItem="01g-dY-zNj" secondAttribute="trailing" constant="32" id="oz7-gV-onn"/>
                             <constraint firstItem="01g-dY-zNj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GsM-eT-Qkl" secondAttribute="trailing" constant="8" symbolic="YES" id="pVD-Qa-xEv"/>
+                            <constraint firstItem="pEJ-YE-ZgO" firstAttribute="height" secondItem="1E6-98-glr" secondAttribute="height" multiplier="0.32" id="rTI-ZI-uPY"/>
                             <constraint firstItem="JXv-9T-nBr" firstAttribute="top" secondItem="S9L-eC-aZv" secondAttribute="top" constant="147" id="rsP-sy-9ES"/>
                             <constraint firstItem="2Si-B7-ace" firstAttribute="leading" secondItem="2Wg-6N-KfI" secondAttribute="trailing" constant="96" id="sg8-40-dV3"/>
                             <constraint firstItem="JXv-9T-nBr" firstAttribute="centerX" secondItem="1E6-98-glr" secondAttribute="centerX" id="t5e-eo-g1L"/>
@@ -624,15 +792,28 @@
                     <navigationItem key="navigationItem" id="oRb-ai-fdw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="Abutton" destination="Z08-nx-bv8" id="kDm-Bo-Jp2"/>
-                        <outlet property="Bbutton" destination="cxp-bV-AaH" id="zHa-p5-jgu"/>
-                        <outlet property="Cbutton" destination="z0B-eW-BhJ" id="hkk-zD-dKK"/>
-                        <outlet property="Dbutton" destination="2Wg-6N-KfI" id="y54-nl-BjE"/>
-                        <outlet property="Ebutton" destination="0k3-IT-0Ur" id="eeH-y0-E0h"/>
-                        <outlet property="Fbutton" destination="2Si-B7-ace" id="IOS-e4-cJt"/>
-                        <outlet property="Gbutton" destination="Isa-Oc-cT5" id="oBT-xx-gF6"/>
+                        <outlet property="gridButtonA" destination="Z08-nx-bv8" id="kDm-Bo-Jp2"/>
+                        <outlet property="gridButtonB" destination="cxp-bV-AaH" id="zHa-p5-jgu"/>
+                        <outlet property="gridButtonC" destination="z0B-eW-BhJ" id="hkk-zD-dKK"/>
+                        <outlet property="gridButtonD" destination="2Wg-6N-KfI" id="y54-nl-BjE"/>
+                        <outlet property="gridButtonE" destination="0k3-IT-0Ur" id="eeH-y0-E0h"/>
+                        <outlet property="gridButtonF" destination="2Si-B7-ace" id="IOS-e4-cJt"/>
+                        <outlet property="gridButtonG" destination="Isa-Oc-cT5" id="oBT-xx-gF6"/>
                         <outlet property="lifeLbl" destination="01g-dY-zNj" id="XEB-cx-HlQ"/>
                         <outlet property="livesText" destination="tFT-Tt-rbY" id="vz9-0n-CAg"/>
+                        <outlet property="pianoBackground" destination="pEJ-YE-ZgO" id="chD-M8-yIj"/>
+                        <outlet property="pianoKeyA" destination="oW4-Cf-p1p" id="bdr-wL-ey9"/>
+                        <outlet property="pianoKeyAsh" destination="aWF-Th-cHQ" id="6Br-P5-Yvd"/>
+                        <outlet property="pianoKeyB" destination="lo6-Si-luf" id="JPm-Q9-LM7"/>
+                        <outlet property="pianoKeyC" destination="KEJ-CA-9Te" id="0wQ-wr-z2q"/>
+                        <outlet property="pianoKeyCsh" destination="4VM-QX-Vbx" id="t5s-Fk-Fd2"/>
+                        <outlet property="pianoKeyD" destination="2S7-kN-nE7" id="yOt-Ux-jJ6"/>
+                        <outlet property="pianoKeyDsh" destination="rgp-Ga-o2C" id="b7u-n2-G9j"/>
+                        <outlet property="pianoKeyE" destination="wca-X5-HcS" id="OeW-7B-G7d"/>
+                        <outlet property="pianoKeyF" destination="BU3-4f-QwA" id="wmq-5G-dNz"/>
+                        <outlet property="pianoKeyFsh" destination="FXy-z6-kTR" id="bNq-Pf-MP0"/>
+                        <outlet property="pianoKeyG" destination="JoC-5m-Ba6" id="84v-Uy-NG5"/>
+                        <outlet property="pianoKeyGsh" destination="21z-Ld-yY5" id="cEQ-a4-ca2"/>
                         <outlet property="scoreLbl" destination="GsM-eT-Qkl" id="BdR-gk-hvV"/>
                         <outlet property="staffImage" destination="JXv-9T-nBr" id="I4r-Hg-aZv"/>
                         <outlet property="staffSelector" destination="DUK-49-kbN" id="MoA-l5-NDb"/>

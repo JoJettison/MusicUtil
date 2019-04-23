@@ -82,6 +82,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="twI-cf-u4o"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="1Ol-EJ-7xU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVH-N7-W6B">
@@ -97,6 +98,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="AOE-rB-TJN"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="si3-e6-EU2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yo-UM-NJm">
@@ -112,6 +114,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="QzJ-xS-0CJ"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cYD-nO-WBM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9w-03-fEw">
@@ -127,6 +130,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hH5-tX-vcG"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="F48-I0-Gck"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FQ-Rg-u0B">
@@ -142,6 +146,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="igo-Ro-Ftu"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="i8v-gC-xD1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0p-6c-9fH">
@@ -157,6 +162,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dDA-t1-BvQ"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="fNr-pp-AX0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-nS-oXK">
@@ -172,6 +178,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Action:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="v25-WT-4OI"/>
+                                    <action selector="gridButtonAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="50G-dz-IQl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWa-ek-r7e">

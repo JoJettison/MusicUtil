@@ -255,36 +255,28 @@ class SheetReadViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         newQuestion()
+        let museTab = tabBarController as! MuseTabBarController
+        if museTab.keyView == false {
+            keyboardView = false
+        }
+        else{
+            keyboardView = true
+        }
+        keyInputSwitch()
     }
     
     
     override func viewDidLoad() {
-        if (keyboardView == true)
-        {
-            gridButtonA.isHidden = true
-            gridButtonB.isHidden = true
-            gridButtonC.isHidden = true
-            gridButtonD.isHidden = true
-            gridButtonE.isHidden = true
-            gridButtonF.isHidden = true
-            gridButtonG.isHidden = true
+        
+        let museTab = tabBarController as! MuseTabBarController
+        if museTab.keyView == false {
+            keyboardView = false
         }
-        else
-        {
-            pianoBackground.isHidden = true
-            pianoKeyC.isHidden = true
-            pianoKeyCsh.isHidden = true
-            pianoKeyD.isHidden = true
-            pianoKeyDsh.isHidden = true
-            pianoKeyE.isHidden = true
-            pianoKeyF.isHidden = true
-            pianoKeyFsh.isHidden = true
-            pianoKeyG.isHidden = true
-            pianoKeyGsh.isHidden = true
-            pianoKeyA.isHidden = true
-            pianoKeyAsh.isHidden = true
-            pianoKeyB.isHidden = true
+        else{
+            keyboardView = true
         }
+        keyInputSwitch()
+        
         initStaffNotes()
         accidCheck()        // Check on load if sharp or flat is displayed
         initGame()
@@ -371,9 +363,60 @@ class SheetReadViewController: UIViewController {
         }
     }
     
+    func keyInputSwitch(){
+        if (keyboardView == true)
+        {
+            gridButtonA.isHidden = true
+            gridButtonB.isHidden = true
+            gridButtonC.isHidden = true
+            gridButtonD.isHidden = true
+            gridButtonE.isHidden = true
+            gridButtonF.isHidden = true
+            gridButtonG.isHidden = true
+            
+            pianoBackground.isHidden = false
+            pianoKeyC.isHidden = false
+            pianoKeyCsh.isHidden = false
+            pianoKeyD.isHidden = false
+            pianoKeyDsh.isHidden = false
+            pianoKeyE.isHidden = false
+            pianoKeyF.isHidden = false
+            pianoKeyFsh.isHidden = false
+            pianoKeyG.isHidden = false
+            pianoKeyGsh.isHidden = false
+            pianoKeyA.isHidden = false
+            pianoKeyAsh.isHidden = false
+            pianoKeyB.isHidden = false
+        }
+        else
+        {
+            pianoBackground.isHidden = true
+            pianoKeyC.isHidden = true
+            pianoKeyCsh.isHidden = true
+            pianoKeyD.isHidden = true
+            pianoKeyDsh.isHidden = true
+            pianoKeyE.isHidden = true
+            pianoKeyF.isHidden = true
+            pianoKeyFsh.isHidden = true
+            pianoKeyG.isHidden = true
+            pianoKeyGsh.isHidden = true
+            pianoKeyA.isHidden = true
+            pianoKeyAsh.isHidden = true
+            pianoKeyB.isHidden = true
+            
+            gridButtonA.isHidden = false
+            gridButtonB.isHidden = false
+            gridButtonC.isHidden = false
+            gridButtonD.isHidden = false
+            gridButtonE.isHidden = false
+            gridButtonF.isHidden = false
+            gridButtonG.isHidden = false
+        }
+    }
+    
     func accidCheck(){
-            var trebAccVal = trebleNotes[randsel].nsf.rawValue
-            var bassAccVal = bassNotes[randsel].nsf.rawValue
+        let trebAccVal = trebleNotes[randsel].nsf.rawValue
+        let bassAccVal = bassNotes[randsel].nsf.rawValue
         
         if( (trebAccVal == 1) || (bassAccVal == 1) ){//Sharp
             gridButtonA.setTitle("A"+sharpSym, for: .normal)

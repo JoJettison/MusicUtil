@@ -13,6 +13,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     @IBOutlet weak var keySwitch: UISwitch!
+    @IBOutlet weak var gameSwitch: UISwitch!
+    @IBOutlet weak var lifeSlider: UISlider!
+    @IBOutlet weak var sliderVal: UILabel!
     
     var keyboardView: Bool = false
     
@@ -28,6 +31,15 @@ class SettingsViewController: UIViewController {
             keyboardView = false
             print("Keyboardview off")
         }
+        
+        if gameSwitch.isOn{
+            museTab.gameMode = true
+            print("gameplay enabled")
+        }
+        else{
+            museTab.gameMode = false
+        }
+        museTab.lifeNum = Int(lifeSlider.value)
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -45,6 +57,14 @@ class SettingsViewController: UIViewController {
             keyboardView = false
             print("Keyboardview off")
         }
+        if gameSwitch.isOn{
+            museTab.gameMode = true
+            print("gameplay enabled")
+        }
+        else{
+            museTab.gameMode = false
+        }
+         museTab.lifeNum = Int(lifeSlider.value)
     }
     override func viewDidAppear(_ animated: Bool) {
         let museTab = tabBarController as! MuseTabBarController
@@ -58,6 +78,14 @@ class SettingsViewController: UIViewController {
             keyboardView = false
             print("Keyboardview off")
         }
+        if gameSwitch.isOn{
+            museTab.gameMode = true
+            print("gameplay enabled")
+        }
+        else{
+            museTab.gameMode = false
+        }
+         museTab.lifeNum = Int(lifeSlider.value)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -72,9 +100,22 @@ class SettingsViewController: UIViewController {
             keyboardView = false
             print("Keyboardview off")
         }
+        if gameSwitch.isOn{
+            museTab.gameMode = true
+            print("gameplay enabled")
+        }
+        else{
+            museTab.gameMode = false
+        }
+        museTab.lifeNum = Int(lifeSlider.value)
     }
     
     
+    @IBAction func lifeValChanged(_ sender: UISlider) {
+        let currentVal = Int(sender.value)
+        
+        sliderVal.text = "\(currentVal)"
+    }
     /*
     // MARK: - Navigation
 

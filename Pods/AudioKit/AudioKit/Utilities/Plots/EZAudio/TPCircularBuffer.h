@@ -45,7 +45,6 @@
 #include <libkern/OSAtomic.h>
 #include <string.h>
 #include <assert.h>
-#include <stdatomic.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -116,8 +115,7 @@ static __inline__ __attribute__((always_inline)) void* TPCircularBufferTail(TPCi
  */
 static __inline__ __attribute__((always_inline)) void TPCircularBufferConsume(TPCircularBuffer *buffer, int32_t amount) {
     buffer->tail = (buffer->tail + amount) % buffer->length;
-    atomic_int fillCount = buffer->fillCount;
-    atomic_fetch_add(&fillCount, -amount);
+    OSAtomicAdd32Barrier(-amount, &buffer->fillCount);
     assert(buffer->fillCount >= 0);
 }
 
@@ -158,8 +156,7 @@ static __inline__ __attribute__((always_inline)) void* TPCircularBufferHead(TPCi
  */
 static __inline__ __attribute__((always_inline)) void TPCircularBufferProduce(TPCircularBuffer *buffer, int amount) {
     buffer->head = (buffer->head + amount) % buffer->length;
-    atomic_int fillCount = buffer->fillCount;
-    atomic_fetch_add(&fillCount, -amount);
+    OSAtomicAdd32Barrier(amount, &buffer->fillCount);
     assert(buffer->fillCount <= buffer->length);
 }
 

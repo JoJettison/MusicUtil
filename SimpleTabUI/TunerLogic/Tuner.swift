@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2016 Tim van Elsloo
- *
+ * Copyright (c) 2015 Comyar Zaheri.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -34,69 +34,77 @@ class Tuner: NSObject {
     /* Private instance variables. */
     fileprivate var timer:      Timer?
     fileprivate let microphone: AKMicrophone
-    fileprivate let analyzer:   AKAudioAnalyzer
-    
-    /* Public instance variables. */
-    public var timerIteration = 0
-    public var frequencySample = Array(repeating: 0.0, count: 20)
-    public var averageAmplitude = 0.0
+    fileprivate let tracker:   AKFrequencyTracker
+    fileprivate let silence:    AKBooster
+    fileprivate let threshold: Double
+    fileprivate let smoothing: Double
+    fileprivate var smoothingBuffer: [Double] = []
+    fileprivate let smoothingBufferCount = 30
     
     override init() {
-        /* Start application-wide microphone recording. */
-        AKManager.shared().enableAudioInput()
-
-        /* Add the built-in microphone. */
         microphone = AKMicrophone()
-        AKOrchestra.add(microphone)
-
-        /* Add an analyzer and store it in an instance variable. */
-        analyzer = AKAudioAnalyzer(input: microphone.output)
-        AKOrchestra.add(analyzer)
+        tracker = AKFrequencyTracker(microphone)
+        silence = AKBooster(tracker, gain: 0)
+        threshold = 0.05
+        smoothing = 0.25
     }
 
     func startMonitoring() {
         /* Start the microphone and analyzer. */
-        analyzer.play()
-        microphone.play()
-
-        /* Initialize and schedule a new run loop timer. (Runs 20 times per second) */
-        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self,
+        tracker.start()
+        microphone.start()
+        AudioKit.output = silence
+        
+        do
+        {
+            try AudioKit.start()
+        }
+        catch
+        {
+            AKLog("AudioKit did not start!")
+        }
+        
+        /* Initialize and schedule a new run loop timer.*/
+        timer = Timer.scheduledTimer(timeInterval: 0.03, target: self,
                                                        selector: #selector(Tuner.tick),
                                                        userInfo: nil,
                                                        repeats: true)
     }
 
     func stopMonitoring() {
-        analyzer.stop()
+        tracker.stop()
         microphone.stop()
         timer?.invalidate()
     }
     
-    func averageAmplitudeCalculation() {
-        /* Calculate the average of 20 frequencies */
-        averageAmplitude = frequencySample.reduce(0,+)/Double(frequencySample.count)
+    /**
+     Exponential smoothing:
+     https://en.wikipedia.org/wiki/Exponential_smoothing
+     */
+    fileprivate func smooth(_ value: Double) -> Double {
+        var frequency = value
+        if smoothingBuffer.count > 0 {
+            let last = smoothingBuffer.last!
+            frequency = (smoothing * value) + (1.0 - smoothing) * last
+            if smoothingBuffer.count > smoothingBufferCount {
+                smoothingBuffer.removeFirst()
+            }
+        }
+        smoothingBuffer.append(frequency)
+        return frequency
     }
     
     @objc func tick() {
         /* Read frequency and amplitude from the analyzer. */
-        let frequency = Double(analyzer.trackedFrequency.floatValue)
-        var amplitude = Double(analyzer.trackedAmplitude.floatValue)
+        var amplitude = tracker.amplitude
+        var frequency = tracker.amplitude
         
-        /* Sample 20 frequencies for average calculation */
-        timerIteration = timerIteration + 1
-        if (timerIteration <= 20)
+        if (amplitude > threshold)
         {
-            frequencySample[timerIteration-1] = amplitude
-            if (timerIteration == 20)
-            {
-                averageAmplitudeCalculation()
-                print(averageAmplitude)
-                timerIteration = 0
-            }
+            amplitude = tracker.amplitude
+            frequency = smooth(tracker.frequency)
         }
-        
-        /* Cut off amplitude if it is below threshold */
-        if (averageAmplitude < 0.02)
+        else
         {
             amplitude = 0.0
         }

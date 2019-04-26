@@ -253,6 +253,11 @@ class SheetReadViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let museTab = tabBarController as! MuseTabBarController
+        lifecount = museTab.lifeNum
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         newQuestion()
         let museTab = tabBarController as! MuseTabBarController
@@ -263,6 +268,15 @@ class SheetReadViewController: UIViewController {
             keyboardView = true
         }
         keyInputSwitch()
+        
+        if museTab.gameMode == true{
+            gameMode = true
+        }
+        else{
+            gameMode = false
+        }
+        lifecount = museTab.lifeNum
+        initGame()
     }
     
     
@@ -279,6 +293,13 @@ class SheetReadViewController: UIViewController {
         
         initStaffNotes()
         accidCheck()        // Check on load if sharp or flat is displayed
+        if museTab.gameMode == true{
+            gameMode = true
+        }
+        else{
+            gameMode = false
+        }
+        lifecount = museTab.lifeNum
         initGame()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -450,6 +471,10 @@ class SheetReadViewController: UIViewController {
             livesText.isHidden = true
             lifeLbl.isHidden = true
             lifecount = -1
+        }
+        else{
+            livesText.isHidden = false
+            lifeLbl.isHidden = false
         }
     }
 

@@ -10,10 +10,13 @@ import UIKit
 
 class SheetReadViewController: UIViewController {
     
-    var keyboardView = true
+    var keyboardView = false
     
     let flatSym = "\u{266D}"
     let sharpSym = "\u{266F}"
+    
+    //Grid View Selection Variable
+    var gridSelection = 0
     
     // Note Variables [Notes are uniquely identified by their NoteID. These match the answer button tags]
     var trNoteC = StaffNote(NoteVal: "C", NoteID: 0, natShaFla: accidental(rawValue: 0)!, image: UIImage(named: "Ctreble-1-1")!)
@@ -235,16 +238,50 @@ class SheetReadViewController: UIViewController {
     @IBAction func staffChange(_ sender: UISegmentedControl) {
         
         if staffSelector.selectedSegmentIndex == 0{
-            randsel = Int.random(in: (0..<trebleNotes.count))
-            staffImage.image =  trebleNotes[randsel].image
-            accidCheck()
-            print("Answer: ",trebleNotes[randsel].NoteVal!)
+            if (keyboardView == true)
+            {
+                randsel = Int.random(in: 0..<trebleNotes.count)
+                staffImage.image = trebleNotes[randsel].image
+                accidCheck()
+                print("Answer: ",trebleNotes[randsel].NoteVal!)
+            }
+            else
+            {
+                randsel = Int.random(in: 0..<trebleNotes.count)
+                if (whiteKeys.contains(trebleNotes[randsel].NoteID ?? 0))
+                {
+                    staffImage.image = trebleNotes[randsel].image
+                    accidCheck()
+                    print("Answer: ",trebleNotes[randsel].NoteVal!)
+                }
+                else
+                {
+                    newQuestion()
+                }
+            }
             
         } else if (staffSelector.selectedSegmentIndex == 1) {
-            randsel = Int.random(in: (0..<bassNotes.count))
-            staffImage.image = bassNotes[randsel].image
-            accidCheck()
-            print("Answer: ",bassNotes[randsel].NoteVal!)
+            if (keyboardView == true)
+            {
+                randsel = Int.random(in: 0..<bassNotes.count)
+                staffImage.image = bassNotes[randsel].image
+                accidCheck()
+                print("Answer: ",bassNotes[randsel].NoteVal!)
+            }
+            else
+            {
+                randsel = Int.random(in: 0..<bassNotes.count)
+                if (whiteKeys.contains(bassNotes[randsel].NoteID ?? 0))
+                {
+                    staffImage.image = bassNotes[randsel].image
+                    accidCheck()
+                    print("Answer: ",bassNotes[randsel].NoteVal!)
+                }
+                else
+                {
+                    newQuestion()
+                }
+            }
             
         }  else{
             //randsel = Int.random(in: (0..<grandNotes.count))
@@ -420,15 +457,49 @@ class SheetReadViewController: UIViewController {
         //Check which selector is in use
         switch(staffSelector.selectedSegmentIndex){
         case 0:
-            randsel = Int.random(in: 0..<trebleNotes.count)
-            staffImage.image =  trebleNotes[randsel].image
-            accidCheck()
-            print("Answer: ",trebleNotes[randsel].NoteVal!)
+            if (keyboardView == true)
+            {
+                randsel = Int.random(in: 0..<trebleNotes.count)
+                staffImage.image = trebleNotes[randsel].image
+                accidCheck()
+                print("Answer: ",trebleNotes[randsel].NoteVal!)
+            }
+            else
+            {
+                randsel = Int.random(in: 0..<trebleNotes.count)
+                if (whiteKeys.contains(trebleNotes[randsel].NoteID ?? 0))
+                {
+                    staffImage.image = trebleNotes[randsel].image
+                    accidCheck()
+                    print("Answer: ",trebleNotes[randsel].NoteVal!)
+                }
+                else
+                {
+                    newQuestion()
+                }
+            }
         case 1:
-            randsel = Int.random(in: 0..<bassNotes.count)
-            staffImage.image = bassNotes[randsel].image
-            accidCheck()
-            print("Answer: ",bassNotes[randsel].NoteVal!)
+            if (keyboardView == true)
+            {
+                randsel = Int.random(in: 0..<bassNotes.count)
+                staffImage.image = bassNotes[randsel].image
+                accidCheck()
+                print("Answer: ",bassNotes[randsel].NoteVal!)
+            }
+            else
+            {
+                randsel = Int.random(in: 0..<bassNotes.count)
+                if (whiteKeys.contains(bassNotes[randsel].NoteID ?? 0))
+                {
+                    staffImage.image = bassNotes[randsel].image
+                    accidCheck()
+                    print("Answer: ",bassNotes[randsel].NoteVal!)
+                }
+                else
+                {
+                    newQuestion()
+                }
+            }
         case 2:
              randsel = Int.random(in: 0..<grandNotes.count)
              accidCheck()

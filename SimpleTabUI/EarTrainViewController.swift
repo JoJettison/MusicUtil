@@ -11,7 +11,7 @@ import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    var keyboardView = false
+    var keyboardView = true
     
     let pianoAnswerDict = [0:"C", 1:"C#", 2:"D", 3:"D#", 4:"E", 5:"F", 6:"F#", 7:"G", 8:"G#", 9:"A", 10:"A#", 11:"B"]
     let whiteKeys = [0, 2, 4, 5, 7, 9, 11]
@@ -33,6 +33,7 @@ class SecondViewController: UIViewController {
     var accidental = -1
     
     //Grid Buttons
+    @IBOutlet weak var gridBackground: UIView!
     @IBOutlet weak var gridButtonC: UIButton!
     @IBOutlet weak var gridButtonD: UIButton!
     @IBOutlet weak var gridButtonE: UIButton!
@@ -194,6 +195,7 @@ class SecondViewController: UIViewController {
         }
         newQuestion()
     }
+    
     
     
     //Play Button

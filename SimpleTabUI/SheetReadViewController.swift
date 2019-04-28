@@ -123,10 +123,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
                     })
             })
-            print("Right")
-            
-            score += 1
-            //updateScore()
+            answerRight()
         }
             //If the answer is correct & the key is black
         else if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && blackKeys.contains((sender as AnyObject).tag ))
@@ -142,10 +139,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
                     })
             })
-            print("Right")
-            
-            score += 1
-            //updateScore()
+           answerRight()
         }
             //If the answer is incorrect & the key is white
         else if ((sender as AnyObject).tag != trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
@@ -161,7 +155,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
                     })
             })
-            print("Wrong")
+            answerWrong()
         }
             //If the answer is incorrect and the key is black
         else
@@ -177,7 +171,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
                     })
             })
-            print("Wrong")
+            answerWrong()
         }
         
         //Finally outside the color indication tests
@@ -199,9 +193,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
                     })
             })
-            print("Right")
-            score += 1
-            print("Score: ", score)
+            answerRight()
         }
         else{
             UIButton.animate(withDuration: 0.1, animations:
@@ -215,15 +207,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
                     })
             })
-            print("Wrong")
-            lifecount -= 1
-            print("Score: ", score)
-            print("life: ", lifecount)
-            if(lifecount == 0){
-                
-                lifecount = 3;
-                score = 0;
-            }
+            answerWrong()
         }
         sleep(1)
         newQuestion()
@@ -252,13 +236,17 @@ class SheetReadViewController: UIViewController {
         }
         
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         let museTab = tabBarController as! MuseTabBarController
-        lifecount = museTab.lifeNum
+        if lifecount != museTab.lifeNum{
+            lifecount = museTab.lifeNum
+        }
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
         newQuestion()
         let museTab = tabBarController as! MuseTabBarController
         if museTab.keyView == false {
@@ -275,7 +263,9 @@ class SheetReadViewController: UIViewController {
         else{
             gameMode = false
         }
-        lifecount = museTab.lifeNum
+        if lifecount != museTab.lifeNum{
+            lifecount = museTab.lifeNum
+        }
         initGame()
     }
     
@@ -299,7 +289,9 @@ class SheetReadViewController: UIViewController {
         else{
             gameMode = false
         }
-        lifecount = museTab.lifeNum
+        if lifecount != museTab.lifeNum{
+            lifecount = museTab.lifeNum
+        }
         initGame()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -468,9 +460,11 @@ class SheetReadViewController: UIViewController {
     
     func initGame(){
         if (!gameMode){
+            let museTab = tabBarController as! MuseTabBarController
             livesText.isHidden = true
             lifeLbl.isHidden = true
             lifecount = -1
+            museTab.lifeNum = lifecount
         }
         else{
             livesText.isHidden = false
@@ -478,6 +472,22 @@ class SheetReadViewController: UIViewController {
         }
     }
 
+    func answerRight(){
+        print("Right")
+        score += 1
+        print("Score: ", score)
+    }
+    func answerWrong(){
+        print("Wrong")
+        lifecount -= 1
+        print("Score: ", score)
+        print("life: ", lifecount)
+        if(lifecount == 0){
+            let museTab = tabBarController as! MuseTabBarController
+            lifecount = museTab.lifeNum
+            score = 0
+        }
+    }
     
     func newQuestion(){
         //Display score

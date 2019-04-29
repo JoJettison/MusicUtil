@@ -57,7 +57,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvD-j5-5LO">
                                 <rect key="frame" x="308" y="106" width="51" height="31"/>
                                 <connections>
-                                    <action selector="modeSwitchedGame:" destination="Itc-Fy-Kie" eventType="valueChanged" id="8ft-pM-SeI"/>
+                                    <action selector="gameModeSwitched:" destination="Itc-Fy-Kie" eventType="valueChanged" id="8ft-pM-SeI"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-0d-BEJ">
@@ -66,7 +66,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-8x-kWE">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-8x-kWE">
                                 <rect key="frame" x="243" y="164" width="118" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="rJZ-Iq-1bM"/>

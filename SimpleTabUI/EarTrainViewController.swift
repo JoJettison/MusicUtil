@@ -214,15 +214,88 @@ class SecondViewController: UIViewController {
     }
     
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        _ = tabBarController as! MuseTabBarController
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
+    }
+    
     override func viewDidAppear(_ animated: Bool)
     {
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
         newQuestion()
+        let museTab = tabBarController as! MuseTabBarController
+        if museTab.keyView == false
+        {
+            keyboardView = false
+        }
+        else
+        {
+            keyboardView = true
+        }
+        keyInputSwitch()
+        
     }
     
     func accidCheck()
     {
         //Updates the value contained within answerValue
         answerValue = audio
+    }
+    
+    func keyInputSwitch(){
+        if (keyboardView == true)
+        {
+            gridBackground.isHidden = true
+            gridButtonA.isHidden = true
+            gridButtonB.isHidden = true
+            gridButtonC.isHidden = true
+            gridButtonD.isHidden = true
+            gridButtonE.isHidden = true
+            gridButtonF.isHidden = true
+            gridButtonG.isHidden = true
+            
+            pianoBackground.isHidden = false
+            pianoKeyC.isHidden = false
+            pianoKeyCsh.isHidden = false
+            pianoKeyD.isHidden = false
+            pianoKeyDsh.isHidden = false
+            pianoKeyE.isHidden = false
+            pianoKeyF.isHidden = false
+            pianoKeyFsh.isHidden = false
+            pianoKeyG.isHidden = false
+            pianoKeyGsh.isHidden = false
+            pianoKeyA.isHidden = false
+            pianoKeyAsh.isHidden = false
+            pianoKeyB.isHidden = false
+        }
+        else
+        {
+            pianoBackground.isHidden = true
+            pianoKeyC.isHidden = true
+            pianoKeyCsh.isHidden = true
+            pianoKeyD.isHidden = true
+            pianoKeyDsh.isHidden = true
+            pianoKeyE.isHidden = true
+            pianoKeyF.isHidden = true
+            pianoKeyFsh.isHidden = true
+            pianoKeyG.isHidden = true
+            pianoKeyGsh.isHidden = true
+            pianoKeyA.isHidden = true
+            pianoKeyAsh.isHidden = true
+            pianoKeyB.isHidden = true
+            
+            gridBackground.isHidden = false
+            gridButtonA.isHidden = false
+            gridButtonB.isHidden = false
+            gridButtonC.isHidden = false
+            gridButtonD.isHidden = false
+            gridButtonE.isHidden = false
+            gridButtonF.isHidden = false
+            gridButtonG.isHidden = false
+        }
     }
     
     func updateScore()
@@ -264,6 +337,16 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad()
     {
+        let museTab = tabBarController as! MuseTabBarController
+        if museTab.keyView == false {
+            keyboardView = false
+        }
+        else{
+            keyboardView = true
+        }
+        keyInputSwitch()
+        
+        
         super.viewDidLoad()
         
         if (keyboardView == true)

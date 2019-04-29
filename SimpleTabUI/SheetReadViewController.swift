@@ -227,6 +227,7 @@ class SheetReadViewController: UIViewController {
             {
                 randsel = Int.random(in: 0..<trebleNotes.count)
                 staffImage.image = trebleNotes[randsel].image
+                answerNoteID = trebleNotes[randsel].NoteID
                 accidCheck()
                 print("Answer: ",trebleNotes[randsel].NoteVal!)
             }
@@ -236,6 +237,7 @@ class SheetReadViewController: UIViewController {
                 if (whiteKeys.contains(trebleNotes[randsel].NoteID ?? 0))
                 {
                     staffImage.image = trebleNotes[randsel].image
+                    answerNoteID = trebleNotes[randsel].NoteID
                     accidCheck()
                     print("Answer: ",trebleNotes[randsel].NoteVal!)
                 }
@@ -250,6 +252,7 @@ class SheetReadViewController: UIViewController {
             {
                 randsel = Int.random(in: 0..<bassNotes.count)
                 staffImage.image = bassNotes[randsel].image
+                answerNoteID = bassNotes[randsel].NoteID
                 accidCheck()
                 print("Answer: ",bassNotes[randsel].NoteVal!)
             }
@@ -259,6 +262,7 @@ class SheetReadViewController: UIViewController {
                 if (whiteKeys.contains(bassNotes[randsel].NoteID ?? 0))
                 {
                     staffImage.image = bassNotes[randsel].image
+                    answerNoteID = bassNotes[randsel].NoteID
                     accidCheck()
                     print("Answer: ",bassNotes[randsel].NoteVal!)
                 }
@@ -541,6 +545,7 @@ class SheetReadViewController: UIViewController {
             {
                 randsel = Int.random(in: 0..<trebleNotes.count)
                 staffImage.image = trebleNotes[randsel].image
+                answerNoteID = trebleNotes[randsel].NoteID
                 accidCheck()
                 print("Answer: ",trebleNotes[randsel].NoteVal!)
             }
@@ -550,6 +555,7 @@ class SheetReadViewController: UIViewController {
                 if (whiteKeys.contains(trebleNotes[randsel].NoteID ?? 0))
                 {
                     staffImage.image = trebleNotes[randsel].image
+                    answerNoteID = trebleNotes[randsel].NoteID
                     accidCheck()
                     print("Answer: ",trebleNotes[randsel].NoteVal!)
                 }
@@ -563,6 +569,7 @@ class SheetReadViewController: UIViewController {
             {
                 randsel = Int.random(in: 0..<bassNotes.count)
                 staffImage.image = bassNotes[randsel].image
+                answerNoteID = bassNotes[randsel].NoteID
                 accidCheck()
                 print("Answer: ",bassNotes[randsel].NoteVal!)
             }
@@ -572,6 +579,7 @@ class SheetReadViewController: UIViewController {
                 if (whiteKeys.contains(bassNotes[randsel].NoteID ?? 0))
                 {
                     staffImage.image = bassNotes[randsel].image
+                    answerNoteID = bassNotes[randsel].NoteID
                     accidCheck()
                     print("Answer: ",bassNotes[randsel].NoteVal!)
                 }

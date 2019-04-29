@@ -9,7 +9,7 @@
 import AudioKit
 import UIKit
 
-class FirstViewController: UIViewController, TunerDelegate {
+class TunerViewController: UIViewController, TunerDelegate {
     let tuner       = Tuner()
     let knobView    = KnobView(frame: CGRect(x: 0, y: 0, width: 245, height: 245))
     

@@ -94,11 +94,11 @@
 		7F088EA7222DCC48009B4592 /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E84222DCC48009B4592 /* A.mp3 */; };
 		7F088EA8222DCC48009B4592 /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E85222DCC48009B4592 /* F.mp3 */; };
 		7F088EA9222DCC48009B4592 /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F088E86222DCC48009B4592 /* E.mp3 */; };
-		7F0C85C92276CDD300C16C50 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C85C82276CDD300C16C50 /* KnobView.swift */; };
 		7F0C85CD2276CDE000C16C50 /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C85CA2276CDE000C16C50 /* Tuner.swift */; };
 		7F0C85CE2276CDE000C16C50 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C85CB2276CDE000C16C50 /* Note.swift */; };
 		7F0C85CF2276CDE000C16C50 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C85CC2276CDE000C16C50 /* Pitch.swift */; };
-		7F0C85D12276D48F00C16C50 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C85D02276D48F00C16C50 /* TunerViewController.swift */; };
+		7F9495212276D84F00225183 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9495202276D84F00225183 /* TunerViewController.swift */; };
+		7F9495232276D85D00225183 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9495222276D85D00225183 /* KnobView.swift */; };
 		A62FBA76DDC2EE5B5F103BD8 /* Pods_MusicUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454F556B2197B0363E0D720F /* Pods_MusicUtil.framework */; };
 /* End PBXBuildFile section */
 
@@ -216,11 +216,11 @@
 		7F088E84222DCC48009B4592 /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
 		7F088E85222DCC48009B4592 /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
 		7F088E86222DCC48009B4592 /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
-		7F0C85C82276CDD300C16C50 /* KnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KnobView.swift; path = ../../../oo/MusicUtil/SimpleTabUI/TunerUI/KnobView.swift; sourceTree = "<group>"; };
 		7F0C85CA2276CDE000C16C50 /* Tuner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuner.swift; sourceTree = "<group>"; };
 		7F0C85CB2276CDE000C16C50 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7F0C85CC2276CDE000C16C50 /* Pitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
-		7F0C85D02276D48F00C16C50 /* TunerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TunerViewController.swift; path = ../../oo/MusicUtil/SimpleTabUI/TunerViewController.swift; sourceTree = "<group>"; };
+		7F9495202276D84F00225183 /* TunerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerViewController.swift; sourceTree = "<group>"; };
+		7F9495222276D85D00225183 /* KnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
 		C30260D1794B2650214E0C3C /* Pods-MusicUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicUtil.debug.xcconfig"; path = "Target Support Files/Pods-MusicUtil/Pods-MusicUtil.debug.xcconfig"; sourceTree = "<group>"; };
 		E1F335A974918051AF92B8B1 /* Pods_MusicUtilTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicUtilTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -322,7 +322,7 @@
 				7CDBA7272215112700798814 /* Assets.xcassets */,
 				7CDBA7292215112700798814 /* LaunchScreen.storyboard */,
 				7CDBA7242215112400798814 /* Main.storyboard */,
-				7F0C85D02276D48F00C16C50 /* TunerViewController.swift */,
+				7F9495202276D84F00225183 /* TunerViewController.swift */,
 				7C7E56C42242AA0200051F83 /* MuseTabBarController.swift */,
 				74796C5E2253F4FF00A12AD4 /* SettingsViewController.swift */,
 				7F2C21E2222497B900F3FA02 /* TunerLogic */,
@@ -433,7 +433,7 @@
 		7F2C21E12224978300F3FA02 /* TunerUI */ = {
 			isa = PBXGroup;
 			children = (
-				7F0C85C82276CDD300C16C50 /* KnobView.swift */,
+				7F9495222276D85D00225183 /* KnobView.swift */,
 			);
 			path = TunerUI;
 			sourceTree = "<group>";
@@ -679,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F0C85CF2276CDE000C16C50 /* Pitch.swift in Sources */,
+				7F9495232276D85D00225183 /* KnobView.swift in Sources */,
 				7F088E5A222DCB37009B4592 /* StaffNote.swift in Sources */,
 				7CDBA71F2215112400798814 /* AppDelegate.swift in Sources */,
 				7F088E60222DCBA9009B4592 /* SheetReadViewController.swift in Sources */,
@@ -686,12 +687,11 @@
 				7F088E5C222DCB83009B4592 /* StaffView.swift in Sources */,
 				74796C5F2253F4FF00A12AD4 /* SettingsViewController.swift in Sources */,
 				7F0C85CD2276CDE000C16C50 /* Tuner.swift in Sources */,
-				7F0C85C92276CDD300C16C50 /* KnobView.swift in Sources */,
 				7C7E56C52242AA0200051F83 /* MuseTabBarController.swift in Sources */,
+				7F9495212276D84F00225183 /* TunerViewController.swift in Sources */,
 				7F088E5F222DCBA9009B4592 /* EarTrainViewController.swift in Sources */,
 				7C823D872273578500469418 /* MetronomeViewController.swift in Sources */,
 				7F0C85CE2276CDE000C16C50 /* Note.swift in Sources */,
-				7F0C85D12276D48F00C16C50 /* TunerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

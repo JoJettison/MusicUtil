@@ -76,17 +76,11 @@
                                     <action selector="lifeValChanged:" destination="Itc-Fy-Kie" eventType="valueChanged" id="648-ne-xj6"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8P-95-h2n">
-                                <rect key="frame" x="16" y="168" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8P-95-h2n">
+                                <rect key="frame" x="16" y="168" width="45" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="f10-EY-Pqd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpr-Wi-QIB">
-                                <rect key="frame" x="289" y="145" width="23" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -177,13 +171,19 @@ The rights granted under, and the subject matter referenced, in this License wer
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYq-0q-7CM">
+                                <rect key="frame" x="69" y="168" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vpe-36-KiI" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="56" id="1yV-R1-nKs"/>
                             <constraint firstItem="aTZ-pE-vYh" firstAttribute="centerX" secondItem="vpe-36-KiI" secondAttribute="centerX" id="3Y3-ZD-4du"/>
                             <constraint firstItem="vpe-36-KiI" firstAttribute="top" secondItem="aTZ-pE-vYh" secondAttribute="bottom" constant="67" id="6YR-jt-of6"/>
-                            <constraint firstItem="lpr-Wi-QIB" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="289" id="ByZ-Av-N7v"/>
                             <constraint firstItem="bCE-JB-VAl" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="166" id="DWK-Hq-cFg"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="leading" secondItem="akF-I2-Ijk" secondAttribute="leadingMargin" id="JmR-jX-4g4"/>
                             <constraint firstAttribute="trailing" secondItem="aTZ-pE-vYh" secondAttribute="trailing" id="MYB-Pu-2ZX"/>
@@ -194,10 +194,8 @@ The rights granted under, and the subject matter referenced, in this License wer
                             <constraint firstItem="0pJ-As-mQZ" firstAttribute="trailing" secondItem="UUT-8x-kWE" secondAttribute="trailing" id="bId-aX-mJ5"/>
                             <constraint firstItem="fx8-0d-BEJ" firstAttribute="top" secondItem="pvD-j5-5LO" secondAttribute="top" id="blP-GU-FZX"/>
                             <constraint firstItem="UUT-8x-kWE" firstAttribute="top" secondItem="pvD-j5-5LO" secondAttribute="bottom" constant="27" id="cTO-fQ-q8L"/>
-                            <constraint firstItem="Nob-mV-8xC" firstAttribute="trailing" secondItem="lpr-Wi-QIB" secondAttribute="trailing" constant="63" id="e6g-Eb-OrV"/>
                             <constraint firstItem="Nob-mV-8xC" firstAttribute="trailing" secondItem="pvD-j5-5LO" secondAttribute="trailing" constant="18" id="epj-xG-8Tw"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="top" secondItem="Nob-mV-8xC" secondAttribute="top" constant="33" id="fRm-F1-n1h"/>
-                            <constraint firstItem="lpr-Wi-QIB" firstAttribute="top" secondItem="pvD-j5-5LO" secondAttribute="bottom" constant="8" symbolic="YES" id="kDV-dC-EA4"/>
                             <constraint firstItem="R8P-95-h2n" firstAttribute="centerY" secondItem="UUT-8x-kWE" secondAttribute="centerY" id="kFs-fB-oBJ"/>
                             <constraint firstItem="aTZ-pE-vYh" firstAttribute="top" secondItem="R8P-95-h2n" secondAttribute="bottom" constant="39" id="qWS-Q4-RCy"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="leading" secondItem="fx8-0d-BEJ" secondAttribute="leading" id="qae-jc-MdD"/>
@@ -220,7 +218,7 @@ The rights granted under, and the subject matter referenced, in this License wer
                         <outlet property="lifeLbl" destination="R8P-95-h2n" id="Tbf-pO-7tD"/>
                         <outlet property="lifeSlider" destination="UUT-8x-kWE" id="ehN-G4-3hB"/>
                         <outlet property="segmentedControl" destination="vpe-36-KiI" id="Nms-cb-2Zv"/>
-                        <outlet property="sliderVal" destination="lpr-Wi-QIB" id="GlZ-Yi-SZL"/>
+                        <outlet property="sliderVal" destination="zYq-0q-7CM" id="wSH-25-1Mc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcZ-bf-mf6" userLabel="First Responder" sceneMemberID="firstResponder"/>

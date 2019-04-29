@@ -69,6 +69,7 @@ class SheetReadViewController: UIViewController {
     var trebleNotes: [StaffNote] = []
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
+    var answerNoteID: Int?
     
     let whiteKeys = [0, 2, 4, 5, 7, 9, 11]
     let blackKeys = [1, 3, 6, 8, 10]
@@ -110,7 +111,7 @@ class SheetReadViewController: UIViewController {
     @IBAction func pianoKeyAction(_ sender: UIButton)
     {
         //If the answer is correct & the key is white
-        if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
+        if ((sender as AnyObject).tag == answerNoteID && whiteKeys.contains((sender as AnyObject).tag ))
         {
             UIButton.animate(withDuration: 0.0, animations:
                 {
@@ -126,7 +127,7 @@ class SheetReadViewController: UIViewController {
             answerRight()
         }
             //If the answer is correct & the key is black
-        else if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && blackKeys.contains((sender as AnyObject).tag ))
+        else if ((sender as AnyObject).tag == answerNoteID && blackKeys.contains((sender as AnyObject).tag ))
         {
             UIButton.animate(withDuration: 0.0, animations:
                 {
@@ -142,7 +143,7 @@ class SheetReadViewController: UIViewController {
            answerRight()
         }
             //If the answer is incorrect & the key is white
-        else if ((sender as AnyObject).tag != trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
+        else if ((sender as AnyObject).tag != answerNoteID && whiteKeys.contains((sender as AnyObject).tag ))
         {
             UIButton.animate(withDuration: 0.1, animations:
                 {
@@ -181,7 +182,7 @@ class SheetReadViewController: UIViewController {
     //Answer Grid Button
     @IBAction func Answer(_ sender: UIButton) {
         
-        if (sender as AnyObject).tag == trebleNotes[randsel].NoteID{
+        if (sender as AnyObject).tag == answerNoteID{
             UIButton.animate(withDuration: 0.0, animations:
                 {
                     sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
@@ -221,12 +222,14 @@ class SheetReadViewController: UIViewController {
         if staffSelector.selectedSegmentIndex == 0{
             randsel = Int.random(in: (0..<trebleNotes.count))
             staffImage.image =  trebleNotes[randsel].image
+            answerNoteID = trebleNotes[randsel].NoteID
             accidCheck()
             print("Answer: ",trebleNotes[randsel].NoteVal!)
             
         } else if (staffSelector.selectedSegmentIndex == 1) {
             randsel = Int.random(in: (0..<bassNotes.count))
             staffImage.image = bassNotes[randsel].image
+            answerNoteID = bassNotes[randsel].NoteID
             accidCheck()
             print("Answer: ",bassNotes[randsel].NoteVal!)
             
@@ -479,6 +482,7 @@ class SheetReadViewController: UIViewController {
     }
     func answerWrong(){
         print("Wrong")
+        print("NoteID: ", answerNoteID!)
         lifecount -= 1
         print("Score: ", score)
         print("life: ", lifecount)
@@ -500,16 +504,15 @@ class SheetReadViewController: UIViewController {
         case 0:
             randsel = Int.random(in: 0..<trebleNotes.count)
             staffImage.image =  trebleNotes[randsel].image
+            answerNoteID = trebleNotes[randsel].NoteID!
             accidCheck()
             print("Answer: ",trebleNotes[randsel].NoteVal!)
         case 1:
             randsel = Int.random(in: 0..<bassNotes.count)
             staffImage.image = bassNotes[randsel].image
+            answerNoteID = bassNotes[randsel].NoteID!
             accidCheck()
             print("Answer: ",bassNotes[randsel].NoteVal!)
-        case 2:
-             randsel = Int.random(in: 0..<grandNotes.count)
-             accidCheck()
         default:
              randsel = 0
              accidCheck()

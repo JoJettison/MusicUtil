@@ -10,7 +10,7 @@
 #import "AKManager.h"
 
 /// Define a block type helper
-typedef void (^AKBlockType)(void);
+typedef void (^AKBlockType)();
 
 @implementation AKEvent
 {
@@ -21,7 +21,7 @@ typedef void (^AKBlockType)(void);
 #  pragma mark - Initialization
 // -----------------------------------------------------------------------------
 
-- (instancetype)initWithBlock:(void (^)(void))aBlock
+- (instancetype)initWithBlock:(void (^)())aBlock
 {
     self = [self init];
     if (self) {

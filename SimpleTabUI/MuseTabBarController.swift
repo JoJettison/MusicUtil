@@ -10,7 +10,12 @@ import UIKit
 
 class MuseTabBarController: UITabBarController {
     
+    var keyView: Bool = false
+    var gameMode: Bool = false
+    var lifeNum: Int = 3
+    
     @IBInspectable var  defaultIndex: Int = 2
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -72,6 +72,7 @@ class SheetReadViewController: UIViewController {
     var trebleNotes: [StaffNote] = []
     var bassNotes: [StaffNote] = []
     var grandNotes: [StaffNote] = []
+    var answerNoteID: Int?
     
     let whiteKeys = [0, 2, 4, 5, 7, 9, 11]
     let blackKeys = [1, 3, 6, 8, 10]
@@ -113,7 +114,7 @@ class SheetReadViewController: UIViewController {
     @IBAction func pianoKeyAction(_ sender: UIButton)
     {
         //If the answer is correct & the key is white
-        if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
+        if ((sender as AnyObject).tag == answerNoteID && whiteKeys.contains((sender as AnyObject).tag ))
         {
             UIButton.animate(withDuration: 0.0, animations:
                 {
@@ -126,13 +127,10 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
                     })
             })
-            print("Right")
-            
-            score += 1
-            //updateScore()
+            answerRight()
         }
             //If the answer is correct & the key is black
-        else if ((sender as AnyObject).tag == trebleNotes[randsel].NoteID && blackKeys.contains((sender as AnyObject).tag ))
+        else if ((sender as AnyObject).tag == answerNoteID && blackKeys.contains((sender as AnyObject).tag ))
         {
             UIButton.animate(withDuration: 0.0, animations:
                 {
@@ -145,13 +143,10 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
                     })
             })
-            print("Right")
-            
-            score += 1
-            //updateScore()
+           answerRight()
         }
             //If the answer is incorrect & the key is white
-        else if ((sender as AnyObject).tag != trebleNotes[randsel].NoteID && whiteKeys.contains((sender as AnyObject).tag ))
+        else if ((sender as AnyObject).tag != answerNoteID && whiteKeys.contains((sender as AnyObject).tag ))
         {
             UIButton.animate(withDuration: 0.1, animations:
                 {
@@ -164,7 +159,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
                     })
             })
-            print("Wrong")
+            answerWrong()
         }
             //If the answer is incorrect and the key is black
         else
@@ -180,7 +175,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
                     })
             })
-            print("Wrong")
+            answerWrong()
         }
         
         //Finally outside the color indication tests
@@ -190,7 +185,7 @@ class SheetReadViewController: UIViewController {
     //Answer Grid Button
     @IBAction func Answer(_ sender: UIButton) {
         
-        if (sender as AnyObject).tag == trebleNotes[randsel].NoteID{
+        if (sender as AnyObject).tag == answerNoteID{
             UIButton.animate(withDuration: 0.0, animations:
                 {
                     sender.backgroundColor = UIColor(red:0.00, green:0.59, blue:0.08, alpha:1.0)
@@ -202,9 +197,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
                     })
             })
-            print("Right")
-            score += 1
-            print("Score: ", score)
+            answerRight()
         }
         else{
             UIButton.animate(withDuration: 0.1, animations:
@@ -218,15 +211,7 @@ class SheetReadViewController: UIViewController {
                             sender.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
                     })
             })
-            print("Wrong")
-            lifecount -= 1
-            print("Score: ", score)
-            print("life: ", lifecount)
-            if(lifecount == 0){
-                
-                lifecount = 3;
-                score = 0;
-            }
+            answerWrong()
         }
         sleep(1)
         newQuestion()
@@ -289,41 +274,62 @@ class SheetReadViewController: UIViewController {
         }
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        let museTab = tabBarController as! MuseTabBarController
+        if lifecount != museTab.lifeNum{
+            lifecount = museTab.lifeNum
+        }
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
+    }
     override func viewDidAppear(_ animated: Bool) {
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
         newQuestion()
+        let museTab = tabBarController as! MuseTabBarController
+        if museTab.keyView == false {
+            keyboardView = false
+        }
+        else{
+            keyboardView = true
+        }
+        keyInputSwitch()
+        
+        if museTab.gameMode == true{
+            gameMode = true
+        }
+        else{
+            gameMode = false
+        }
+        if lifecount != museTab.lifeNum{
+            lifecount = museTab.lifeNum
+        }
+        initGame()
     }
     
     
     override func viewDidLoad() {
-        if (keyboardView == true)
-        {
-            gridButtonA.isHidden = true
-            gridButtonB.isHidden = true
-            gridButtonC.isHidden = true
-            gridButtonD.isHidden = true
-            gridButtonE.isHidden = true
-            gridButtonF.isHidden = true
-            gridButtonG.isHidden = true
+        
+        let museTab = tabBarController as! MuseTabBarController
+        if museTab.keyView == false {
+            keyboardView = false
         }
-        else
-        {
-            pianoBackground.isHidden = true
-            pianoKeyC.isHidden = true
-            pianoKeyCsh.isHidden = true
-            pianoKeyD.isHidden = true
-            pianoKeyDsh.isHidden = true
-            pianoKeyE.isHidden = true
-            pianoKeyF.isHidden = true
-            pianoKeyFsh.isHidden = true
-            pianoKeyG.isHidden = true
-            pianoKeyGsh.isHidden = true
-            pianoKeyA.isHidden = true
-            pianoKeyAsh.isHidden = true
-            pianoKeyB.isHidden = true
+        else{
+            keyboardView = true
         }
+        keyInputSwitch()
+        
         initStaffNotes()
         accidCheck()        // Check on load if sharp or flat is displayed
+        if museTab.gameMode == true{
+            gameMode = true
+        }
+        else{
+            gameMode = false
+        }
+        if lifecount != museTab.lifeNum{
+            lifecount = museTab.lifeNum
+        }
         initGame()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -408,9 +414,60 @@ class SheetReadViewController: UIViewController {
         }
     }
     
+    func keyInputSwitch(){
+        if (keyboardView == true)
+        {
+            gridButtonA.isHidden = true
+            gridButtonB.isHidden = true
+            gridButtonC.isHidden = true
+            gridButtonD.isHidden = true
+            gridButtonE.isHidden = true
+            gridButtonF.isHidden = true
+            gridButtonG.isHidden = true
+            
+            pianoBackground.isHidden = false
+            pianoKeyC.isHidden = false
+            pianoKeyCsh.isHidden = false
+            pianoKeyD.isHidden = false
+            pianoKeyDsh.isHidden = false
+            pianoKeyE.isHidden = false
+            pianoKeyF.isHidden = false
+            pianoKeyFsh.isHidden = false
+            pianoKeyG.isHidden = false
+            pianoKeyGsh.isHidden = false
+            pianoKeyA.isHidden = false
+            pianoKeyAsh.isHidden = false
+            pianoKeyB.isHidden = false
+        }
+        else
+        {
+            pianoBackground.isHidden = true
+            pianoKeyC.isHidden = true
+            pianoKeyCsh.isHidden = true
+            pianoKeyD.isHidden = true
+            pianoKeyDsh.isHidden = true
+            pianoKeyE.isHidden = true
+            pianoKeyF.isHidden = true
+            pianoKeyFsh.isHidden = true
+            pianoKeyG.isHidden = true
+            pianoKeyGsh.isHidden = true
+            pianoKeyA.isHidden = true
+            pianoKeyAsh.isHidden = true
+            pianoKeyB.isHidden = true
+            
+            gridButtonA.isHidden = false
+            gridButtonB.isHidden = false
+            gridButtonC.isHidden = false
+            gridButtonD.isHidden = false
+            gridButtonE.isHidden = false
+            gridButtonF.isHidden = false
+            gridButtonG.isHidden = false
+        }
+    }
+    
     func accidCheck(){
-            var trebAccVal = trebleNotes[randsel].nsf.rawValue
-            var bassAccVal = bassNotes[randsel].nsf.rawValue
+        let trebAccVal = trebleNotes[randsel].nsf.rawValue
+        let bassAccVal = bassNotes[randsel].nsf.rawValue
         
         if( (trebAccVal == 1) || (bassAccVal == 1) ){//Sharp
             gridButtonA.setTitle("A"+sharpSym, for: .normal)
@@ -441,12 +498,35 @@ class SheetReadViewController: UIViewController {
     
     func initGame(){
         if (!gameMode){
+            let museTab = tabBarController as! MuseTabBarController
             livesText.isHidden = true
             lifeLbl.isHidden = true
             lifecount = -1
+            museTab.lifeNum = lifecount
+        }
+        else{
+            livesText.isHidden = false
+            lifeLbl.isHidden = false
         }
     }
 
+    func answerRight(){
+        print("Right")
+        score += 1
+        print("Score: ", score)
+    }
+    func answerWrong(){
+        print("Wrong")
+        print("NoteID: ", answerNoteID!)
+        lifecount -= 1
+        print("Score: ", score)
+        print("life: ", lifecount)
+        if(lifecount == 0){
+            let museTab = tabBarController as! MuseTabBarController
+            lifecount = museTab.lifeNum
+            score = 0
+        }
+    }
     
     func newQuestion(){
         //Display score

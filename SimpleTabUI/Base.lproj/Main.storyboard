@@ -13,7 +13,7 @@
         <!--Tuner View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="Tuner View Controller" customClass="FirstViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="Tuner View Controller" customClass="TunerViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,8 +48,8 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pJ-As-mQZ">
                                 <rect key="frame" x="310" y="53" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqT-UC-CbI">
-                                <rect key="frame" x="16" y="53" width="116" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Keyboard Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqT-UC-CbI">
+                                <rect key="frame" x="16" y="53" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,13 @@
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
-                                <string key="text">Tuner logic provided by Tim Van Elsoo: https://github.com/elslooo/guitar-tuner  MIT License  Copyright (c) 2016 Tim van Elsloo
+                                <mutableString key="text">Tuner base logic and UI adapted from:  https://github.com/elslooo/guitar-tuner and https://github.com/comyar/TuningFork. The algorithms are computationally powered by the open source library AudioKit: https://github.com/AudioKit/AudioKit.
+
+Licensed under MIT.
+
+Copyright (c) 2016 Tim van Elsloo
+Copyright (c) 2015 Comyar Zaheri
+Copyright (c) 2016 Aurelius Prochazka
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -167,13 +173,12 @@ If any provision of this License is invalid or unenforceable under applicable la
 No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent.
 This License constitutes the entire agreement between the parties with respect to the Work licensed here. There are no understandings, agreements or representations with respect to the Work not specified here. Licensor shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Licensor and You.
 The rights granted under, and the subject matter referenced, in this License were drafted utilizing the terminology of the Berne Convention for the Protection of Literary and Artistic Works (as amended on September 28, 1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, the WIPO Performances and Phonograms Treaty of 1996 and the Universal Copyright Convention (as revised on July 24, 1971). These rights and subject matter take effect in the relevant jurisdiction in which the License terms are sought to be enforced according to the corresponding provisions of the implementation of those treaty provisions in the applicable national law. If the standard suite of rights granted under applicable copyright law includes additional rights not granted under this License, such additional rights are deemed to be included in the License; this License is not intended to restrict the license of any rights under applicable law.
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYq-0q-7CM">
-                                <rect key="frame" x="69" y="168" width="23" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-Xs-Eqd">
+                                <rect key="frame" x="69" y="168" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -185,18 +190,25 @@ The rights granted under, and the subject matter referenced, in this License wer
                             <constraint firstItem="aTZ-pE-vYh" firstAttribute="centerX" secondItem="vpe-36-KiI" secondAttribute="centerX" id="3Y3-ZD-4du"/>
                             <constraint firstItem="vpe-36-KiI" firstAttribute="top" secondItem="aTZ-pE-vYh" secondAttribute="bottom" constant="67" id="6YR-jt-of6"/>
                             <constraint firstItem="bCE-JB-VAl" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="166" id="DWK-Hq-cFg"/>
+                            <constraint firstItem="aTZ-pE-vYh" firstAttribute="top" secondItem="R8P-95-h2n" secondAttribute="bottom" constant="39" id="Ed8-FP-JIH"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="leading" secondItem="akF-I2-Ijk" secondAttribute="leadingMargin" id="JmR-jX-4g4"/>
                             <constraint firstAttribute="trailing" secondItem="aTZ-pE-vYh" secondAttribute="trailing" id="MYB-Pu-2ZX"/>
                             <constraint firstItem="Nob-mV-8xC" firstAttribute="bottom" secondItem="vpe-36-KiI" secondAttribute="bottom" constant="29" id="PUJ-Pl-6US"/>
+                            <constraint firstItem="oO0-Xs-Eqd" firstAttribute="leading" secondItem="R8P-95-h2n" secondAttribute="trailing" constant="8" id="Pbq-AJ-wl3"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="top" secondItem="0pJ-As-mQZ" secondAttribute="top" id="Pe0-R0-9RV"/>
                             <constraint firstItem="pvD-j5-5LO" firstAttribute="top" secondItem="0pJ-As-mQZ" secondAttribute="bottom" constant="22" id="QrI-qg-8mG"/>
                             <constraint firstItem="aTZ-pE-vYh" firstAttribute="leading" secondItem="akF-I2-Ijk" secondAttribute="leading" id="Ut2-Wt-XWT"/>
                             <constraint firstItem="0pJ-As-mQZ" firstAttribute="trailing" secondItem="UUT-8x-kWE" secondAttribute="trailing" id="bId-aX-mJ5"/>
                             <constraint firstItem="fx8-0d-BEJ" firstAttribute="top" secondItem="pvD-j5-5LO" secondAttribute="top" id="blP-GU-FZX"/>
+                            <constraint firstItem="UUT-8x-kWE" firstAttribute="leading" secondItem="oO0-Xs-Eqd" secondAttribute="trailing" constant="165" id="bzC-jL-zr0"/>
                             <constraint firstItem="UUT-8x-kWE" firstAttribute="top" secondItem="pvD-j5-5LO" secondAttribute="bottom" constant="27" id="cTO-fQ-q8L"/>
+                            <constraint firstItem="aTZ-pE-vYh" firstAttribute="top" secondItem="oO0-Xs-Eqd" secondAttribute="bottom" constant="39" id="eDc-ii-unI"/>
                             <constraint firstItem="Nob-mV-8xC" firstAttribute="trailing" secondItem="pvD-j5-5LO" secondAttribute="trailing" constant="18" id="epj-xG-8Tw"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="top" secondItem="Nob-mV-8xC" secondAttribute="top" constant="33" id="fRm-F1-n1h"/>
+                            <constraint firstItem="R8P-95-h2n" firstAttribute="leading" secondItem="Nob-mV-8xC" secondAttribute="leading" constant="16" id="gQ9-XI-ylK"/>
                             <constraint firstItem="R8P-95-h2n" firstAttribute="centerY" secondItem="UUT-8x-kWE" secondAttribute="centerY" id="kFs-fB-oBJ"/>
+                            <constraint firstItem="R8P-95-h2n" firstAttribute="top" secondItem="fx8-0d-BEJ" secondAttribute="bottom" constant="41" id="pxA-ar-5go"/>
+                            <constraint firstItem="oO0-Xs-Eqd" firstAttribute="top" secondItem="fx8-0d-BEJ" secondAttribute="bottom" constant="41" id="q0i-7Z-AJB"/>
                             <constraint firstItem="aTZ-pE-vYh" firstAttribute="top" secondItem="R8P-95-h2n" secondAttribute="bottom" constant="39" id="qWS-Q4-RCy"/>
                             <constraint firstItem="sqT-UC-CbI" firstAttribute="leading" secondItem="fx8-0d-BEJ" secondAttribute="leading" id="qae-jc-MdD"/>
                             <constraint firstItem="bCE-JB-VAl" firstAttribute="top" secondItem="Nob-mV-8xC" secondAttribute="top" constant="8" id="sQR-BS-aiz"/>
@@ -218,7 +230,7 @@ The rights granted under, and the subject matter referenced, in this License wer
                         <outlet property="lifeLbl" destination="R8P-95-h2n" id="Tbf-pO-7tD"/>
                         <outlet property="lifeSlider" destination="UUT-8x-kWE" id="ehN-G4-3hB"/>
                         <outlet property="segmentedControl" destination="vpe-36-KiI" id="Nms-cb-2Zv"/>
-                        <outlet property="sliderVal" destination="zYq-0q-7CM" id="wSH-25-1Mc"/>
+                        <outlet property="sliderVal" destination="oO0-Xs-Eqd" id="QJG-UC-GrZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcZ-bf-mf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,7 +258,7 @@ The rights granted under, and the subject matter referenced, in this License wer
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfH-oh-11i" userLabel="PlayButton">
-                                <rect key="frame" x="169" y="119" width="37" height="37"/>
+                                <rect key="frame" x="175" y="119" width="25" height="25"/>
                                 <state key="normal" image="playButton"/>
                                 <connections>
                                     <action selector="Play:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hqR-eM-bhY"/>
@@ -1001,19 +1013,68 @@ The rights granted under, and the subject matter referenced, in this License wer
         <!--Metronome-->
         <scene sceneID="NtO-cs-PLk">
             <objects>
-                <viewController id="43f-2P-6n0" sceneMemberID="viewController">
+                <viewController id="43f-2P-6n0" customClass="MetronomeViewController" customModule="MusicUtil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Opn-e7-yhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP0-cX-QNM">
+                                <rect key="frame" x="140" y="269.5" width="94" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzu-6E-86Y">
+                                <rect key="frame" x="140" y="356" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="onStartClick:" destination="43f-2P-6n0" eventType="touchUpInside" id="VvS-so-KHZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjT-vW-OsQ">
+                                <rect key="frame" x="202" y="356" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="onStopClick:" destination="43f-2P-6n0" eventType="touchUpInside" id="KDh-9k-Pny"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="54" maximumValue="108" translatesAutoresizingMaskIntoConstraints="NO" id="Rhg-KM-PyK">
+                                <rect key="frame" x="140" y="319" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepper:" destination="43f-2P-6n0" eventType="valueChanged" id="cGN-jm-LVG"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
                         <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rhg-KM-PyK" firstAttribute="top" secondItem="JP0-cX-QNM" secondAttribute="bottom" constant="29" id="273-RQ-qAu"/>
+                            <constraint firstItem="JjT-vW-OsQ" firstAttribute="leading" secondItem="yzu-6E-86Y" secondAttribute="trailing" constant="28" id="2FL-dy-Uaq"/>
+                            <constraint firstItem="hpu-Xt-hPZ" firstAttribute="trailing" secondItem="Rhg-KM-PyK" secondAttribute="trailing" constant="141" id="3NR-21-weg"/>
+                            <constraint firstItem="hpu-Xt-hPZ" firstAttribute="bottom" secondItem="JjT-vW-OsQ" secondAttribute="bottom" constant="232" id="5nQ-tx-m3L"/>
+                            <constraint firstItem="JP0-cX-QNM" firstAttribute="leading" secondItem="hpu-Xt-hPZ" secondAttribute="leading" constant="140" id="D10-MO-I2d"/>
+                            <constraint firstItem="JP0-cX-QNM" firstAttribute="top" secondItem="hpu-Xt-hPZ" secondAttribute="top" constant="249.5" id="DH9-dY-UTE"/>
+                            <constraint firstItem="hpu-Xt-hPZ" firstAttribute="trailing" secondItem="JP0-cX-QNM" secondAttribute="trailing" constant="141" id="HFd-R0-CXe"/>
+                            <constraint firstItem="JjT-vW-OsQ" firstAttribute="top" secondItem="Rhg-KM-PyK" secondAttribute="bottom" constant="8" id="OmJ-cN-6kV"/>
+                            <constraint firstItem="JjT-vW-OsQ" firstAttribute="leading" secondItem="yzu-6E-86Y" secondAttribute="trailing" constant="28" id="RxG-9C-ubT"/>
+                            <constraint firstItem="yzu-6E-86Y" firstAttribute="top" secondItem="Rhg-KM-PyK" secondAttribute="bottom" constant="8" id="TXi-oJ-c0K"/>
+                            <constraint firstItem="Rhg-KM-PyK" firstAttribute="leading" secondItem="hpu-Xt-hPZ" secondAttribute="leading" constant="140" id="b0a-0b-leK"/>
+                            <constraint firstItem="yzu-6E-86Y" firstAttribute="top" secondItem="Rhg-KM-PyK" secondAttribute="bottom" constant="8" id="b3I-Cb-I4d"/>
+                            <constraint firstItem="yzu-6E-86Y" firstAttribute="leading" secondItem="hpu-Xt-hPZ" secondAttribute="leading" constant="140" id="fJY-wu-Zvq"/>
+                            <constraint firstItem="Rhg-KM-PyK" firstAttribute="top" secondItem="JP0-cX-QNM" secondAttribute="bottom" constant="29" id="j46-I8-X2R"/>
+                            <constraint firstItem="hpu-Xt-hPZ" firstAttribute="trailing" secondItem="JjT-vW-OsQ" secondAttribute="trailing" constant="141" id="jAL-Yc-sV2"/>
+                            <constraint firstItem="hpu-Xt-hPZ" firstAttribute="bottom" secondItem="yzu-6E-86Y" secondAttribute="bottom" constant="232" id="pfC-0G-Y8l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hpu-Xt-hPZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Metronome" image="metronome" selectedImage="metronome" id="buD-vj-BLO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bpmlbl" destination="JP0-cX-QNM" id="h14-2Q-lMT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5b6-SP-bUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="734"/>
+            <point key="canvasLocation" x="1456.8" y="732.68365817091455"/>
         </scene>
         <!--Muse Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1047,11 +1108,11 @@ The rights granted under, and the subject matter referenced, in this License wer
     </scenes>
     <resources>
         <image name="EarIcon" width="30" height="30"/>
-        <image name="earTrainer" width="37.5" height="37.5"/>
-        <image name="metronome" width="37.5" height="37.5"/>
-        <image name="playButton" width="37.5" height="37.5"/>
-        <image name="settings" width="37.5" height="37.5"/>
-        <image name="sightReading" width="37.5" height="37.5"/>
-        <image name="tuner" width="37.5" height="37.5"/>
+        <image name="earTrainer" width="25" height="25"/>
+        <image name="metronome" width="25" height="25"/>
+        <image name="playButton" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="sightReading" width="25" height="25"/>
+        <image name="tuner" width="25" height="25"/>
     </resources>
 </document>
